@@ -1,13 +1,55 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/server",
+    "pages/forum/forum",
+    "pages/task/Release",
+    "pages/personal/personal",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#ff9500",
+    "navigationBarTitleText": "快帮邦",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#ff9500",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/index.png",
+        "selectedIconPath": "image/index.png"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "text": "论坛",
+        "iconPath": "image/forum.png",
+        "selectedIconPath": "image/forum.png"
+      },
+      {
+        "pagePath": "pages/task/Release",
+        "text": "任务发布",
+        "iconPath": "image/release.png",
+        "selectedIconPath": "image/release.png"
+      },
+      {
+        "pagePath": "pages/task/Release",
+        "text": "消息",
+        "iconPath": "image/news.png",
+        "selectedIconPath": "image/news.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "image/personal.png",
+        "selectedIconPath": "image/personal.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
