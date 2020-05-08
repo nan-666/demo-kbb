@@ -1,0 +1,69 @@
+<scroll-view class="content-server" scroll-y>
+  <!-- 搜索栏 -->
+  <view class="server-search">
+    <view class="server-search-site">
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/site.png" />
+     <view>九江市</view>
+    </view>
+    <view class="server-search-box">
+      <icon class="weui-icon-search_in-box" type="search"></icon>
+      <input type="text" placeholder-class="placeholderinput" placeholder="搜索服务"/>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <swiper class="content-server-slide" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" autoplay circular>
+    <swiper-item>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/bg/01.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/bg/02.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/bg/03.png"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 按钮区 -->
+  <view class="content-server-portal">
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/maintain.png"></image>
+      <text>家电维修</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/delivery.png"></image>
+      <text>生活配送</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/house.png"></image>
+      <text>房子装修</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/move.png"></image>
+      <text>拉家搬货</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/install.png"></image>
+      <text>上门安装</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/pipeline.png"></image>
+      <text>管道疏通</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/clean.png"></image>
+      <text>家庭保洁</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/classify.png"></image>
+      <text>全部分类</text>
+    </view>
+  </view>
+  <!-- 推荐 -->
+  <view class="list-title">推荐</view>
+  <view class="content-activity">
+    <view>精选人才</view>
+    <view>装修设计</view>
+    <view>智能管家</view>
+    <view>特惠活动</view>
+  </view>
+  
+</scroll-view>
