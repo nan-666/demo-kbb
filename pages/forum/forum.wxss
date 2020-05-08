@@ -9,31 +9,31 @@
   position: relative;
 }
 
-.serach image{
+.search image{
   width: 60rpx;
   height: 60rpx;
   margin: auto;
 }
-.serach-ss{
+.search-ss{
   display: flex;
-  border: 3px solid #ded9d9;
+  background: #eaebed;
   border-radius: 25px;
   width: 500rpx;
   margin: auto;
 }
-.serach-ss image{
+.search-ss image{
   width: 40rpx;
   height: 40rpx;
   align-items: center;
 }
-.serach-fb{
+.search-fb{
   display: flex;
 }
-.serach text{
+.search text{
   align-items: center;
   margin: auto;
 }
-.serach{
+.search{
   margin-top: 10rpx;
   float: left;
   display: flex;
@@ -44,16 +44,17 @@
 /* 版块栏 */
 .block{
   /* overflow:hidden; */
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .block-bk{
-  width: 25%;
+  flex: 20%;
   height: 135rpx;
-  margin: 5px 9.5px;
-  flex: auto;
+  margin: 15rpx 20rpx;
   border: 0px solid #ffffff;
-  border-radius: 25%;
+  border-radius: 40rpx;
   position: relative;
   float: left;
   padding: 12rpx 12rpx;
@@ -114,9 +115,9 @@
   display: flex;
   width: 160rpx;
   height: 65rpx;
-  border: 3px solid #0d93fa;
-  background-color: #0d93fa;
-  color: #ffffff;
+  border: 1rpx solid #ff5733;
+  background-color: #fff;
+  color: #ff5733;
   border-radius: 40rpx;
   float: right;
   align-items: center;

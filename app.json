@@ -1,7 +1,6 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/index/server",
     "pages/forum/forum",
     "pages/task/Release",
     "pages/personal/personal",
@@ -36,21 +35,18 @@
         "text": "任务发布",
         "iconPath": "image/release.png",
         "selectedIconPath": "image/release1.png"
-
       },
       {
         "pagePath": "pages/task/Release",
         "text": "消息",
         "iconPath": "image/news.png",
         "selectedIconPath": "image/news1.png"
-
       },
       {
         "pagePath": "pages/personal/personal",
         "text": "个人中心",
         "iconPath": "image/personal.png",
         "selectedIconPath": "image/personal1.png"
-
       }
     ]
   },

@@ -2,13 +2,13 @@
 <!-- 论坛首页 -->
 <view class="container">
   <!-- 搜索栏 -->
-  <view class= "serach">
+  <view class= "search">
     <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/xx.png"></image>
-    <view class= "serach-ss">
+    <view class= "search-ss">
       <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/ss.png"></image>
-      <input class="input" name="serach" placeholder="搜搜精彩内容" bindinput="serachInput"/>
+      <input class="input" name="search" placeholder="搜搜精彩内容" bindinput="searchInput"/>
     </view>
-    <view class = "serach-fb">
+    <view class = "search-fb">
       <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/fb.png"></image>
       <text>发布</text>
     </view>
