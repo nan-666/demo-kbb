@@ -1,1 +1,156 @@
 /* pages/personal/personal.wxss */
+page {
+  background: #eeeeee;
+}
+.content {
+  height: 100%;
+}
+
+/* 用户信息样式 */
+.content-info {
+  width: 100vw;
+  height: 300rpx;
+  background: #ff9500;
+}
+/* 头像 */
+.content-info-head {
+  height: 150rpx;
+  width: 150rpx;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  border-radius: 100%;
+}
+/* 设置 */
+.content-info-set {
+  position: relative;
+  left: 530rpx;
+  top: -160rpx;
+  display: flex;
+  font-size: 10pt;
+}
+.content-info-set>image {
+  height: 50rpx;
+  width: 50rpx;
+  margin-right: 20rpx;
+}
+.content-info-set>view {
+  color: white;
+  margin: auto 0;
+}
+/* 登录/注册 */
+.content-info-operate {
+  display: flex;
+  color: white;
+  margin: 10rpx;
+  font-size: 10pt;
+  position: relative;
+  top: -170rpx;
+  left: 180rpx;
+}
+.content-info-operate>view:nth-last-child(2) {
+  margin: 0 10rpx;
+}
+/* 身份切换 */
+.content-info-change {
+  width: 400rpx;
+  height: 40rpx;
+  background: #e18200;
+  color: white;
+  display: flex;
+  font-size: 9pt;
+  position: relative;
+  left: 350rpx;
+  top: -190rpx;
+}
+.content-info-change>view {
+  margin-left: 20rpx;
+}
+.content-info-change>image {
+  height: 30rpx;
+  width: 30rpx;
+  margin: auto 0;
+}
+/* 我的收藏、关注、足迹 */
+.content-info-collect {
+  display: flex;
+}
+.content-info-collect>view {
+  position: relative;
+  top: -150rpx;
+  margin: auto;
+  font-size: 10pt;
+  color: white;
+  text-align: center;
+}
+
+/* 订单样式 */
+.content-order {
+  display: flex;
+  background: white;
+  height: 200rpx;
+  width: 720rpx;
+  margin: 20rpx auto;
+  border-radius: 3%;
+  font-size: 10pt;
+}
+.content-order-item {
+  margin: auto;
+}
+.content-order-item>image {
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+  margin: auto;
+}
+
+/* 我的资产样式 */
+.content-property {
+  background: white;
+  height: 200rpx;
+  width: 720rpx;
+  margin: 20rpx auto;
+  border-radius: 3%;
+  font-size: 10pt;
+}
+.content-property-title {
+  font-size: 10pt;
+  font-weight: bold;
+  position: relative;
+  top: 20rpx;
+  left: 20rpx;
+}
+.content-property-item {
+  display: flex;
+  margin-top: 50rpx;
+}
+.content-property-item>view {
+  margin: auto;
+  text-align: center;
+}
+
+/* 常用服务样式 */
+.content-serve {
+  background: white;
+  height: 200rpx;
+  width: 720rpx;
+  margin: 20rpx auto;
+  border-radius: 3%;
+  font-size: 10pt;
+}
+.content-serve-title {
+  font-size: 10pt;
+  font-weight: bold;
+  position: relative;
+  top: 20rpx;
+  left: 20rpx;
+}
+.content-serve-item {
+  display: flex;
+  margin-top: 60rpx;
+}
+.content-serve-item>view {
+  color: #ccc;
+  margin: auto;
+  text-align: center;
+
+}
