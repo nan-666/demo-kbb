@@ -1,2 +1,52 @@
 <!--pages/forum/forum.wxml-->
-<text>pages/forum/forum.wxml</text>
+<!-- 论坛首页 -->
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class= "serach">
+    <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/xx.png"></image>
+    <view class= "serach-ss">
+      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/ss.png"></image>
+      <input class="input" name="serach" placeholder="搜搜精彩内容" bindinput="serachInput"/>
+    </view>
+    <view class = "serach-fb">
+      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/fb.png"></image>
+      <text>发布</text>
+    </view>
+  </view>
+  <!-- 论坛版块栏 -->
+  <view class = "block">
+    <view wx:for = "{{block}}" class= "block-bk">
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+  <!-- 论坛内容 -->
+  <view class="tab">
+    <view class="tab-item {{tab==0?'active':''}}" bindtap="changeItem" data-item="0">关注</view>
+    <view class="tab-item {{tab==1?'active':''}}" bindtap="changeItem" data-item="1">推荐</view>
+    <view class="tab-item {{tab==2?'active':''}}" bindtap="changeItem" data-item="2">最新</view>
+  </view>
+  <view class = "content">
+    <view class = "content-top">
+      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/tx.jpg"></image>
+      <view class="text">
+        <text class="name">封印的橙子</text>
+        <text class="time">昨天 9:00</text>
+      </view>
+      <view class="follow">
+        <text>+关注</text>
+      </view>
+    </view>
+    <view class="content-content">
+      <text>接单了 接单了</text>
+      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/img.jpg"></image>
+    </view>
+    <view class="content-bottom">
+      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/zf.png"></image>
+      <text>70</text>
+      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/pl.png"></image>
+      <text>70</text>
+      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/dz.png"></image>
+      <text>70</text>
+    </view>
+  </view>
+</view>
