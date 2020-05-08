@@ -1,2 +1,33 @@
 <!--index.wxml-->
 
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+
+<!-- 标签页 -->
+<view class="tab">
+  <view class="tab-item {{tab==0 ? 'active':''}}" bindtap="changeItem" data-item="0">服务</view>
+  <view class="tab-item {{tab==1 ? 'active':''}}" bindtap="changeItem" data-item="1">任务大厅</view>
+</view>
+
+<view class="content">
+<!--curren:当前滑块显示页面索引号； bindchange:滑块滑动时监听函数 -->
+  <swiper current="{{item}}" bindchange="changeTab">
+    <swiper-item>
+      <include src="server.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="task.wxml" />
+    </swiper-item>
+  </swiper>
+
+</view>

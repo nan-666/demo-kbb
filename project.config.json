@@ -16,7 +16,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.0",
-	"appid": "wx20b19657a35cc2f0",
+	"appid": "wx1d28ca23aead252d",
+	"appid": "wx764dc5f71993dcf9",
 	"projectname": "demo-kbb",
 	"debugOptions": {
 		"hidedInDevtools": []

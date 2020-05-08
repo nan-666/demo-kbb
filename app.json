@@ -23,31 +23,34 @@
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "image/index.png",
-        "selectedIconPath": "image/index.png"
+        "selectedIconPath": "image/index1.png"
       },
       {
         "pagePath": "pages/forum/forum",
         "text": "论坛",
         "iconPath": "image/forum.png",
-        "selectedIconPath": "image/forum.png"
+        "selectedIconPath": "image/forum1.png"
       },
       {
         "pagePath": "pages/task/Release",
         "text": "任务发布",
         "iconPath": "image/release.png",
-        "selectedIconPath": "image/release.png"
+        "selectedIconPath": "image/release1.png"
+
       },
       {
         "pagePath": "pages/task/Release",
         "text": "消息",
         "iconPath": "image/news.png",
-        "selectedIconPath": "image/news.png"
+        "selectedIconPath": "image/news1.png"
+
       },
       {
         "pagePath": "pages/personal/personal",
         "text": "个人中心",
         "iconPath": "image/personal.png",
-        "selectedIconPath": "image/personal.png"
+        "selectedIconPath": "image/personal1.png"
+
       }
     ]
   },
