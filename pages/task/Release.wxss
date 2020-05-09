@@ -1,1 +1,67 @@
 /* pages/task/Release.wxss */
+page{
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  color: #050505;
+  height: 100%;
+}
+/* 顶部图标 */
+.topicon{
+    font-size: 11pt;
+    margin-bottom: 20rpx;
+    margin-top: 10rpx;
+  }
+  
+  .icon-inner {
+    display: flex;
+    /* 自动换行 */
+    flex-wrap: wrap;
+    margin:0 20rpx
+  }
+  
+  .list-item {
+    flex: 1;
+  }
+  .icon-title{
+    font-size: 8pt;
+  }
+
+  .list-item > image {
+    width: 120rpx;
+    height: 120rpx;
+    display: block;
+    margin:0 auto;
+  }
+  
+  .list-item > view {
+    width: 100rpx;
+    margin: 10rpx auto;
+    text-align: center;
+    font-size: 7pt;
+  }
+  
+  /* 详细服务要求样式 */
+  
+  .server-title{
+    height: 50rpx;
+    width: 100%;
+    margin-top: 30rpx;
+    border-bottom: 1px solid #ccc;
+  }
+  .server-input{
+    margin-left: 200rpx;
+    margin-top: -45rpx;
+    font-size: 10pt;
+  }
+  .server-title image{
+    height: 35rpx;
+    width: 35rpx;
+  }
+  .content button{
+    margin-top: 100rpx;
+    background-color:#FF5733;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12pt;
+  }

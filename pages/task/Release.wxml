@@ -1,2 +1,70 @@
 <!--pages/task/Release.wxml-->
-<text>pages/task/Release.wxml</text>
+
+<!-- 图标 -->
+<view class="topicon">
+      <view class="icon-inner">
+        <view class="list-item" wx:for="{{topicon}}" wx:key="index"  data-index="{{index}}">
+          <image src="{{item.coverImgUrl}}" />
+          <view class="icon-title">{{item.title}}</view>  
+        </view>
+      </view>
+</view>
+
+<!-- 详细服务要求 -->
+
+<form bindsubmit="formSubmit">
+  <view class="content">
+    <view class="server-title">
+      <text>选择服务</text><text style="color:red;">*</text>
+      <view class="server-input">
+        <picker name="num" bindchange="pickerChange" value="{{picker.index}}" range="{{picker.arr}}">{{picker.arr[picker.index]}}</picker>
+      </view>
+      
+    </view>
+    <view class="server-title">
+      <text>服务要求</text><text style="color:red;">*</text>
+      <view class="server-input">
+        <input name="requirement" id="requirement" bindchange="requirementChange" bindfocus="inputFocus" placeholder="服务要求"></input>
+      </view>
+      
+    </view>
+    <view class="server-title">
+      <text>服务信息</text><text style="color:red;">*</text>
+      <view class="server-input">
+        <input name="information" id="information" bindchange="informationChange" bindfocus="inputFocus" placeholder="请如实填写真实信息"></input>
+        </view>
+    </view>
+    <view class="server-title">
+      <text>联系人</text><text style="color:red;">*</text>
+      <view class="server-input">
+        <input name="name" id="name" bindchange="nameChange" bindfocus="inputFocus" placeholder="姓名"></input>
+      </view>
+    </view>
+    <view class="server-title">
+      <text>联系电话</text><text style="color:red;">*</text>
+      <view class="server-input">
+         <input name="phone" id="phone" bindchange="phoneChange" bindfocus="inputFocus" placeholder="联系电话"></input>
+      </view>
+    </view>
+    <view class="server-title">
+      <text>服务时间</text><text style="color:red;">*</text>
+      <view class="server-input">
+        <picker mode="date" value="{{date}}" start="2015-10-01" end="2070-10-01" bindchange="dateChange">{{date}}</picker>
+      </view>
+    </view>
+    <view class="server-title">
+      <text>服务地址</text><text style="color:red;">*</text>
+      <view class="server-input">
+        <picker mode="region" bindchange="regionChange" value="{{region}}" custom-item="{{customItem}}">{{region[0]}} {{region[1]}} {{region[2]}}</picker>
+      </view>
+    </view>
+    <view class="server-title">
+      <text>佣金</text><text style="color:red;" space="nbsp">*     \t</text>
+        <image src = "http://q9xwl365p.bkt.clouddn.com/task/Release/money.png" />
+      <view class="server-input">
+        <input name="money" id="money" bindchange="moneyChange" bindfocus="inputFocus" placeholder="金额"></input>
+      </view>
+    </view>
+    <button form-type="submit">发布需求</button>
+  </view>
+</form>
