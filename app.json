@@ -5,13 +5,13 @@
     "pages/task/Release",
     "pages/personal/personal",
     "pages/map/map",
-    "pages/logs/logs"
+    "pages/Fdetails/details"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#ff9500",
+    "navigationBarBackgroundColor": "#ff5733",
     "navigationBarTitleText": "快帮邦",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"white"
   },
   "tabBar": {
     "color": "#ccc",

@@ -1,0 +1,177 @@
+/* pages/Fdetails/details.wxss */
+/* 帖子详情样式 */
+.detailes-content-top{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 20rpx;
+}
+.detailes-content-top image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  margin: 5rpx;
+}
+.detailes-content-text{
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  width: 450rpx;
+  height: 80rpx;
+  position: relative;
+
+}
+.time{
+  font-size: 12px;
+  position: relative;
+  top: 5rpx;
+}
+.detailes-content-follow{
+  display: flex;
+  width: 160rpx;
+  height: 75rpx;
+  margin-top: 10rpx;
+  border: 1rpx solid #ff5733;
+  background-color: #fff;
+  color: #ff5733;
+  border-radius: 40rpx;
+  float: right;
+  align-items: center;
+  justify-content: center; 
+}
+.detailes-content-follow text{
+  align-items: center;
+  justify-content: center; 
+}
+.content-text{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.content-text text{
+  margin: 20rpx;
+  display: block;
+  width: 600rpx;
+  top: 150rpx;
+  left: 60rpx;
+  align-items: center;
+  justify-content: center; 
+}
+.content-text image{
+  margin: 20rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+.details-content-bottom {
+  margin: 20rpx;
+  display: flex;
+  /*justify-content : flex-end;  解决浮动失效*/
+  justify-content: flex-end;
+  width: 100%;
+  float: right;
+}
+.details-content-bottom image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx;
+}
+.details-content-bottom text{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+/* 评论区样式 */
+.comment-title{
+  width: 100%;
+  height: 4.5vh;
+}
+.tab{
+  margin-top: 10rpx;
+  position: relative;
+  width: 100%;
+}
+.tab-item {
+  flex: 1;
+  font-size: 11pt;
+  text-align: left;
+  margin-left: 20rpx;
+  line-height: 72rpx;
+  border-bottom: 8rpx solid #eee;
+  position: relative;
+  float: left;
+}
+.active{
+  color: #ff5733;
+  border-bottom-color: #ff5733;
+}
+/* 底部添加评论样式 */
+.comment-add{
+  display: flex;
+  align-items: center;
+  background: fff;
+  border: 1rpx solid #ccc;
+  width: 100%;
+  height: 112rpx;
+  position: fixed;
+  bottom: 0;
+}
+.comment-add input{
+  width: 80vw;
+  height: 6vh;
+  margin: 20rpx 30rpx;
+  background: #dadada;
+}
+.comment-add image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+/* all页面样式 */
+.content-all{
+  height: 100%;
+}
+/* 设置滚动条样式 */
+::webkit-scrollbar{   
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.comment-user{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 20rpx;
+}
+.comment-user image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-top: 10rpx;
+}
+.user-info{
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  width: 450rpx;
+  height: 80rpx;
+  position: relative;
+}
+.user-time{
+  font-size: 12px;
+  position: relative;
+  top: 5rpx;
+}
+.comment-reply{
+  margin-top: 10rpx;
+  position: absolute;
+  right: 20rpx; 
+  color: #505050;
+}
+.comment-content{
+  width: 80vw;
+  padding: 15rpx;
+  margin-left: 13vw;
+  border-bottom: 1rpx solid #999999;
+}

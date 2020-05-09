@@ -31,4 +31,11 @@ Page({
     }],
     backgroundImgUrl:"http://q9xwl365p.bkt.clouddn.com/forum/index/ltbk.png"
   },
+
+  //点击话题内容跳转到帖子详情页
+  toDetails:function(){
+    wx.navigateTo({
+      url: '/pages/Fdetails/details',
+    })
+  }
 })

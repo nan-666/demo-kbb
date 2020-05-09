@@ -36,7 +36,7 @@
         <text>+关注</text>
       </view>
     </view>
-    <view class="content-content">
+    <view class="content-content" bindtap="toDetails">
       <text>接单了 接单了</text>
       <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/img.jpg"></image>
     </view>
