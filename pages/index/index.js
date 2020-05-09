@@ -19,5 +19,7 @@ Page({
       tab: e.detail.current
     })
   },
-
+  btnclick: function(e) {
+    wx.navigateTo({ url: '/pages/map/map' })
+  }
 })
