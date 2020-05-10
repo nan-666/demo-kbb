@@ -1,0 +1,99 @@
+/* pages/index/portal/service/service.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  height: 100%;
+  font-size: 10pt;
+}
+.content {
+  flex: 1;
+}
+
+/* 搜索栏 */
+.search {
+  display: flex;
+  background: #eaebed;
+  border-radius: 7px;
+  width: 700rpx;
+  margin: 20rpx auto;
+}
+.search image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: auto 20rpx;
+  align-items: center;
+}
+
+/* 服务分类 */
+.content-portal {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50rpx;
+}
+.content-portal > view {
+  flex: 1;
+  margin: 0 40rpx;
+  text-align: center;
+}
+.content-portal image{
+  width: 20vw;
+  height: 15vh;
+  margin: auto;
+  display: block;
+}
+
+/* 销量、评价等 */
+.content-tab{
+  display: flex;
+}
+.tab-item{
+  flex: 1;
+  font-size: 10pt;
+  text-align: center;
+  line-height: 72rpx;
+  border-bottom: 6rpx solid #eee;
+}
+.active{
+  color: #ff5733;
+  border-bottom-color: #ff5733;
+}
+.content-tab-content {
+  flex: 1;
+}
+
+/* 销量 */
+.content-sales {
+  display: flex;
+  height: 100%;
+  margin-top: 20rpx;
+}
+.content-sales-item {
+  height: 17vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+}
+.content-sales-item-img {
+  height: 15vh;
+  width: 25vw;
+  margin-left: 20rpx;
+}
+.content-sales-info {
+  flex: 1;
+  line-height: 38rpx;
+  margin-left: 20rpx;
+  padding-bottom: 8rpx;
+}
+.content-sales-appraise {
+  display: flex;
+}
+.content-sales-appraise > view {
+  margin-right: 15rpx;
+}
+.content-sales-appraise > image {
+  flex-direction: column;
+  height: 30rpx;
+  width: 30rpx;
+  margin: auto 0;
+}

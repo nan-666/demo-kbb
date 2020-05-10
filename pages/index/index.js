@@ -38,5 +38,13 @@ Page({
   ,
   btnclick: function(e) {
     wx.navigateTo({ url: '/pages/map/map' })
+  },
+
+  // 点击跳转至家电维修页面
+  toService: function(e) {
+    wx.navigateTo({
+      url: '/pages/index/portal/service/service',
+    })
   }
+
 })
