@@ -139,3 +139,53 @@ page{
   background-image: url(http://img4.imgtn.bdimg.com/it/u=1521115105,1345867389&fm=26&gp=0.jpg);
   height: 150rpx;
 }
+
+/* 任务大厅 */
+/* 服务页面样式 */
+.contents{
+  flex: 1;
+}
+.contents > swiper{
+  height: 100vh;
+}
+
+.contents-server{
+  height: 100%;
+}
+.syn{
+  height:15vh;
+  border-bottom: 1px solid gray;
+  position: relative;
+}
+.fimg{
+  width:120rpx;
+  height:120rpx;
+  display: inline-block;
+  margin:15rpx;
+  border:1px solid lightgray;
+  border-radius: 10%;
+}
+.simg{
+  width:50rpx;
+  height:50rpx;
+}
+.syn-content{
+  margin-left:50rpx;
+  display: inline-block;
+  position: absolute;
+  top:0;
+  line-height: 7vh;
+}
+.title{
+  display: block;
+}
+.sort{
+  border:1px solid gray;
+  border-radius: 20%;
+}
+.syn-money{
+  line-height: 7vh;
+  display: inline-block;
+  position: absolute;
+  right:20rpx;
+}

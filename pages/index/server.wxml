@@ -1,7 +1,7 @@
 <scroll-view class="content-server" scroll-y>
   <!-- 搜索栏 -->
-  <view class="server-search" bindtap="btnclick">
-    <view class="server-search-site">
+  <view class="server-search">
+    <view class="server-search-site" bindtap="btnclick">
       <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/site.png" />
      <view>九江市</view>
     </view>

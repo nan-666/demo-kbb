@@ -1,0 +1,22 @@
+<view class="syn">
+  <image src="http://q9xwl365p.bkt.clouddn.com/task/syn/pipe.png" class="fimg"/>
+  <view class="syn-content">
+    <text class="title">急急急，下水道堵了</text>
+    <text class="sort">管道疏通</text>
+  </view>
+  <view class="syn-money">
+    <view>￥<text class="money">66</text></view>
+    <image src="http://q9xwl365p.bkt.clouddn.com/task/syn/look.png" class="simg"/>
+  </view>
+</view>
+<view class="syn">
+  <image src="http://q9xwl365p.bkt.clouddn.com/task/syn/pipe.png" class="fimg"/>
+  <view class="syn-content">
+    <text class="title">急急急，下水道堵了</text>
+    <text class="sort">管道疏通</text>
+  </view>
+  <view class="syn-money">
+    <view>￥<text class="money">66</text></view>
+    <image src="http://q9xwl365p.bkt.clouddn.com/task/syn/look.png" class="simg"/>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+  <scroll-view class="contents-server" scroll-y>
+  <!-- 搜索栏 -->
+  <view class="server-search">
+    <view class="server-search-site" bindtap="btnclick">
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/site.png" />
+     <view>九江市</view>
+    </view>
+    <view class="server-search-box">
+      <icon class="weui-icon-search_in-box" type="search"></icon>
+      <input type="text" placeholder-class="placeholderinput" placeholder="搜索服务"/>
+    </view>
+  </view>
+  <!-- 标签 -->
+  <view class="tab">
+  <view class="tab-item {{tabs==0 ? 'active':''}}" bindtap="changeItems" data-item="0">综合</view>
+  <view class="tab-item {{tabs==1 ? 'active':''}}" bindtap="changeItems" data-item="1">最新</view>
+  <view class="tab-item {{tabs==2 ? 'active':''}}" bindtap="changeItems" data-item="2">佣金</view>
+  <view class="tab-item">筛选</view>
+</view>
+
+<view class="contents">
+<!--curren:当前滑块显示页面索引号； bindchange:滑块滑动时监听函数 -->
+  <swiper current="{{items}}" bindchange="changeTabs">
+    <swiper-item>
+      <include src="syn.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="new.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="money.wxml" />
+    </swiper-item>
+  </swiper>
+</view>
+</scroll-view>

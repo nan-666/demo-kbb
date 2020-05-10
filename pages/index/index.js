@@ -4,6 +4,8 @@ Page({
   data:{
     item: 0,
     tab: 0,
+    items:0,
+    tabs:0
   },
   // 标签栏点击监听
   changeItem(e) {
@@ -19,6 +21,21 @@ Page({
       tab: e.detail.current
     })
   },
+  // 任务大厅标签栏点击监听
+  changeItems(e) {
+    var items = e.currentTarget.dataset.item;
+    this.setData({
+      items: items
+    })
+  },
+  // 任务大厅滑块滑动时的监听函数
+  changeTabs: function (e) {
+    // e.detail.current为当前显示页面的索引号
+    this.setData({
+      tabs: e.detail.current
+    })
+  }
+  ,
   btnclick: function(e) {
     wx.navigateTo({ url: '/pages/map/map' })
   }
