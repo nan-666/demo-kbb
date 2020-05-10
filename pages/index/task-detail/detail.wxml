@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<!-- 需求描述 -->
+<view class="content">
+  <view class="detail-total">
+    <view class="detail-title">客户xxxx</view>
+    <view class="detail-content">于2020-04-28发布该需求
+      <view class="detail-corner"><text>阅读数\n</text><text>76265</text></view>
+    </view>
+  </view>
+  <view class="detail-total">
+    <view class="detail-title">任务标题</view>
+    <view class="detail-content">急急急！下水道堵了
+    </view>
+  </view>
+  <view class="detail-total">
+    <view class="detail-title">问题描述</view>
+    <view class="detail-content">下水道堵塞
+    </view>
+  </view>
+  <view class="detail-image">
+    <view class="detail-title">相关图片</view>
+    <view class="detail-content">
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/task-detail/heart.jpg"/>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/task-detail/heart.jpg"/>
+    </view>
+  </view>
+  <view class="detail-district">
+    <view class="detail-title">地址</view>
+    <view class="detail-content">广东省广州市番禺区市桥街大北路永恒大街6号
+    </view>
+  </view>
+  <view class="detail-total">
+    <view class="detail-title">类别</view>
+    <view class="detail-content">管道疏通
+    </view>
+  </view>
+  <view class="detail-total">
+    <view class="detail-title">佣金</view>
+    <view class="detail-content">¥ 66
+    </view>
+  </view>
+  <button type="color:white;">立即接单</button>
+</view>

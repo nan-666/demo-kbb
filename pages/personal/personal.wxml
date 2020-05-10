@@ -2,7 +2,7 @@
 <scroll-view class="content" scroll-y>
 	<!-- 头像、账号设置、身份切换及登录/注册部分 -->
 	<view class="content-info">
-		<image class="content-info-head" src="http://q9xwl365p.bkt.clouddn.com/forum/index/tx.jpg" />
+		<image class="content-info-head" src="http://q9xwl365p.bkt.clouddn.com/forum/index/tx.jpg" bindtap="btnclick"/>
 		<view class="content-info-set">
 			<image src="http://q9xwl365p.bkt.clouddn.com/personal/personal/sz.png" />
 			<view>账号设置</view>

@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/index/portal/service/service",
     "pages/forum/forum",
@@ -12,13 +12,14 @@
     "pages/personal/property/A_card/A_card",
     "pages/personal/property/ICBC/ICBC",
     "pages/map/map",
-    "pages/Fdetails/details"
+    "pages/Fdetails/details",
+    "pages/index/task-detail/detail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff5733",
     "navigationBarTitleText": "快帮邦",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#ccc",

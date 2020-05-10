@@ -1,4 +1,4 @@
-<view class="syn">
+<view class="syn" bindtap="toDetails">
   <image src="http://q9xwl365p.bkt.clouddn.com/task/syn/pipe.png" class="fimg"/>
   <view class="syn-content">
     <text class="title">急急急，下水道堵了</text>

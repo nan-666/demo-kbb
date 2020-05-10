@@ -46,5 +46,11 @@ Page({
       url: '/pages/index/portal/service/service',
     })
   }
-
+  ,
+//点击话题内容跳转到帖子详情页
+toDetails:function(){
+  wx.navigateTo({
+    url: '/pages/index/task-detail/detail',
+  })
+}
 })
