@@ -12,7 +12,6 @@
     "pages/personal/property/A_card/A_card",
     "pages/personal/property/ICBC/ICBC",
     "pages/map/map",
-    "pages/Fdetails/details",
     "pages/index/task-detail/detail"
   ],
   "window": {

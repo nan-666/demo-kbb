@@ -35,7 +35,7 @@ Page({
   //点击话题内容跳转到帖子详情页
   toDetails:function(){
     wx.navigateTo({
-      url: '/pages/Fdetails/details',
+      url: '/pages/forum/Fdetails/details',
     })
   }
 })

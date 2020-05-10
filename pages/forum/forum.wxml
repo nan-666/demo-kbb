@@ -3,14 +3,14 @@
 <view class="container">
   <!-- 搜索栏 -->
   <view class= "search">
-    <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/xx.png"></image>
+    <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/gr.png"></image>
     <view class= "search-ss">
       <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/ss.png"></image>
       <input class="input" name="search" placeholder="搜搜精彩内容" bindinput="searchInput"/>
     </view>
     <view class = "search-fb">
       <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/fb.png"></image>
-      <text>发布</text>
+      <text>发帖</text>
     </view>
   </view>
   <!-- 论坛版块栏 -->
