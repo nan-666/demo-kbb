@@ -1,0 +1,23 @@
+<view class="atmetopic">
+<!-- 用户头像 -->
+  <image src="http://q9xwl365p.bkt.clouddn.com/atmetopic/head.png" class="userhead"/>
+  <view class="topiccontent">
+  <!-- 用户名称及发布时间 -->
+    <view class="username">一切安好</view>
+    <view class="reporttime1">04-27 16:53</view>
+  </view>
+</view>
+ <!-- @的对象及内容 -->
+  <view class="others">
+  @<text class="obj">peace</text>
+    <text class="objcontent">快来看看!</text>
+  </view>
+  <view class="topic">
+    <text>@科普bot：减少食盐量可降低患上胃癌的风险，一个人每天摄入的食盐量不宜超过6克。盐分摄取过多，会损坏胃黏膜屏障，增加对致癌物质的易感性，导致胃癌风险增高。过多食用盐对血压不好，可致心脏病、中风等疾病。 ​​​</text>
+  </view>
+  <view class="img">
+  <image src="http://q9xwl365p.bkt.clouddn.com/atmetopic/praise.png"/>
+  <image src="http://q9xwl365p.bkt.clouddn.com/atmetopic/replays.png"/>
+  <image src="http://q9xwl365p.bkt.clouddn.com/atmetopic/relay.png"/>
+  <image src="http://q9xwl365p.bkt.clouddn.com/atmetopic/link.png"/>
+  </view>

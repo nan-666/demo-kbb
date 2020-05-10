@@ -1,0 +1,63 @@
+/* historyorder/historyorder.wxss */
+/* 全部订单样式 */
+/* 全部订单记录 */
+.contents{
+  flex: 1;
+}
+.contents > swiper{
+  height: 100vh;
+}
+
+.contents-server{
+  height: 100%;
+}
+.allorder{
+  font-size:30rpx;
+  color:gray;
+  border-bottom:1px solid gray;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+}
+.syn{
+  height:15vh;
+  border-bottom: 1px solid gray;
+  position: relative;
+}
+/* 第一张图片 */
+.fimg{
+  width:120rpx;
+  height:120rpx;
+  display: inline-block;
+  margin:30rpx;
+  border:1px solid lightgray;
+  border-radius: 10%;
+}
+/* 标题+分类 */
+.syn-content{
+  margin-left:50rpx;
+  display: inline-block;
+  position: absolute;
+  top:20rpx;
+  line-height: 3vh;
+  font-size: 30rpx;
+  line-height: 4vh;
+}
+.title{
+  display: block;
+}
+.sort{
+  border:1px solid gray;
+  border-radius: 20%;
+}
+.status{
+  position: absolute;
+  right:20rpx;
+  top:20rpx;
+  line-height: 6vh;
+}
+.details{
+  background-color: lightskyblue;
+  border: 1px solid gray;
+  border-radius: 20%;
+}
+/* 全部订单样式结束*/

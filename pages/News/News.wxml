@@ -1,0 +1,24 @@
+<view class="tab">
+  <view class="tab-item {{tab==0 ? 'active':''}}" bindtap="changeItem" data-item="0">@我</view>
+  <view class="tab-item {{tab==1 ? 'active':''}}" bindtap="changeItem" data-item="1">评论</view>
+  <view class="tab-item {{tab==2 ? 'active':''}}" bindtap="changeItem" data-item="2">赞</view>
+  <view class="tab-item {{tab==3 ? 'active':''}}" bindtap="changeItem" data-item="3">消息</view>
+</view>
+
+<view class="content">
+<!--curren:当前滑块显示页面索引号； bindchange:滑块滑动时监听函数 -->
+  <swiper current="{{item}}" bindchange="changeTab">
+    <swiper-item>
+      <include src="atme.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="discuss.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="praise.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="new.wxml" />
+    </swiper-item>
+  </swiper>
+</view>

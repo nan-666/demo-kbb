@@ -30,4 +30,11 @@ Page({
     })
 
   }
+  ,
+  order:function(){
+    wx.navigateTo({
+      url: '/pages/personal/historyorder/historyorder',
+    })
+
+  }
 })

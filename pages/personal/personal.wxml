@@ -50,7 +50,7 @@
 			<image src="http://q9xwl365p.bkt.clouddn.com/personal/personal/fwh.png" />
 			<text>服务后</text>
 		</view>
-		<view class="content-order-item">
+		<view class="content-order-item" bindtap="order">
 			<image src="http://q9xwl365p.bkt.clouddn.com/personal/personal/qbdd.png" />
 			<text>全部订单</text>
 		</view>
