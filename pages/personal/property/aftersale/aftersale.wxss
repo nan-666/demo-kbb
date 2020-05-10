@@ -1,0 +1,103 @@
+/* pages/personal/property/aftersale/aftersale.wxss */
+page{
+  background: #cbcbcb;
+}
+.content-title{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20vh;
+  background: #fff;
+}
+.content-title image{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 30rpx;
+}
+.title-text{
+  margin-top: 50rpx;
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  width: 450rpx;
+  height: 80rpx;
+  position: relative;
+}
+.number{
+  position: relative;
+  top: 30rpx;
+}
+.cause{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 20vh;
+  background: #fff;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  list-style: none;
+  line-height: 40px;
+  text-indent: 10px;
+  background-color: #fff;
+}
+.cause view{
+  position: relative;
+  border-bottom: 1px solid #ededed;
+}
+.cause view:last-child {
+  border-bottom: none;
+}
+.cause-info-item {
+  height: 117rpx;
+  line-height: 117rpx;
+}
+.picker-status,.picker-cause,.input{
+  float: right;
+  border: none;
+  width: 65%;
+  line-height: 117rpx;
+  height: 117rpx;
+  margin-right: 25px;
+  color: #888;
+  font-size: 14px;
+  height: 50px;
+}
+.select{
+  width: 70rpx;
+  height: 70rpx;
+  margin: 20rpx 0;
+  position: absolute;
+  right: 20rpx;
+}
+.money{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 20vh;
+  background: #fff;
+}
+.money > view{
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+}
+.money > view:nth-child(1) text{
+  color: #c60d0d;
+}
+.money > view:nth-child(2){
+  color: #5e5e5e;
+}
+.upload-picture{
+  width: 100%;
+  height: 35vh;
+  background: #fff;
+  margin-top: 20rpx;
+}
+.upload-picture view{
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+}
+.upload-picture image{
+  margin-left: 30rpx;
+  width: 160rpx;
+  height: 160rpx;
+}

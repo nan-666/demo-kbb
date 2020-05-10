@@ -1,0 +1,41 @@
+<!--pages/personal/property/aftersale/aftersale.wxml-->
+<!--index.wxml-->
+<!-- 售后服务 -->
+<view class="content-title">
+  <image src="http://q9xwl365p.bkt.clouddn.com/personal/property/aftersale/dryclean.jpg"></image>
+  <view class="title-text">
+    <text class="title">干洗服务</text>
+    <text class="number">大洗*1</text>
+  </view>
+</view>
+<!-- 退款详情填写 -->
+<view class="cause">
+  <view class="cause-info-item">
+    <label>服务状态</label>
+    <image class="select" src="http://q9xwl365p.bkt.clouddn.com/Asetting/img/arrows.png" />
+    <picker mode="selector" class="picker-status">
+      <view class="picker"></view>
+    </picker>
+  </view>
+  <view class="cause-info-item">
+    <label>退款原因</label>
+    <image class="select" src="http://q9xwl365p.bkt.clouddn.com/Asetting/img/arrows.png" />
+    <picker mode="selector" class="picker-cause">
+      <view class="picker"></view>
+    </picker>
+  </view>
+</view>
+<!-- 退款金额 -->
+<view class="money">
+  <view>退款金额：<text>￥20</text></view>
+  <view>不可修改，最多<text>￥20</text></view>
+  <view class="cause-info-item">
+    <label>退款说明</label>
+    <input class="input" placeholder="选填" />
+  </view>
+</view>
+<!-- 上传图片 -->
+<view class="upload-picture">
+  <view>上传凭证</view>
+  <image src="http://q9xwl365p.bkt.clouddn.com/personal/property/aftersale/add.png"></image>
+</view>

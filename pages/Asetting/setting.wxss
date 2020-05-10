@@ -1,0 +1,117 @@
+/* pages/Asetting/setting.wxss */
+/**index.wxss**/
+.photo{
+  background: #efefef;
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  text-align: center;
+}
+.tphoto{
+  color: #ff5733;
+  margin-top: 15rpx;
+}
+/* 表单样式 */
+.centerPage-wrap .cover-thumb {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+.centerPage-wrap .centerPage-user-info {
+  padding-left: 3%;
+  padding-right: 3%;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  list-style: none;
+  line-height: 40px;
+  text-indent: 10px;
+  background-color: #fff;
+}
+.centerPage-wrap.cur-bind-tel .centerPage-user-info {
+  display: none;
+}
+.centerPage-wrap .centerPage-user-info view {
+  position: relative;
+  border-bottom: 1px solid #ededed;
+}
+.centerPage-wrap .centerPage-user-info view:last-child {
+  border-bottom: none;
+}
+
+.centerPage-info-item {
+  height: 117rpx;
+  line-height: 117rpx;
+}
+.centerPage-wrap .input,
+.centerPage-wrap .userCenter-tel,
+.centerPage-wrap .centerPage-sex {
+  float: right;
+  border: none;
+  width: 65%;
+  line-height: 117rpx;
+  height: 117rpx;
+  margin-right: 25px;
+  color: #888;
+  font-size: 14px;
+}
+.centerPage-wrap .centerPage-sex {
+  height: 50px;
+}
+.centerPage-wrap .shadow-content {
+  width: 80%;
+  left: 8%;
+  top: 50%;
+  margin-top: -150px;
+  padding: 3% 2%;
+  background-color: #fff;
+  font-size: 14px;
+}
+.centerPage-wrap .shadow-content view {
+  line-height: 40px;
+  text-indent: 10px;
+}
+.centerPage-wrap .shadow-content .title {
+  font-size: 18px;
+  color: #ff5733;
+  border-bottom: 2px solid #bcbcbc;
+}
+.centerPage-wrap .centerPage-sex-p:first-child {
+  border-bottom: 1px solid #bcbcbc;
+}
+.centerPage-wrap .centerPage-sex-p label {
+  display: none;
+  float: right;
+  color: #ff5733;
+  margin-right: 10px;
+}
+.centerPage-wrap .selected label {
+  display: block;
+}
+.centerPage-save-btn {
+  margin: 70rpx 50rpx;
+  height:90rpx;
+  line-height:90rpx;
+  background-color: #ff5733;
+  color: #fff;
+  border-radius: 2px;
+  text-align: center;
+}
+.select{
+  width: 70rpx;
+  height: 70rpx;
+  margin: 20rpx 0;
+  position: absolute;
+  right: 20rpx;
+}

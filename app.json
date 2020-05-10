@@ -5,6 +5,7 @@
     "pages/forum/forum",
     "pages/task/Release",
     "pages/personal/personal",
+    "pages/Asetting/setting",
     "pages/personal/property/balance/balance",
     "pages/personal/property/withdraw/withdraw",
     "pages/personal/property/recharge/recharge",
