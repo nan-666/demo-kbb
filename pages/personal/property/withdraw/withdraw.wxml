@@ -1,2 +1,25 @@
-<!--pages/personal/property/withdraw/withdraw.wxml-->
-<text>pages/personal/property/withdraw/withdraw.wxml</text>
+<view class="total">
+
+<!-- 银行卡部分 -->
+  <view class="card">
+    <view class="card-image"> 
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/task-detail/heart.jpg"/>
+    </view>
+    <view class="card-title-1">****银行</view>
+    <view class="card-title-2">尾号**** **卡</view>
+    <view class="card-icon"> 
+      <image src = "http://q9xwl365p.bkt.clouddn.com/personal/property/balance/right.png" />
+    </view>
+  </view>
+
+  <!-- 金额部分 -->
+  <form bindsubmit="formSubmit">
+    <view class="money">
+      <view class="money-title">提现金额</view>
+      <view class="money-icon">¥
+      <input name="money" id="money" bindchange="moneyChange" bindfocus="inputFocus" placeholder="请输入任意金额"></input></view>
+      <view class="money-coin">可用余额 0.00元</view>
+    </view>
+    <button form-type="submit" style="width:620rpx;">预计两个小时内到账，确认提现</button>
+  </form>
+</view>

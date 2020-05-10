@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "提 现",
+    "navigationBarTextStyle":"black"
 }

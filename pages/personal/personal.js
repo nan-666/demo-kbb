@@ -17,6 +17,12 @@ Page({
       url: '/pages/Asetting/setting',
     })
   },
+  //点击账户余额跳转到余额
+  toBalance:function(){
+    wx.navigateTo({
+      url: '/pages/personal/property/balance/balance',
+    })
+  },
   //点击服务号跳转到售后页
   toAftersale:function(){
     wx.navigateTo({

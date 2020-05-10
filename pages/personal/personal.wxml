@@ -60,7 +60,7 @@
 	<view class="content-property">
 		<view class="content-property-title">我的资产</view>
 		<view class="content-property-item">
-			<view>
+			<view bindtap="toBalance">
 				<view>-</view>
 				<text>账户余额</text>
 			</view>

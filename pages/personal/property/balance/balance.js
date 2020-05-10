@@ -1,6 +1,20 @@
 // pages/personal/property/balance/balance.js
 Page({
 
+  
+//点击充值跳转到充值详情页
+toReCharge:function(){
+  wx.navigateTo({
+    url: '/pages/personal/property/recharge/recharge',
+  })
+},
+
+//点击提现跳转到提现详情页
+toWithdraw:function(){
+  wx.navigateTo({
+    url: '/pages/personal/property/withdraw/withdraw',
+  })
+},
   /**
    * 页面的初始数据
    */
