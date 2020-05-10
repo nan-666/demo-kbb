@@ -1,9 +1,8 @@
-//index.js
-
+// pages/index/portal/service/service.js
 Page({
   data:{
     item: 0,
-    tab: 0,
+    tab: 0
   },
   // 标签栏点击监听
   changeItem(e) {
@@ -19,15 +18,4 @@ Page({
       tab: e.detail.current
     })
   },
-  btnclick: function(e) {
-    wx.navigateTo({ url: '/pages/map/map' })
-  },
-
-  // 点击跳转至家电维修页面
-  toService: function(e) {
-    wx.navigateTo({
-      url: '/pages/index/portal/service/service',
-    })
-  }
-
 })

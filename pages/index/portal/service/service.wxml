@@ -1,0 +1,74 @@
+<!--pages/index/portal/service/service.wxml-->
+<scroll-view class="content" scroll-y>
+  <!-- 搜索栏 -->
+  <view class= "search">
+      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/ss.png"></image>
+      <input class="input" name="search" placeholder="搜索服务商" bindinput="searchInput"/>
+    </view>
+
+  <!-- 服务分类区 -->
+  <view class="content-portal">
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/maintain.png"></image>
+      <text>修空调</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/delivery.png"></image>
+      <text>空调移机</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/house.png"></image>
+      <text>空调加氧</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/move.png"></image>
+      <text>修冰箱</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/install.png"></image>
+      <text>修洗衣机</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/pipeline.png"></image>
+      <text>修热水器</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/clean.png"></image>
+      <text>修燃气灶</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/classify.png"></image>
+      <text>修电脑</text>
+    </view>
+    <view>
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/classify.png"></image>
+      <text>其他</text>
+    </view>
+  </view>
+
+  <!-- 销量、评价等 -->
+  <view class="content-tab">
+    <view class="tab-item {{tab==0 ? 'active':''}}" bindtap="changeItem" data-item="0">TOP销量</view>
+    <view class="tab-item {{tab==1 ? 'active':''}}" bindtap="changeItem" data-item="1">五星评价</view>
+    <view class="tab-item {{tab==2 ? 'active':''}}" bindtap="changeItem" data-item="2">同城商家</view>
+    <view class="tab-item {{tab==3 ? 'active':''}}" bindtap="changeItem" data-item="3">新店</view>
+  </view>
+
+  <view class="content-tab-content">
+  <!--curren:当前滑块显示页面索引号； bindchange:滑块滑动时监听函数 -->
+  <swiper current="{{item}}" bindchange="changeTab">
+    <swiper-item>
+      <include src="sales.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="appraise.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="merchant.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="shop.wxml" />
+    </swiper-item>
+  </swiper>
+</view>
+</scroll-view>

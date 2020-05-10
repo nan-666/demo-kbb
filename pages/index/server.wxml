@@ -24,7 +24,7 @@
   </swiper>
   <!-- 按钮区 -->
   <view class="content-server-portal">
-    <view>
+    <view bindtap="toService">
       <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/maintain.png"></image>
       <text>家电维修</text>
     </view>

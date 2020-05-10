@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/portal/service/service",
     "pages/forum/forum",
     "pages/task/Release",
     "pages/personal/personal",
