@@ -5,6 +5,12 @@
     "pages/forum/forum",
     "pages/task/Release",
     "pages/personal/personal",
+    "pages/personal/property/balance/balance",
+    "pages/personal/property/withdraw/withdraw",
+    "pages/personal/property/recharge/recharge",
+    "pages/personal/property/C_card/C_card",
+    "pages/personal/property/A_card/A_card",
+    "pages/personal/property/ICBC/ICBC",
     "pages/map/map",
     "pages/Fdetails/details"
   ],
