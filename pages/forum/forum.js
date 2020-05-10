@@ -38,4 +38,10 @@ Page({
       url: '/pages/forum/Fdetails/details',
     })
   }
+  ,
+  btnclick:function(){
+    wx.navigateTo({
+      url: '/pages/forum/myforum/index',
+    })
+  }
 })
