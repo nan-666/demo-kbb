@@ -1,1 +1,48 @@
 /* pages/personal/property/C_card/C_card.wxss */
+page {
+  font-size: 10pt;
+  background: #eee;
+}
+
+/* 银行卡信息 */
+.content {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 0;
+}
+.item {
+  height: 17vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+}
+.item > image:first-child {
+  height: 15vh;
+  width: 25vw;
+  margin-left: 20rpx;
+}
+.item-info {
+  flex: 1;
+  line-height: 38rpx;
+  margin-left: 20rpx;
+  padding-bottom: 8rpx;
+}
+.item-info-card {
+  display: flex;
+  color: rgb(199, 197, 197);
+}
+.item-info-card > view:first-child {
+  margin-right: 15rpx;
+}
+.item > image:last-child {
+  height: 50rpx;
+  width: 50rpx;
+  margin-right: 20rpx;
+}
+.C_card-add {
+  height: 120rpx;
+  width: 120rpx;
+  margin-left: 300rpx;
+  margin-top: 20rpx;
+}

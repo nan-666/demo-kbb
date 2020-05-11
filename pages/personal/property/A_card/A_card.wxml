@@ -1,2 +1,14 @@
 <!--pages/personal/property/A_card/A_card.wxml-->
-<text>pages/personal/property/A_card/A_card.wxml</text>
+<scroll-view class="A_card" scroll-y>
+  <!-- 银行卡输入区-->
+  <view class= "add">
+    <input class="input" maxlength="19" type="number" placeholder="点击输入银行卡号" bindinput="searchInput"/>
+      <view class="add-photograph">
+        <image src="http://q9xwl365p.bkt.clouddn.com/personal/property/A_card/xj.png" />
+        <view>拍照添卡</view>
+      </view>
+  </view>
+  
+  <!-- 提交按钮 -->
+  <button style="width: 700rpx; font-weight: unset" form-type="submit">提交卡号</button>
+</scroll-view>
