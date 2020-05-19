@@ -1,0 +1,24 @@
+/* pages/index/recommend/design/design.wxss */
+.content-design{
+  height: 100%;
+}
+.design{
+  display: flex;
+  flex-wrap: wrap;
+}
+.design-detail{
+  margin: 20rpx auto;
+  width: 45vw;
+  height: 55vh;
+  border:1rpx solid #f0f0f0;
+  border-radius: 10rpx;
+}
+.design-detail image{
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  width: 45vw;
+  height: 40vh;
+}
+.design-introduce view{
+  margin-left: 10rpx;
+}

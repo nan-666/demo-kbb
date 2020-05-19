@@ -37,9 +37,9 @@ page {
   text-align: center;
 }
 .content-portal image{
-  width: 20vw;
-  height: 15vh;
-  margin: auto;
+  width: 15vw;
+  height: 11vh;
+  margin: 10rpx auto;
   display: block;
 }
 

@@ -1,29 +1,16 @@
 <scroll-view class="content-sales" scroll-y>
-  <view class="content-sales-item">
-    <image class="content-sales-item-img" src="http://q9xwl365p.bkt.clouddn.com/forum/index/tx.jpg" />
+  <view class="content-sales-item" wx:for="{{recommendlist}}" wx:key="index">
+    <image class="content-sales-item-img" src="{{item.imgUrl}}" />
     <view class="content-sales-info">
-      <view>xxxx专业电脑维修</view>
+      <view>{{item.title}}</view>
       <view  class="content-sales-appraise">
-        <view>5.0</view>
-        <image src="http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png" />
-        <image src="http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png" />
-        <image src="http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png" />
-        <image src="http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png" />
-        <image src="http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png" />
-      </view>
-    </view>
-  </view>
-  <view class="content-sales-item">
-    <image class="content-sales-item-img" src="http://q9xwl365p.bkt.clouddn.com/forum/index/tx.jpg" />
-    <view class="content-sales-info">
-      <view>xxxx专业电脑维修</view>
-      <view  class="content-sales-appraise">
-        <view>5.0</view>
-        <image src="http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png" />
-        <image src="http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png" />
-        <image src="http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png" />
-        <image src="http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png" />
-        <image src="http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png" />
+        <view>{{item.rank}}</view>
+        <block wx:for="{{item.star1}}" wx:key="index">
+          <image src='http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png'></image>
+        </block>
+        <block wx:for="{{item.star2}}" wx:key="index">
+          <image src='http://q9xwl365p.bkt.clouddn.com/service/star.png'></image>
+        </block>
       </view>
     </view>
   </view>

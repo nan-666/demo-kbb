@@ -2,6 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/index/portal/service/service",
+    "pages/index/portal/classify/classify",
+    "pages/index/recommend/activity/activity",
+    "pages/index/recommend/design/design",
+    "pages/index/recommend/intelligence/intelligence",
     "pages/forum/forum",
     "pages/task/Release",
     "pages/personal/personal",
@@ -12,7 +16,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ff5733",
+    "navigationBarBackgroundColor": "#ff9500",
     "navigationBarTitleText": "快帮邦",
     "navigationBarTextStyle": "white"
   },

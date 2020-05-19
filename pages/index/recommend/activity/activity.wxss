@@ -1,0 +1,24 @@
+/* pages/index/recommend/activity/activity.wxss */
+.activity{
+  margin: 20rpx 20rpx;
+  width: 94vw;
+  height: 28vh;
+  border: 1rpx solid #dedede;
+  border-radius: 30rpx;
+  
+}
+.activity image{
+  width: 94vw;
+  height: 21vh;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+.activity-detail text{
+  margin-left: 50rpx;
+}
+.activity-detail image{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 40rpx;
+}

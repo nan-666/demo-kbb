@@ -1,0 +1,21 @@
+<view class="intelligence">
+  <image src="http://q9xwl365p.bkt.clouddn.com/index/recommend/intelligence/bg.png"></image>
+  <view class="attention">客服将会致电了解您的情况，并告知您智能推荐结果</view>
+  <view class="intelligence-input">
+    <view class="input-box">
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/recommend/intelligence/name.png" class="icon"/>
+      <input type="text" placeholder="姓名"></input>
+    </view>
+    <view class="input-box">
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/recommend/intelligence/phone.png" class="icon"/>
+      <input type="text" placeholder="请输入手机号"></input>
+    </view>
+    <view class="input-box">
+      <image src="http://q9xwl365p.bkt.clouddn.com/index/recommend/intelligence/site2.png" class="icon"/>
+      <view class="server-input">
+        <picker mode="region" bindchange="regionChange" value="{{region}}" custom-item="{{customItem}}">{{region[0]}} {{region[1]}} {{region[2]}}</picker>
+      </view>
+    </view>
+  </view>
+  <button>获取推荐</button>
+</view>

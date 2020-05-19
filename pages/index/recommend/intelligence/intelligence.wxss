@@ -1,0 +1,25 @@
+.attention{
+  font-size: 9pt;
+  text-align: center;
+}
+.intelligence-input{
+  display: flex;
+  flex-wrap: wrap;
+}
+.input-box{
+  display: flex;
+  border: 1rpx solid #eed8c1;
+  width: 90vw;
+  margin: 20rpx 30rpx;
+  padding: 10rpx;
+}
+.icon{
+  width: 60rpx;
+  height: 60rpx;
+  align-items: center;
+}
+button{
+  width: 90vw;
+  background: #eed8c1;
+  color: #fff;
+}

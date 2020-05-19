@@ -40,17 +40,42 @@ Page({
     wx.navigateTo({ url: '/pages/map/map' })
   },
 
-  // 点击跳转至家电维修页面
+  // 点击跳转至服务页面
   toService: function(e) {
+    var id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/index/portal/service/service',
+      url: '/pages/index/portal/service/service?id='+id,
     })
-  }
-  ,
-//点击话题内容跳转到帖子详情页
-toDetails:function(){
-  wx.navigateTo({
-    url: '/pages/index/task-detail/detail',
-  })
-}
+  },
+  // 点击跳转至分类页面
+  toClassify: function(e) {
+    var id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '/pages/index/portal/classify/classify',
+    })
+  },
+  //点击任务跳转到任务详情页
+  toDetails:function(){
+    wx.navigateTo({
+      url: '/pages/index/task-detail/detail',
+    })
+  },
+  //点击跳转至活动页面
+  toActivity:function(){
+    wx.navigateTo({
+      url: '/pages/index/recommend/activity/activity',
+    })
+  },
+  //点击跳转至装修设计页面
+  toDesign:function(){
+    wx.navigateTo({
+      url: '/pages/index/recommend/design/design',
+    })
+  },
+  //点击跳转至智能管家页面
+  toIntelligence:function(){
+    wx.navigateTo({
+      url: '/pages/index/recommend/intelligence/intelligence',
+    })
+  },
 })

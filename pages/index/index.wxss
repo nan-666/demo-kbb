@@ -58,31 +58,21 @@ page{
   width: 80rpx;
 }
 .server-search-box{
-  position: relative;
-  right: 20rpx;
-  width: 80vw;
-  box-sizing: border-box;
-  z-index: 1;
-}
-.weui-icon-search_in-box{
-  width: 50rpx;
-  height: 50rpx;
-  position: absolute;
-  left: 4px;
-  top: 4px;
-}
-.server-search-box input{
-  height: 28px;
-  line-height: 28px;
-  font-size: 14px;
+  display: flex;
   background: #eaebed;
   border-radius: 20rpx;
-}
-.placeholderinput{
+  width: 80vw;
+  height: 25px;
+  line-height: 25px;
+  margin: auto;
   position: absolute;
-  left: 25px;
+  right: 20rpx;
 }
-
+.server-search-box image{
+  width: 50rpx;
+  height: 50rpx;
+  align-items: center;
+}
 
 .content-server-slide{
   height: 302rpx;
