@@ -23,6 +23,12 @@ Page({
       url: '/pages/personal/property/balance/balance',
     })
   },
+  // 点击常用服务跳转到常用服务页
+  toC_Services: function() {
+    wx.navigateTo({
+      url: '/pages/personal/C_Services/C_Services',
+    })
+  },
   //点击服务号跳转到售后页
   toAftersale:function(){
     wx.navigateTo({

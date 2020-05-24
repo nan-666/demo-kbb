@@ -1,0 +1,14 @@
+/* pages/personal/C_Services/C_Services.wxss */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-serve {
+  margin: auto;
+  text-align: center;
+}
+.content-serve > image {
+  height: 350rpx;
+  width: 350rpx;
+  display: block;
+}

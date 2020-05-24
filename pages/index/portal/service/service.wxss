@@ -62,7 +62,7 @@ page {
   flex: 1;
 }
 
-/* 销量 */
+/* 销量等分栏内容 */
 .content-sales {
   display: flex;
   height: 100%;

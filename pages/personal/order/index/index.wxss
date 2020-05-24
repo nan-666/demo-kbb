@@ -1,0 +1,113 @@
+page{
+  display: flex;
+  flex-direction: column;
+  background: #ECECEC;
+  color: #000000;
+  height: 100%;
+}
+
+.tab {
+  display: flex;
+}
+
+.tab-item {
+  flex: 1;
+  font-size: 10pt;
+  text-align: center;
+  line-height: 72rpx;
+  border-bottom: 6rpx solid #eee;
+}
+
+.content {
+  flex: 1;
+}
+
+.content > swiper{
+  height: 100%;
+}
+
+.active {
+  color: #ff5733;
+  border-bottom-color: #ff5733;
+}
+
+/* 订单框 */
+.order{
+  height: 350rpx;
+  width: 95%;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 50rpx;
+}
+
+.shop{
+  height: 60rpx;
+  width: 400rpx;
+}
+
+.shop image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.shop-img{
+  margin-left: 20rpx;
+}
+.shop-name{
+  margin-left: 85rpx;
+  margin-top: -60rpx;
+  font-size: 12pt;
+}
+.shop-right{
+  margin-left: 320rpx;
+  margin-top: -50rpx;
+}
+.service{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.service image{
+  height: 150rpx;
+  width: 150rpx;
+}
+.service-name{
+  margin-top: -170rpx;
+  margin-left: 180rpx;
+}
+.service-money{
+  margin-left: 520rpx;
+  margin-top: -50rpx;
+}
+.service-detail{
+  margin-left: 180rpx;
+  margin-top: 20rpx;
+  font-size: 10pt;
+  color: #adadad;
+}
+.service-num{
+  margin-left: 520rpx;
+  margin-top: -50rpx;
+  font-size: 10pt;
+}
+.service-pay{
+  margin-top: 50rpx;
+  margin-left: 180rpx;
+  font-size: 8pt;
+}
+.button-all{
+  width: 400rpx;
+  margin-top: 20rpx;
+  margin-left: 250rpx;
+  display: flex;
+}
+.button{
+  height: 50rpx;
+  width: 180rpx;
+  margin-left: 10rpx;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 20rpx;
+  text-align: center;
+  font-size: 10pt;
+  color: #6d6d6d;
+}

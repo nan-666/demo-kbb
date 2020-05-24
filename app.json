@@ -6,14 +6,18 @@
     "pages/index/recommend/activity/activity",
     "pages/index/recommend/design/design",
     "pages/index/recommend/intelligence/intelligence",
+<<<<<<< HEAD
     "pages/index/search/result/result",
+=======
+>>>>>>> hcy
     "pages/forum/forum",
     "pages/task/Release",
     "pages/personal/personal",
     "pages/Asetting/setting",
     "pages/News/News",
     "pages/map/map",
-    "pages/forum/myforum/index"
+    "pages/forum/myforum/index",
+    "pages/personal/C_Services/C_Services"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,4 +1,4 @@
-// pages/personal/property/ICBC/ICBC.js
+// pages/detail/detail.js
 Page({
 
   /**

@@ -4,7 +4,11 @@ page {
   justify-content: space-around; 
 }
 .A_card {
+<<<<<<< HEAD
   background: #eee;
+=======
+  background: #f9f9f9;
+>>>>>>> hcy
   font-size: 10pt;
   display: flex;
   flex-direction: column;

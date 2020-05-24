@@ -8,6 +8,13 @@ Page({
 
   },
 
+  // 点击银行卡跳转到选择银行卡页
+  toC_card: function() {
+    wx.navigateTo({
+      url: '/pages/personal/property/C_card/C_card',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

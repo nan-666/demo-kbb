@@ -51,8 +51,15 @@
 }
 
 .centerPage-info-item {
+  display: flex;
   height: 117rpx;
   line-height: 117rpx;
+}
+.centerPage-info-item .picker {
+  margin-left: 100rpx;
+}
+.centerPage-info-item .radio {
+  margin-left: 70rpx;
 }
 .centerPage-wrap .input,
 .centerPage-wrap .userCenter-tel,
@@ -102,7 +109,6 @@
 .centerPage-save-btn {
   margin: 70rpx 50rpx;
   height:90rpx;
-  line-height:90rpx;
   background-color: #ff5733;
   color: #fff;
   border-radius: 2px;

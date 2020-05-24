@@ -1,0 +1,7 @@
+<!--pages/personal/C_Services/C_Services.wxml-->
+<view class="content">
+	<view class="content-serve" wx:for="{{list}}" wx:key="index">
+    <image src="{{item.image}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+</view>

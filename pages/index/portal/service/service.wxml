@@ -2,9 +2,9 @@
 <scroll-view class="content" scroll-y>
   <!-- 搜索栏 -->
   <view class= "search">
-      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/ss.png"></image>
-      <input class="input" name="search" placeholder="搜索服务商" bindinput="searchInput"/>
-    </view>
+    <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/ss.png"></image>
+    <input class="input" name="search" placeholder="搜索服务商" bindinput="searchInput"/>
+  </view>
 
   <!-- 商户信息等 -->
   <view class="content-tab">
@@ -15,20 +15,20 @@
   </view>
 
   <view class="content-tab-content">
-  <!--curren:当前滑块显示页面索引号； bindchange:滑块滑动时监听函数 -->
-  <swiper current="{{item}}" bindchange="changeTab">
-    <swiper-item>
-      <include src="sales.wxml" />
-    </swiper-item>
-    <swiper-item>
-      <include src="appraise.wxml" />
-    </swiper-item>
-    <swiper-item>
-      <include src="merchant.wxml" />
-    </swiper-item>
-    <swiper-item>
-      <include src="shop.wxml" />
-    </swiper-item>
-  </swiper>
-</view>
+    <!--curren:当前滑块显示页面索引号； bindchange:滑块滑动时监听函数 -->
+    <swiper current="{{item}}" bindchange="changeTab">
+      <swiper-item>
+        <include src="sales.wxml" />
+      </swiper-item>
+      <swiper-item>
+        <include src="appraise.wxml" />
+      </swiper-item>
+      <swiper-item>
+        <include src="merchant.wxml" />
+      </swiper-item>
+      <swiper-item>
+        <include src="shop.wxml" />
+      </swiper-item>
+    </swiper>
+  </view>
 </scroll-view>

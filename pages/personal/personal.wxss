@@ -1,6 +1,6 @@
 /* pages/personal/personal.wxss */
 page {
-  background: #eeeeee;
+  background: #f9f9f9;
 }
 .content {
   height: 100%;
@@ -16,17 +16,17 @@ page {
 .content-info-head {
   height: 150rpx;
   width: 150rpx;
-  margin-top: 30rpx;
+  margin-top: 75rpx;
   margin-left: 20rpx;
   border-radius: 100%;
 }
 /* 设置 */
 .content-info-set {
-  position: relative;
-  left: 530rpx;
-  top: -160rpx;
   display: flex;
   font-size: 10pt;
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
 }
 .content-info-set>image {
   height: 50rpx;
@@ -43,9 +43,9 @@ page {
   color: white;
   margin: 10rpx;
   font-size: 10pt;
-  position: relative;
-  top: -170rpx;
-  left: 180rpx;
+  position: absolute;
+  top: 120rpx;
+  left: 200rpx;
 }
 .content-info-operate>view:nth-last-child(2) {
   margin: 0 10rpx;
@@ -58,9 +58,7 @@ page {
   color: white;
   display: flex;
   font-size: 9pt;
-  position: relative;
-  left: 350rpx;
-  top: -190rpx;
+  margin-left: 350rpx;
 }
 .content-info-change>view {
   margin-left: 20rpx;
@@ -70,87 +68,28 @@ page {
   width: 30rpx;
   margin: auto 0;
 }
-/* 我的收藏、关注、足迹 */
-.content-info-collect {
-  display: flex;
-}
-.content-info-collect>view {
-  position: relative;
-  top: -150rpx;
-  margin: auto;
-  font-size: 10pt;
-  color: white;
-  text-align: center;
-}
 
-/* 订单样式 */
-.content-order {
-  display: flex;
-  background: white;
-  height: 200rpx;
-  width: 720rpx;
-  margin: 20rpx auto;
-  border-radius: 3%;
-  font-size: 10pt;
-}
-.content-order-item {
-  margin: auto;
-}
-.content-order-item>image {
-  width: 100rpx;
-  height: 100rpx;
-  display: block;
-  margin: auto;
-}
-
-/* 我的资产样式 */
-.content-property {
-  background: white;
-  height: 200rpx;
-  width: 720rpx;
-  margin: 20rpx auto;
-  border-radius: 3%;
-  font-size: 10pt;
-}
-.content-property-title {
-  font-size: 10pt;
-  font-weight: bold;
-  position: relative;
-  top: 20rpx;
-  left: 20rpx;
-}
-.content-property-item {
-  display: flex;
-  margin-top: 50rpx;
-}
-.content-property-item>view {
-  margin: auto;
-  text-align: center;
-}
-
-/* 常用服务样式 */
-.content-serve {
-  background: white;
-  height: 200rpx;
-  width: 720rpx;
-  margin: 20rpx auto;
-  border-radius: 3%;
-  font-size: 10pt;
-}
-.content-serve-title {
-  font-size: 10pt;
-  font-weight: bold;
-  position: relative;
-  top: 20rpx;
-  left: 20rpx;
-}
-.content-serve-item {
-  display: flex;
+/* 订单、余额、常用服务等样式 */
+.content2 {
+  background: #fff;
+  font-size: 11pt;
+  color: rgb(110, 109, 109);
   margin-top: 60rpx;
+  display: flex;
+  flex-direction: column;
 }
-.content-serve-item>view {
-  color: #ccc;
-  margin: auto;
-  text-align: center;
+.content2-item {
+  display: flex;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.content2-item > view {
+  width: 200rpx;
+}
+.content2-item > image {
+  height: 50rpx;
+  width: 50rpx;
+  margin-left: 460rpx;
+}
 
-}
