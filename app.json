@@ -6,6 +6,7 @@
     "pages/index/recommend/activity/activity",
     "pages/index/recommend/design/design",
     "pages/index/recommend/intelligence/intelligence",
+    "pages/index/search/result/result",
     "pages/forum/forum",
     "pages/task/Release",
     "pages/personal/personal",

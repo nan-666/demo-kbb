@@ -24,31 +24,31 @@
   </swiper>
   <!-- 按钮区 -->
   <view class="content-server-portal">
-    <view bindtap="toService" data-id="0">
+    <view bindtap="toService" data-keyword="家电维修">
       <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/maintain.png"></image>
       <text>家电维修</text>
     </view>
-    <view bindtap="toService" data-id="1">
+    <view bindtap="toService" data-keyword="生活配送">
       <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/delivery.png"></image>
       <text>生活配送</text>
     </view>
-    <view bindtap="toService" data-id="2">
+    <view bindtap="toService" data-keyword="房子装修">
       <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/house.png"></image>
       <text>房子装修</text>
     </view>
-    <view bindtap="toService" data-id="3">
+    <view bindtap="toService" data-keyword="拉家搬货">
       <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/move.png"></image>
       <text>拉家搬货</text>
     </view>
-    <view bindtap="toService" data-id="4">
+    <view bindtap="toService" data-keyword="上门安装">
       <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/install.png"></image>
       <text>上门安装</text>
     </view>
-    <view bindtap="toService" data-id="5">
+    <view bindtap="toService" data-keyword="管道疏通">
       <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/pipeline.png"></image>
       <text>管道疏通</text>
     </view>
-    <view bindtap="toService" data-id="6">
+    <view bindtap="toService" data-keyword="家庭保洁">
       <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/clean.png"></image>
       <text>家庭保洁</text>
     </view>

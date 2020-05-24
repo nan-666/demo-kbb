@@ -42,9 +42,9 @@ Page({
 
   // 点击跳转至服务页面
   toService: function(e) {
-    var id = e.currentTarget.dataset.id;
+    var keyword = e.currentTarget.dataset.keyword;
     wx.navigateTo({
-      url: '/pages/index/portal/service/service?id='+id,
+      url: '/pages/index/portal/service/service?keyword='+keyword,
     })
   },
   // 点击跳转至分类页面

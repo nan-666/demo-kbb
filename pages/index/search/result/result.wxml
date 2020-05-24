@@ -1,0 +1,24 @@
+<view class="searchresultList-container">
+  <view class="search-bg1"></view>
+  <view class="search-box">
+    <view class="search-icon">
+      <input class="input" placeholder="点击搜索" />
+    </view>
+  </view>
+  <view class="content-sales-item" wx:for="{{list}}" wx:key="index">
+    <image class="content-sales-item-img" src="{{item.imgUrl}}" />
+    <view class="content-sales-info">
+      <view>{{item.title}}</view>
+      <view  class="content-sales-appraise">
+        <view>{{item.rank}}</view>
+        <block wx:for="{{item.star1}}" wx:key="index">
+          <image src='http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png'></image>
+        </block>
+        <block wx:for="{{item.star2}}" wx:key="index">
+          <image src='http://q9xwl365p.bkt.clouddn.com/service/star.png'></image>
+        </block>
+      </view>
+    </view>
+  </view>
+
+</view>
