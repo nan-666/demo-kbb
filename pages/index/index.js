@@ -34,8 +34,18 @@ Page({
     this.setData({
       tabs: e.detail.current
     })
-  }
-  ,
+  },
+
+  //搜索功能
+  goSearch: function(e) {
+    var formData = e.detail.value;
+    if (formData) {
+      wx.navigateTo({
+        url: '/pages/index/search/result/result?data='+formData,
+      })
+    }
+  },
+
   btnclick: function(e) {
     wx.navigateTo({ url: '/pages/map/map' })
   },

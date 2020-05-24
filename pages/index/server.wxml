@@ -7,7 +7,7 @@
     </view>
     <view class="server-search-box">
       <icon class="weui-icon-search_in-box" type="search"></icon>
-      <input type="text" placeholder-class="placeholderinput" placeholder="搜索服务"/>
+      <input type="text" placeholder-class="placeholderinput" placeholder="搜索服务" value='{{keyWord}}' bindconfirm='goSearch'/>
     </view>
   </view>
   <!-- 轮播图 -->
