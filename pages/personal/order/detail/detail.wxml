@@ -4,43 +4,45 @@
     <text>交易成功</text>
   </view>
 </view>
-<view class="middle">
+<view class="middle" >
   <view class="shop">
     <view class="shop-img">
       <image src="http://q9xwl365p.bkt.clouddn.com/personal/order/shop.png"/>
     </view>
-    <view class="shop-name"><text>天蓝蓝干洗店</text></view>
+    <view class="shop-name" wx:for="{{shop}}" wx:key="index" data-index="{{index}}">{{item.name}}</view>
     <view class="shop-right">
       <image src="http://q9xwl365p.bkt.clouddn.com/personal/property/balance/right.png"/>
     </view>
   </view>
+  <view  wx:for="{{service}}" wx:key="index" data-index="{{index}}">
   <view class="service">
     <view class="service-img">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/task-detail/heart.jpg"/>
+      <image src="{{item.coverImgUrl}}"/>
     </view>
-    <view class="service-name"><text>干洗服务</text></view>
-    <view class="service-money"><text>¥19.90</text></view>
-    <view class="service-detail"><text>大件</text></view>
-    <view class="service-num"><text>×1</text></view>
+    <view class="service-name">{{item.name}}</view>
+    <view class="service-money">¥{{item.money}}</view>
+    <view class="service-detail">{{item.detail}}</view>
+    <view class="service-num">×{{item.num}}</view>
   </view>
   <view class="return">退换</view>
   <view class="price">
     <view class="price-name">商品总价</view>
-    <view class="price-num">¥19.90</view>
+    <view class="price-num">¥{{item.money}}</view>
     <view class="price-name">实付款</view>
-    <view class="price-num">¥19.90</view>
+    <view class="price-num">¥{{item.trueMoney}}</view>
+  </view>
   </view>
 </view>
-<view class="end">
+<view class="end" wx:for="{{time}}" wx:key="index" data-index="{{index}}">
   <view class="order-detail">订单详情</view>
   <view class="detail-name">订单编号：</view>
-  <view class="detail-time">8002 4435 272</view>
+  <view class="detail-time">{{item.num}}</view>
   <view class="detail-name">消费时间：</view>
-  <view class="detail-time">2020-04-09 22:58:42</view>
+  <view class="detail-time">{{item.consumption}}</view>
   <view class="detail-name">付款时间：</view>
-  <view class="detail-time">2020-04-09 23:00:01</view>
+  <view class="detail-time">{{item.payTime}}</view>
   <view class="detail-name">成交时间：</view>
-  <view class="detail-time">2020-04-12 16:58:42</view>
+  <view class="detail-time">{{item.successTime}}</view>
 </view>
 <view class="all">
   <view class="button-all">

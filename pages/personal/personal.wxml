@@ -19,7 +19,7 @@
 	</view>
 
   <view class="content2">
-	  <view class="content2-item">
+	  <view class="content2-item" bindtap="order">
 		  <view>订单</view>
 			<image src="http://q9xwl365p.bkt.clouddn.com/personal/property/balance/right.png" />
 		</view>

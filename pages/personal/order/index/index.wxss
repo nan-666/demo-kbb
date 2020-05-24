@@ -33,7 +33,7 @@ page{
 
 /* 订单框 */
 .order{
-  height: 350rpx;
+
   width: 95%;
   background-color: #fff;
   margin: 0 auto;

@@ -1,27 +1,27 @@
 <!--pages/index/info.wxml.wxml-->
-  <view class="order" bindtap="toDetail">
-    <view class="shop">
-      <view class="shop-img">
-        <image src="http://q9xwl365p.bkt.clouddn.com/personal/order/shop.png"/>
-      </view>
-      <view class="shop-name"><text>天蓝蓝干洗店</text></view>
-      <view class="shop-right">
-        <image src="http://q9xwl365p.bkt.clouddn.com/personal/property/balance/right.png"/>
-      </view>
+<view class="order" wx:for="{{shop}}" wx:key="index" data-index="{{index}}">
+  <view class="shop">
+    <view class="shop-img">
+      <image src="http://q9xwl365p.bkt.clouddn.com/personal/order/shop.png"/>
     </view>
-    <view class="service">
-      <view class="service-img">
-        <image src="http://q9xwl365p.bkt.clouddn.com/index/task-detail/heart.jpg"/>
-      </view>
-      <view class="service-name"><text>干洗服务</text></view>
-      <view class="service-money"><text>¥19.90</text></view>
-      <view class="service-detail"><text>大件</text></view>
-      <view class="service-num"><text>×1</text></view>
-      <view class="service-pay"><text>总价：¥19.9  优惠：¥0.00 实付款：¥19.90</text></view>
-    </view>
-    <view class="button-all">
-      <view class="button">查看进度</view>
-      <view class="button">评价</view>
+    <view class="shop-name"><text>{{item.name}}</text></view>
+    <view class="shop-right">
+      <image src="http://q9xwl365p.bkt.clouddn.com/personal/property/balance/right.png"/>
     </view>
   </view>
+  <view class="service" bindtap="toDetail" wx:for="{{service}}" wx:key="index" data-index="{{index}}">
+    <view class="service-img">
+      <image src="{{item.coverImgUrl}}"/>
+    </view>
+    <view class="service-name">{{item.name}}</view>
+    <view class="service-money">¥{{item.money}}</view>
+    <view class="service-detail">{{item.detail}}</view>
+    <view class="service-num">×{{item.num}}</view>
+    <view class="service-pay"><text>总价：¥{{item.money}} 优惠：¥{{item.free}} 实付款：¥{{item.trueMoney}}</text></view>
+  </view>
+  <view class="button-all">
+    <view class="button">查看进度</view>
+    <view class="button">评价</view>
+  </view>
+</view>
   

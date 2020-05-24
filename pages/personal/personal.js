@@ -39,7 +39,7 @@ Page({
   ,
   order:function(){
     wx.navigateTo({
-      url: '/pages/personal/historyorder/historyorder',
+      url: '/pages/personal/order/index/index',
     })
 
   }
