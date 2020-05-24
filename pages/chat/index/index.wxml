@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="chat-container">
+    <view wx:if="{{allConversation.length === 0}}" class="empty">
+      <button type="button" class="empty-button" bindtap="startSession"> 发起一段对话吧 </button></view>
+    <block wx:for="{{allConversation}}" wx:key="index">
+      <view class="chat" wx:if="{{item.type === 'C2C'}}" bindtap="goChat" data-id="{{item.userProfile.userID}}">
+        <view class="avatar-container">
+          <i-avatar src="{{item.userProfile.avatar || '/static/images/header-male.png'}}" i-class="avatar"></i-avatar>
+        </view>
+        <view class="right">
+          <view class="information">
+            <view class="username">{{item.userProfile.nick || item.userProfile.userID}}</view>
+            <view class="content" wx:if="{{!item.lastMessage.isRevoked}}">{{item.lastMessage.messageForShow}}</view>
+            <view class="content" wx:else>
+              <block wx:if="{{myInfo.userID === item.lastMessage.fromAccount}}">你撤回了一条消息</block>
+              <block wx:else>{{item.lastMessage.fromAccount}}撤回了一条消息</block>
+            </view>
+          </view>
+          <view class="time">
+            <view class="last">{{item.lastMessage.lastTime}}</view>
+            <view class="remain" wx:if="{{item.unreadCount > 0}}">
+              <label wx:if="{{item.unreadCount > 99}}" class="info">99+</label>
+              <label wx:else class="info">{{item.unreadCount}}</label>
+            </view>
+          </view>
+        </view>
+      </view>
+      </block>
+  </view>

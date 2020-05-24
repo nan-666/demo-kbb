@@ -1,15 +1,6 @@
 <!--pages/personal/property/C_card/C_card.wxml-->
 <scroll-view class="C_card" scroll-y>
   <view class="content">
-<<<<<<< HEAD
-    <view class="item">
-      <image src="http://q9xwl365p.bkt.clouddn.com/personal/property/C_card/zggsyh.png" />
-      <view class="item-info">
-        <view>中国工商银行</view>
-        <view class="item-info-card">
-          <view>尾号****</view>
-          <view>储蓄卡</view>
-=======
     <view class="content-item" wx:for="{{cardlist}}" wx:key="index">
       <image src="{{item.image}}" />
       <view class="item-info">
@@ -17,24 +8,10 @@
         <view class="item-info-card">
           <view>{{item.number}}</view>
           <view>{{item.card}}</view>
->>>>>>> hcy
         </view>
       </view>
       <image src="http://q9xwl365p.bkt.clouddn.com/personal/property/C_card/g.png" />
     </view>
-<<<<<<< HEAD
-    <view class="item">
-      <image src="http://q9xwl365p.bkt.clouddn.com/personal/property/C_card/zgjsyh.png" />
-      <view class="item-info">
-        <view>中国建设银行</view>
-        <view class="item-info-card">
-          <view>尾号****</view>
-          <view>储蓄卡</view>
-        </view>
-      </view>
-    </view>
-=======
->>>>>>> hcy
  </view>
  <image class="C_card-add" bindtap="toA_card" src="http://q9xwl365p.bkt.clouddn.com/personal/property/C_card/tjyhk.png" />
 </scroll-view>

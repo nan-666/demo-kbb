@@ -1,0 +1,8 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+    <view class="search-bar">
+      <image src="/static/images/search.png" class="_img" />
+      <input value="{{ID}}" bindinput="bindInput" focus="{{true}}" confirm-type="search" placeholder="{{placeholder}}" bindconfirm="search" class="_input" />
+    </view> 
+    <button bindtap="clickTap" loading="{{loading}}" hidden="{{!(searched)}}" hover-class="clicked" class="_button">{{buttonText}}</button>
+  </view>

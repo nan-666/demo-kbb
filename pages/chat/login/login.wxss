@@ -1,0 +1,68 @@
+/* pages/login/login.wxss */
+
+.counter-warp{
+  height: 100%;
+  background: #fff;
+  text-align: center;
+}
+.counter-warp .header{
+  padding: 60rpx 80rpx;
+  background-color: #006fff;
+  color: #fff;
+}
+.counter-warp .header .header-content{
+  display: flex;
+  align-items: center;
+}
+.counter-warp .header .header-content .icon{
+  width: 152rpx;
+  height: 100rpx;
+}
+.counter-warp .header .header-content .text{
+  text-align: left;
+  padding-left: 16rpx;
+}
+.counter-warp .header .header-content .text .text-header{
+  font-size: 56rpx;
+}
+.counter-warp .header .header-content .text .text-content{
+  font-size: 24rpx;
+}
+.counter-warp .picker{
+  width: 80vw;
+  margin: 160rpx auto 120rpx;
+}
+.counter-warp .picker .cell{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #dbdbdb;
+  padding-bottom: 24rpx;
+}
+.counter-warp .picker .cell .choose{
+  font-weight: 600;
+  font-size: 32rpx;
+}
+.input{
+  text-align: center;
+  height: 64rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  font-size: 32rpx;
+  border: 2rpx solid #dbdbdb;
+  margin-bottom: 16rpx;
+}
+.login-button{
+  width: 80vw;
+  background-color: #006fff;
+  color: #fff;
+  font-size: 32rpx;
+}
+.login-button.data-v-778c2c8d::before {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 12rpx 4rpx 0;
+}
+.clicked{
+  background-color: #0063e5;
+}

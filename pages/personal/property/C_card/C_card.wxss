@@ -1,11 +1,7 @@
 /* pages/personal/property/C_card/C_card.wxss */
 page {
   font-size: 10pt;
-<<<<<<< HEAD
-  background: #eee;
-=======
   background: #f9f9f9;
->>>>>>> hcy
 }
 
 /* 银行卡信息 */
@@ -15,21 +11,14 @@ page {
   flex-direction: column;
   margin: 20rpx 0;
 }
-<<<<<<< HEAD
-.item {
-=======
+
 .content-item {
->>>>>>> hcy
   height: 17vh;
   display: flex;
   align-items: center;
   border-bottom: 2px solid #eee;
 }
-<<<<<<< HEAD
-.item > image:first-child {
-=======
 .content-item > image:first-child {
->>>>>>> hcy
   height: 15vh;
   width: 25vw;
   margin-left: 20rpx;
@@ -47,11 +36,8 @@ page {
 .item-info-card > view:first-child {
   margin-right: 15rpx;
 }
-<<<<<<< HEAD
-.item > image:last-child {
-=======
+
 .content-item > image:last-child {
->>>>>>> hcy
   height: 50rpx;
   width: 50rpx;
   margin-right: 20rpx;

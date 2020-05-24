@@ -1,7 +1,5 @@
 // pages/personal/property/C_card/C_card.js
 Page({
-<<<<<<< HEAD
-=======
   data: {
     // cardlist: [
     //   {
@@ -30,7 +28,7 @@ Page({
       }
     })
   },
->>>>>>> hcy
+
   toA_card: function() {
     wx.navigateTo({
       url: '/pages/personal/property/A_card/A_card',
