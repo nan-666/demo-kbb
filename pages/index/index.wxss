@@ -179,3 +179,7 @@ page{
   position: absolute;
   right:20rpx;
 }
+.reporttimes{ 
+  font-size: 30rpx; 
+  margin-left:20rpx; 
+} 
