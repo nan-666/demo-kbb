@@ -2,7 +2,8 @@
 Page({
   data:{
     type:'',
-    list:''
+    list:'',
+    show:true
   },
 
   //数据加载
@@ -14,17 +15,17 @@ Page({
     })
     //向后台请求数据
     wx.request({
-      url: 'http://127.0.0.1:3001/getList/',
+      url: 'http://localhost:8080/kbb/merchant/search',
       method:'POST',
-      data:type,
+      data:{"type":_this.data.type},
+      header:{
+        'content-type': 'application/x-www-form-urlencoded'
+      },
       success:function(res){
         // 设商家列表数据
-        
-        for(var i = 0; i < res.data.length;i++){
-          _this.setData({
-            list: res.data[i].Info
-          })
-        }
+        _this.setData({
+          list:res.data
+        })
       }
     })
   }

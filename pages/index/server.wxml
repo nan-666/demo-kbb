@@ -8,6 +8,7 @@
     <view class="server-search-box">
       <icon class="weui-icon-search_in-box" type="search"></icon>
       <input type="text" placeholder-class="placeholderinput" placeholder="搜索服务" value='{{keyWord}}' bindconfirm='goSearch'/>
+      <!-- <input type="text" placeholder-class="placeholderinput" placeholder="搜索服务" bindinput="serverinput"/> -->
     </view>
   </view>
   <!-- 轮播图 -->
@@ -60,7 +61,7 @@
   <!-- 推荐 -->
   <view class="list-title">推荐</view>
   <view class="content-activity">
-    <view>精选人才</view>
+    <view bindtap="people">精选人才</view>
     <view bindtap="toDesign">装修设计</view>
     <view bindtap="toIntelligence">智能管家</view>
     <view bindtap="toActivity">特惠活动</view>
