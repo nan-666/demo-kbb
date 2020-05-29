@@ -19,10 +19,11 @@ page{
 .people{
   position:relative;
   width:100vw;
-  height:16vh;
+  height:auto;
   box-shadow: 0px 0px 2px 0px lightgray;
   margin-top:5px;
   background-color: white;
+
 }
 image{
   margin-top:6px;
