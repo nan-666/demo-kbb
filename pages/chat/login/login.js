@@ -20,7 +20,7 @@ Page({
   login: function(){
     var userId = this.data.userIDList[this.data.selectedIndex];
     wx.request({
-      url: 'http://127.0.0.1:80/kbb/GetUserSig',
+      url: 'http://127.0.0.1:8080/kbb/GetUserSig',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded',

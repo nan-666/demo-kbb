@@ -1,25 +1,36 @@
 //app.js
-/**
- * 实现小程序的登录，流程如下：
- * 1. 先判断用户是否已登录，即缓存中是否已经有token。
- * 2. 如果缓存中有token则无需再登录（调用wx.login())，但是需要校验token有效性。因为token可能会因为多终端登录等原因过期，
- *    如token过期则需要让用户重新登录（调用wx.login())；如果token有效，则后续的业务操作都要携带token。
- * 3. 如果缓存中没有token，用户需要进行登录，登录时分为两种情况：
- *    （1）用户已存在：在服务端根据用户发送的code生成唯一的openId，并且在数据库中查询到此openId，说明此用户已存在：
- *        a）生成新的token，并更新数据库中旧token；
- *        b）把新token发回小程序端，更新缓存。
- *     (2) 用户不存在：在数据库中没有查询到用户的openId，说明此用户不存在：
- *        a）在服务端的数据库表user中，首先新添加一个用户，同时可以设置一些默认数据（比如默认用户名、初始积分等）；
- *        b）生成token，把openId、token以及新用户的userId存入数据库表session中；
- *        c）把token返回到小程序端缓存。
- * 注意：为了后期更新token方便，同时数据库中数值型查询效率比字符型查询效率高（token、openId都为字符型），各数据表中不要、
- *      直接存token或openId字段，而是将token、openId与userId关联。
- */
+// 引入腾讯IM SDK
+import TIM from '/utils/tim-wx';
+// 发送图片、文件等消息需要的 COS SDK。如果聊天发送的是纯文字，这里不必要导入
+import COS from "/utils/cos-wx-sdk-v5";
+
+let options = {
+  SDKAppID: 1400374895   // 接入时需要换为您的即时通信应用的 SDKAppID
+};
+
+// 创建 SDK 实例，TIM.create() 方法对于同一个 SDKAppID 只会返回同一份实例。SDK 实例通常用 tim 表示
+let tim = TIM.create(options); 
+
+// 注册 COS SDK 插件。如果聊天发送的是纯文字，这里不需要注册
+tim.registerPlugin({'cos-wx-sdk': COS});
 App({
 
   // 打开小程序最先执行此函数，实际开发中常用来做登录判断、存储/更新缓存等
   onLaunch: function () {
+    // 展示本地存储能力
+    var logs = wx.getStorageSync('logs') || []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
+
+    //tim
     var _this = this;
+    let onSdkReady = function (event) {
+      _this.gobalData.isSdkReady = true
+    };
+    tim.on(TIM.EVENT.SDK_READY, onSdkReady);
+
+
+    
     // 验证登录：取出缓存中token
     var token = wx.getStorageSync('token');
     if (token) { // 已有token
@@ -108,7 +119,14 @@ App({
       },
     })
   },
-
+  globalData: {
+    userInfo: null
+  }
+  ,
+  tim: tim,
+  event: {
+    SdkReady: TIM.EVENT.SDK_READY
+  },
   // 全局变量定义
   gobalData: {
     token: '',
