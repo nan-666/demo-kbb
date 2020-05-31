@@ -3,7 +3,7 @@ Page({
   data:{
     item: 0,
     tab: 0,
-    keyword:'',
+    type:'',
     recommendlist:'',
     fivestarlist:'',
     citylist:'',
@@ -43,37 +43,37 @@ Page({
 
   onLoad: function (options) {
     var _this = this;
-    var keyword = options.keyword;
-    console.log(options.keyword)
+    var type = options.keyword
     this.setData({
-        keyword:keyword,
+        type:type,
     })
     //向后台请求数据
     wx.request({
-      url: 'http://127.0.0.1:3000',
+      url: 'http://localhost:8080/kbb/merchant/search',
       method:'POST',
-      data:keyword,
+      data:{"type":_this.data.type},
+      header:{
+        'content-type': 'application/x-www-form-urlencoded'
+      },
       success:function(res){
         // 设商家列表数据
         for(var i = 0; i < res.data.length; i++){
-          if(res.data[i].title == '推荐'){
-            _this.setData({
-              recommendlist: res.data[i].Info
-            })
-          } else if(res.data[i].title == '五星评价'){
-            _this.setData({
-              fivestarlist: res.data[i].Info
-            })
-          } else if(res.data[i].title == '同城商家'){
-            _this.setData({
-              citylist: res.data[i].Info
-            })
+          if(res.data[i].star > 3){
+            _this.data.recommendlist.push(res.data[i])
+          } else if(res.data[i].star == 5){
+            _this.data.fivestarlist.push(res.data[i])
+          } else if(res.data[i].address == '江西省九江市濂溪区'){
+            _this.data.citylist.push(res.data[i])
           } else {
-            _this.setData({
-              newlist: res.data[i].Info
-            })
+            _this.data.newlist.push(res.data[i])
           }
         }
+        _this.setData({
+          recommendlist,
+          fivestarlist,
+          citylist,
+          newlist
+        })
       }
     })
   }

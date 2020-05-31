@@ -1,0 +1,14 @@
+<!--pages/people/people.wxml-->
+<view class="title">精选人才</view>
+<view class="people">
+  <image src="http://q9xwl365p.bkt.clouddn.com/atmetopic/head.png"/>
+  <view class="content">
+  <view class="serve">家政服务</view>
+  <view class="scoreborder">
+  <text class="Txt">评分</text>
+  <text class="score">5.0</text>
+  </view>
+  <view class="sort">家政保洁</view>
+  </view>
+    <text class="detail" bindtap="lookdetail">查看详情</text>
+</view>
