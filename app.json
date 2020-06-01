@@ -6,13 +6,14 @@
     "pages/index/recommend/activity/activity",
     "pages/index/recommend/design/design",
     "pages/index/recommend/intelligence/intelligence",
+    "pages/index/task-detail/detail",
     "pages/index/search/result/result",
     "pages/task/Release",
     "pages/people/people",
     "pages/personal/personal",
     "pages/Asetting/setting",
     "pages/map/map",
-    "pages/chat/login/login",
+    "pages/chat/index/index",
     "pages/find/find",
     "pages/personal/C_Services/C_Services"
   ],
@@ -47,7 +48,7 @@
         "selectedIconPath": "image/release1.png"
       },
       {
-        "pagePath": "pages/chat/login/login",
+        "pagePath": "pages/chat/index/index",
         "text": "消息",
         "iconPath": "image/news.png",
         "selectedIconPath": "image/news1.png"

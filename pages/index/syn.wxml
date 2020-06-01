@@ -19,5 +19,4 @@
 		</view>
 		<view class="gototop {{scrolltop>200?'active':''}}" bindtap="goToTop"></view>
 	</scroll-view>
-  
 </view>

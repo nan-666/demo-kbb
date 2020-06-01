@@ -1,62 +1,43 @@
 /**index.wxss**/
 page{
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-  height: 100%;
-}
-.content{
-  width: 100%;
+  margin: 20rpx;
 }
 .detail-total{
-  height: 60rpx;
-  width: 100%;
-  margin-top: 20rpx;
+  width: 95vw;
+  font-size: 35rpx;
+  border: 1rpx solid #eee;
 }
-.detail-title{
-  height: 50rpx;
-  width: 175rpx;
-  font-size: 15px;
-  margin-left: 25rpx;
+.detail-total > view{
+  margin: 15rpx;
 }
-.detail-content{
-  width: 520rpx;
-  font-size: 12px;
-  margin-left: 225rpx;
-  margin-top: -40rpx;
+image{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
 }
-.detail-corner{
-  height: 65rpx;
-  width: 90rpx;
-  margin-top: -40rpx;
-  margin-left: 370rpx;
-  font-size: 8pt;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 20rpx;
-  color: #656565;
+.button{
+  color: #fff;
+  font-size: 11pt;
+  display: flex;
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
 }
 
-.detail-image{
-  height: 160rpx;
-  width: 100%;
-  margin-top: 20rpx;
+.relation{
+  width: 200rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background: #66c0ff;
+  margin-right: 20rpx;
+  border-radius: 15rpx;
+  text-align: center;
 }
-.detail-district{
-  height: 100rpx;
-  width: 100%;
-  margin-top: 20rpx;
-}
-.detail-image image{
-  height: 150rpx;
-  width: 150rpx;
-  margin-left: 10px;
-  border: 1px solid #000;
-}
-.content button{
-  margin-top: 200rpx;
-  background-color: #FF5733;
-  border-radius: 20rpx;
-  font-size: 15px;
-  color: #fff;
+.receive{
+  width: 200rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background: #fe4a55;
+  border-radius: 15rpx;
+  text-align: center;
 }
