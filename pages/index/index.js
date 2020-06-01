@@ -128,4 +128,6 @@ toDetails:function(){
 people:function(){
   wx.navigateTo({ url: '/pages/people/people' })
 }
+
 })
+

@@ -1,0 +1,18 @@
+/* pages/peopledetail/peopledetail.wxss */
+.content{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  text-align: center;
+}
+image{
+  width:34vw;
+  height:20vh;
+  border-radius: 50%;
+  display: block;
+  margin:3vh auto;
+}
+.main{
+  display: block;
+  line-height: 5vh;
+}

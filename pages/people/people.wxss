@@ -1,71 +1,48 @@
 /* pages/people/people.wxss */
-page{
-  display:flex;
-  flex:1;
-  flex-direction: column;
-  height: 100%;
-  background-color: #eee;
+.service-list{
+	padding: 0 20rpx;
 }
-.title{
-  width:100vw;
-  text-align: center;
-  height:5vh;
-  line-height: 5vh;
-  background-color: white;
-  font-size:20px;
-  font-weight: bold;
-  color:rgba(250, 2, 2, 0.966);
+.service-item{
+	display: flex;
+	padding: 20rpx 0; 
+	border-bottom: 1rpx solid #e8e8e8;
 }
-.people{
-  position:relative;
-  width:100vw;
-  height:16vh;
-  box-shadow: 0px 0px 2px 0px lightgray;
-  margin-top:5px;
-  background-color: white;
+.service-img{
+	width: 220rpx;
+	height: 156rpx;
 }
-image{
-  margin-top:6px;
-  width:150rpx;
-  height:150rpx;
-  border-radius: 50%;
-  display: inline-block;
+.service-item image{
+	width: 220rpx;
+	height: 156rpx;
 }
-.content{
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  position:absolute;
-  left:200rpx;
-  top:8px;
+.service-text{
+	flex: 1;
+	margin-left: 20rpx;
+	width: 100%;
 }
-.detail{
-  position: absolute;
-  right:10px;
-  top:30px;
+.service-text .service-tite{
+	color: #333;
+	width: 100%;
+	font-size: 34rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
-/* //内容样式 */
-.serve{
-  font-size: 20px;
+.service-tags{
+	margin: 6rpx 0;
 }
-.scoreborder{
-  margin-top:2px;
-  margin-bottom:2px;
-  border:2px solid rgb(240, 226, 28);
-  position: relative;
-  width:58px;
+.service-tags text{
+	padding: 6rpx 16rpx;
+	border: 1rpx solid #f7982a;
+	line-height: 1;
+	color: #f7982a;
+	font-size: 28rpx;
+	border-radius: 4rpx;
+	margin-right: 10rpx;
+	margin-bottom: 10rpx;
+	white-space: nowrap;
 }
-.score{
-  position: absolute;
-  right:0;
-  color:red;
-  border-left:2px solid rgb(240, 226, 28);
-  background-color: rgb(240, 226, 28);
-}
-.sort{
-  width:60px;
-  font-size:15px;
-  border:2px solid rgb(95, 193, 226);
-  border-radius: 30%;
-  background-color: lightblue;
+.service-city{
+	color: #666;
+	font-size: 30rpx;
 }
