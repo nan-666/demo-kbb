@@ -86,7 +86,7 @@ Page({
   // 发起会话，跳转到会话页面
   createConversation: function(){
     wx.navigateTo({
-      url: '../chat/chat?toAccount=' + this.data.ID     // 将聊天对方ID传递到会话页面
+      url: '/pages/chat/chat/chat?toAccount=' + this.data.ID     // 将聊天对方ID传递到会话页面
     })
   },
 

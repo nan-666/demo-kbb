@@ -1,66 +1,36 @@
-// pages/contact/contact.js
+// 获取App实例
+var app = getApp();
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    search: '',
+    groupedFriends: [],
+    indexList: [],
+    addUserId: '',
+    result: {},
+    scrollTop: 0
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad: function () {
+    var _this = this;
+    // 腾讯IM不提供添加好友功能，可以将与用户聊过天的所有用户id存入自己的数据库中，方便在通讯录中列出
+    
+    // if(!app.gobalData.isSdkReady){
+    //   wx.showLoading({ title: '正在同步数据', mask: true });
+    //   let onSdkReady = function (event) {
+    //     _this.getFreinds();
+    //   };
+    //   app.tim.on(app.event.SdkReady, onSdkReady);
+    // }else{
+    //   _this.getFreinds();
+    // }      
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  getFreinds: function () {
+    // app.tim.getFriendList({
+    //   fromAccount: app.gobalData.userId
+    // }).then(function (res) {
+    //   console.log(res)
+    // })
   }
 })

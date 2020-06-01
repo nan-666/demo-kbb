@@ -106,14 +106,20 @@ App({
             'Accept': 'application/json'
           },
           success: function (res) {
-            console.log(res.data.data.token)
             // 将token保存为全局变量，共各页面使用
             _this.gobalData.token = res.data.data.token;
+            _this.gobalData._data = res.data.data;
             // 将token存入缓存，下次打开小程序无需再登录获取token
+            wx.setStorage({
+              data: res.data.data,
+              key: '_data'
+            }
+            );
             wx.setStorage({
               data: res.data.data.token,
               key: 'token'
-            })
+            }
+            )
           }
         })
       },

@@ -1,2 +1,23 @@
 <!--pages/contact/contact.wxml-->
-<text>pages/contact/contact.wxml</text>
+<view class="container">
+    <view class="methods">
+      <i-cell-group class="_i-cell-group">
+        <i-cell title="发起会话"is-link url="/pages/search/search?type=user"class="_i-cell"></i-cell>
+        <i-cell title="加入群聊"is-link url="/pages/search/search?type=group"class="_i-cell"></i-cell>
+        <i-cell title="新建群聊"is-link url="/pages/create/main"class="_i-cell"></i-cell>
+        <i-cell title="我的黑名单"is-link url="/pages/blacklist/main"class="_i-cell"></i-cell>
+        <i-cell title="我的群组"is-link url="/pages/groups/main"class="_i-cell"></i-cell>
+      </i-cell-group>
+    </view>
+    <view class="friends">
+      <van-index-bar scroll-top="{{scrollTop}}" index-list="{{indexList}}" class="_van-index-bar">
+        <view wx:key="index" wx:for="{{groupedFriends}}">
+          <van-index-anchor index="{{item.key}}" class="_van-index-anchor"></van-index-anchor>
+          <view class="friend-item" wx:key="friend.userID" key="{{friend.userID}}" bindtap="handleProxy" data-eventid="{{'0_'+index+'-'+idx2}}" data-comkey="{{$k}}" wx:for="{{item.friendList}}" wx:for-index="idx2" wx:for-item="friend">
+            <i-avatar i-class="avatar" src="{{friend.profile.avatar}}" class="_i-avatar"></i-avatar>
+            <view class="username">{{friend.profile.nick || friend.userID}}</view>
+          </view>
+        </view>
+      </van-index-bar>
+    </view>
+</view>

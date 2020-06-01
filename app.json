@@ -11,7 +11,7 @@
     "pages/personal/personal",
     "pages/Asetting/setting",
     "pages/map/map",
-    "pages/chat/login/login",
+    "pages/chat/index/index",
     "pages/find/find",
     "pages/personal/C_Services/C_Services"
   ],
@@ -46,7 +46,7 @@
         "selectedIconPath": "image/release1.png"
       },
       {
-        "pagePath": "pages/chat/login/login",
+        "pagePath": "pages/chat/index/index",
         "text": "消息",
         "iconPath": "image/news.png",
         "selectedIconPath": "image/news1.png"
