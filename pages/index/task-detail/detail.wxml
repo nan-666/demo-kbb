@@ -1,42 +1,25 @@
 <!--index.wxml-->
 <!-- 需求描述 -->
-<view class="content" wx:for="{{detailList}}" wx:key="index">
-  <view class="detail-total">
-    <view class="detail-title">客户{{item.nickname}}</view>
-    <view class="detail-content">于{{item.time}}发布该需求
+<view class="content" >
+  <view class="detail-total" wx:for="{{detailList}}" wx:key="index">
+    <view>任务标题：{{item.title}}</view>
+    <view>服务类型：{{item.type}}</view>
+    <view>问题描述：{{item.describe}}</view>
+    <view>服务时间：{{item.time}}</view>
+    <view>订单发布时间：{{item.time}}</view>
+    <view>订单金额：￥ {{item.money}}</view>
+    <view>用户电话：{{item.phone}}</view>
+    <view class="detail-image">
+      <view class="detail-title">相关图片：</view>
+      <view class="detail-content">
+        <image src="{{item.img_1}}"/>
+        <image src="{{item.img_2}}"/>
+      </view>
     </view>
+    <view>地址：江西省九江市濂溪区</view>
   </view>
-  <view class="detail-total">
-    <view class="detail-title">任务标题</view>
-    <view class="detail-content">{{item.title}}
-    </view>
+  <view class="button">
+    <view class="relation">联系用户</view>
+    <view class="receive">立即接单</view>
   </view>
-  <view class="detail-total">
-    <view class="detail-title">问题描述</view>
-    <view class="detail-content">{{item.describe}}
-    </view>
-  </view>
-  <view class="detail-image">
-    <view class="detail-title">相关图片</view>
-    <view class="detail-content">
-      <image src="{{item.img_1}}"/>
-      <image src="{{item.img_2}}"/>
-    </view>
-  </view>
-  <view class="detail-district">
-    <view class="detail-title">地址</view>
-    <view class="detail-content">{{item.address}}
-    </view>
-  </view>
-  <view class="detail-total">
-    <view class="detail-title">类别</view>
-    <view class="detail-content">{{item.type}}
-    </view>
-  </view>
-  <view class="detail-total">
-    <view class="detail-title">佣金</view>
-    <view class="detail-content">¥ {{item.money}}
-    </view>
-  </view>
-  <button type="color:white;">立即接单</button>
 </view>
