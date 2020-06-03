@@ -1,6 +1,6 @@
 <!--pages/peopledetail/peopledetail.wxml-->
 <view class="content">
-<image src="http://q9xwl365p.bkt.clouddn.com/atmetopic/head.png" />
+<image src="http://qbboxshzh.bkt.clouddn.com/atmetopic/head.png" />
 <view class="main">
 <view class="name">姓名：张杰</view>
 <view class="phone">电话：1008611</view>

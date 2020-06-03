@@ -3,11 +3,11 @@
   <view class="order" wx:for="{{shop}}" wx:key="index" data-index="{{index}}">
     <view class="shop">
       <view class="shop-img">
-        <image src="http://q9xwl365p.bkt.clouddn.com/personal/order/shop.png"/>
+        <image src="http://qbboxshzh.bkt.clouddn.com/personal/order/shop.png"/>
       </view>
       <view class="shop-name"><text>{{item.name}}</text></view>
       <view class="shop-right">
-        <image src="http://q9xwl365p.bkt.clouddn.com/personal/property/balance/right.png"/>
+        <image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png"/>
       </view>
     </view>
     <view class="service" bindtap="toDetail" wx:for="{{service}}" wx:key="index" data-index="{{index}}">

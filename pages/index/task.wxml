@@ -2,7 +2,7 @@
   <!-- 搜索栏 -->
   <view class="server-search">
     <view class="server-search-site" bindtap="btnclick">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/site.png" />
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/icon/site.png" />
      <view>九江市</view>
     </view>
     <view class="server-search-box">

@@ -4,28 +4,28 @@
 	<view class="content-info">
 		<image class="content-info-head" src="{{userInfo.avatarUrl}}" bindtap="btnclick"/>
 		<view class="content-info-set" bindtap="toSetting">
-			<image src="http://q9xwl365p.bkt.clouddn.com/personal/personal/sz.png" />
+			<image src="http://qbboxshzh.bkt.clouddn.com/personal/personal/sz.png" />
 			<view>账号设置</view>
 		</view>
 	
 		<view class="content-info-change">
 			<view>登录后可切换为服务商身份</view>
-			<image src="http://q9xwl365p.bkt.clouddn.com/personal/personal/qj.png" />
+			<image src="http://qbboxshzh.bkt.clouddn.com/personal/personal/qj.png" />
 		</view>
 	</view>
 
   <view class="content2">
 	  <view class="content2-item" bindtap="order">
 		  <view>订单</view>
-			<image src="http://q9xwl365p.bkt.clouddn.com/personal/property/balance/right.png" />
+			<image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
 		</view>
 	  <view class="content2-item" bindtap="toBalance">
 		  <view>账户余额</view>
-			<image src="http://q9xwl365p.bkt.clouddn.com/personal/property/balance/right.png" />
+			<image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
 		</view>
 	  <view class="content2-item" bindtap="toC_Services">
 		  <view>常用服务</view>
-			<image src="http://q9xwl365p.bkt.clouddn.com/personal/property/balance/right.png" />
+			<image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
 		</view>
 	</view>
 </scroll-view>

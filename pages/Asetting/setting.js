@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    image: 'http://q9xwl365p.bkt.clouddn.com/forum/index/tx.jpg',
+    image: 'http://qbboxshzh.bkt.clouddn.com/forum/index/tx.jpg',
     // username: '',
     // gender:[{
     //       sex:'男',

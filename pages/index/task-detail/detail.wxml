@@ -20,8 +20,8 @@
   <view class="detail-image">
     <view class="detail-title">相关图片</view>
     <view class="detail-content">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/task-detail/heart.jpg"/>
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/task-detail/heart.jpg"/>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/task-detail/heart.jpg"/>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/task-detail/heart.jpg"/>
     </view>
   </view>
   <view class="detail-district">

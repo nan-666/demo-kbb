@@ -2,7 +2,7 @@
 <scroll-view class="content" scroll-y>
   <!-- 搜索栏 -->
   <view class= "search">
-    <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/ss.png"></image>
+    <image src="http://qbboxshzh.bkt.clouddn.com/forum/index/ss.png"></image>
     <input class="input" name="search" placeholder="搜索服务商" bindinput="searchInput"/>
   </view>
 

@@ -2,7 +2,7 @@
 <view class="container">
   <!--顶部信息栏-->
   <view class="top">
-    <image src="http://q9xwl365p.bkt.clouddn.com/personal/worker/tx.jpg"></image>
+    <image src="http://qbboxshzh.bkt.clouddn.com/personal/worker/tx.jpg"></image>
     <view class="top-xx">
       <text>XXX维修职工</text>
       <view class="top-tab">
@@ -35,7 +35,7 @@
   <!--动态内容栏-->
   <view class = "content">
     <view class = "content-top">
-      <image src="http://q9xwl365p.bkt.clouddn.com/personal/worker/tx.jpg"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/personal/worker/tx.jpg"></image>
       <view class="text">
         <text class="name">XXX维修职工</text>
         <text class="time">昨天 9:00</text>
@@ -44,7 +44,7 @@
     <view class="content-content">
       <text>分享文章</text>
       <view>
-        <image src="http://q9xwl365p.bkt.clouddn.com/personal/worker/work.jpg"></image>
+        <image src="http://qbboxshzh.bkt.clouddn.com/personal/worker/work.jpg"></image>
         <view>
           <text>怎样让维修更简单</text>
           <text>小红书app</text>
@@ -52,11 +52,11 @@
       </view>
     </view>
     <view class="content-bottom">
-      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/zf.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/forum/index/zf.png"></image>
       <text>70</text>
-      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/pl.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/forum/index/pl.png"></image>
       <text>70</text>
-      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/dz.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/forum/index/dz.png"></image>
       <text>70</text>
     </view>
   </view>

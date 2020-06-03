@@ -11,14 +11,14 @@ Page({
     //入驻用户信息
   //   fivestarlist:[
   //     {
-  //       imgUrl:'http://q9xwl365p.bkt.clouddn.com/forum/index/tx.jpg',
+  //       imgUrl:'http://qbboxshzh.bkt.clouddn.com/forum/index/tx.jpg',
   //       title:'xxxx专业电脑维修',
   //       rank:'5.0',
   //       star1:5,
   //       star2:0,
   //     },
   //     {
-  //       imgUrl:'http://q9xwl365p.bkt.clouddn.com/forum/index/tx.jpg',
+  //       imgUrl:'http://qbboxshzh.bkt.clouddn.com/forum/index/tx.jpg',
   //       title:'xxxx专业电脑维修',
   //       rank:'5.0',
   //       star1:5,

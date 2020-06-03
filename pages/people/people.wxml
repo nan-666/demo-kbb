@@ -1,7 +1,7 @@
 <!--pages/people/people.wxml-->
 <view class="title">精选人才</view>
 <view class="people">
-  <image src="http://q9xwl365p.bkt.clouddn.com/atmetopic/head.png"/>
+  <image src="http://qbboxshzh.bkt.clouddn.com/atmetopic/head.png"/>
   <view class="content">
   <view class="serve">家政服务</view>
   <view class="scoreborder">

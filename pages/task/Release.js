@@ -11,19 +11,19 @@ Page({
     topicon:[{
       id: 1,
       title: '预约服务',
-      coverImgUrl: 'http://q9xwl365p.bkt.clouddn.com/task/Release/yyfw.png',
+      coverImgUrl: 'http://qbboxshzh.bkt.clouddn.com/task/Release/yyfw.png',
     },{
       id: 2,
       title: '匹配人员',
-      coverImgUrl: 'http://q9xwl365p.bkt.clouddn.com/task/Release/ppry.png',
+      coverImgUrl: 'http://qbboxshzh.bkt.clouddn.com/task/Release/ppry.png',
     },{
       id: 3,
       title: '订单服务',
-      coverImgUrl: 'http://q9xwl365p.bkt.clouddn.com/task/Release/ddfw.png',
+      coverImgUrl: 'http://qbboxshzh.bkt.clouddn.com/task/Release/ddfw.png',
     },{
       id: 4,
       title: '订单完成',
-      coverImgUrl: 'http://q9xwl365p.bkt.clouddn.com/task/Release/ddwc.png',
+      coverImgUrl: 'http://qbboxshzh.bkt.clouddn.com/task/Release/ddwc.png',
     },],
 
        // 

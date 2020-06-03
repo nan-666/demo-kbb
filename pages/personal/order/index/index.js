@@ -13,7 +13,7 @@ Page({
     //   num: 1,
     //   free: 0.00,
     //   trueMoney: 19.90,
-    //   coverImgUrl: 'http://q9xwl365p.bkt.clouddn.com/index/task-detail/heart.jpg'
+    //   coverImgUrl: 'http://qbboxshzh.bkt.clouddn.com/index/task-detail/heart.jpg'
     // }]
   },
  

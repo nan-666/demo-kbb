@@ -9,6 +9,6 @@
   </view>
   <view class="syn-money">
     <view>￥<text class="money">{{item.money}}</text></view>
-    <image src="http://q9xwl365p.bkt.clouddn.com/task/syn/look.png" class="simg"/>
+    <image src="http://qbboxshzh.bkt.clouddn.com/task/syn/look.png" class="simg"/>
   </view>
 </view>

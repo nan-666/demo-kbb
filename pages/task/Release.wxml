@@ -60,7 +60,7 @@
     </view>
     <view class="server-title">
       <text>佣金</text><text style="color:red;" space="nbsp">*     \t</text>
-        <image src = "http://q9xwl365p.bkt.clouddn.com/task/Release/money.png" />
+        <image src = "http://qbboxshzh.bkt.clouddn.com/task/Release/money.png" />
       <view class="server-input">
         <input name="money" id="money" bindchange="moneyChange" bindfocus="inputFocus" placeholder="金额"></input>
       </view>

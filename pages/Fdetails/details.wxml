@@ -3,7 +3,7 @@
   <view class = "details-content">
   <!-- 发帖人信息 -->
     <view class = "detailes-content-top">
-      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/tx.jpg"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/forum/index/tx.jpg"></image>
       <view class="detailes-content-text">
         <text class="name">封印的橙子</text>
         <text class="time">昨天 9:00</text>
@@ -15,20 +15,20 @@
     <!-- 话题内容 -->
     <view class="content-text">
       <text>接单了 接单了</text>
-      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/img.jpg"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/forum/index/img.jpg"></image>
     </view>
     <view class="details-content-bottom">
-      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/zf.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/forum/index/zf.png"></image>
       <text>70</text>
-      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/pl.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/forum/index/pl.png"></image>
       <text>70</text>
-      <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/dz.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/forum/index/dz.png"></image>
       <text>70</text>
     </view>
   </view>
   <!-- 精彩评论 -->
   <view class="comment">
-    <image class="comment-title" src="http://q9xwl365p.bkt.clouddn.com/Fdetails/img/comment.png"></image>
+    <image class="comment-title" src="http://qbboxshzh.bkt.clouddn.com/Fdetails/img/comment.png"></image>
     <view class="tab">
       <view class="tab-item {{tab==0?'active':''}}" bindtap="changeItem" data-item="0">全部</view>
       <view class="tab-item {{tab==1?'active':''}}" bindtap="changeItem" data-item="1">只看楼主</view>
@@ -48,7 +48,7 @@
     <!-- 底部添加评论 -->
     <view class="comment-add">
       <input type="text" placeholder="发表评论"></input>
-      <image src="http://q9xwl365p.bkt.clouddn.com/Fdetails/img/ava.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/Fdetails/img/ava.png"></image>
     </view>
   </view>
 </view>

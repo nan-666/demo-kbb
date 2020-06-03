@@ -9,21 +9,21 @@
   <view class="balance-content">
     <view class="balance-detail" bindtap="toReCharge">
       <view class="icon-left">
-        <image src = "http://q9xwl365p.bkt.clouddn.com/personal/property/balance/recharge.png" />
+        <image src = "http://qbboxshzh.bkt.clouddn.com/personal/property/balance/recharge.png" />
       </view>
       <view class="balance-word">充值
         <view class="icon-right">
-          <image src = "http://q9xwl365p.bkt.clouddn.com/personal/property/balance/right.png" />
+          <image src = "http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
         </view>
       </view>
     </view>
     <view class="balance-detail" bindtap="toWithdraw">
       <view class="icon-left">
-        <image src = "http://q9xwl365p.bkt.clouddn.com/personal/property/balance/withdraw.png" />
+        <image src = "http://qbboxshzh.bkt.clouddn.com/personal/property/balance/withdraw.png" />
       </view>
       <view class="balance-word">提现
         <view class="icon-right">
-          <image src = "http://q9xwl365p.bkt.clouddn.com/personal/property/balance/right.png" />
+          <image src = "http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
         </view>
       </view>
     </view>

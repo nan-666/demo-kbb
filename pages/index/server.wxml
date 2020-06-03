@@ -2,7 +2,7 @@
   <!-- 搜索栏 -->
   <view class="server-search">
     <view class="server-search-site" bindtap="btnclick">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/site.png" />
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/icon/site.png" />
      <view>九江市</view>
     </view>
     <view class="server-search-box">
@@ -14,47 +14,47 @@
   <!-- 轮播图 -->
   <swiper class="content-server-slide" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" autoplay circular>
     <swiper-item>
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/bg/01.jpg"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/bg/01.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/bg/02.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/bg/02.png"></image>
     </swiper-item>
     <swiper-item>
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/bg/03.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/bg/03.png"></image>
     </swiper-item>
   </swiper>
   <!-- 按钮区 -->
   <view class="content-server-portal">
     <view bindtap="toService" data-keyword="家电维修">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/maintain.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/icon/maintain.png"></image>
       <text>家电维修</text>
     </view>
     <view bindtap="toService" data-keyword="生活配送">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/delivery.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/icon/delivery.png"></image>
       <text>生活配送</text>
     </view>
     <view bindtap="toService" data-keyword="房子装修">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/house.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/icon/house.png"></image>
       <text>房子装修</text>
     </view>
     <view bindtap="toService" data-keyword="拉家搬货">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/move.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/icon/move.png"></image>
       <text>拉家搬货</text>
     </view>
     <view bindtap="toService" data-keyword="上门安装">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/install.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/icon/install.png"></image>
       <text>上门安装</text>
     </view>
     <view bindtap="toService" data-keyword="管道疏通">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/pipeline.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/icon/pipeline.png"></image>
       <text>管道疏通</text>
     </view>
     <view bindtap="toService" data-keyword="家庭保洁">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/clean.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/icon/clean.png"></image>
       <text>家庭保洁</text>
     </view>
     <view bindtap="toClassify">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/classify.png"></image>
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/icon/classify.png"></image>
       <text>全部分类</text>
     </view>
   </view>
