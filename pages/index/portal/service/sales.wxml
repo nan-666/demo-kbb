@@ -1,17 +1,18 @@
 <scroll-view class="content-sales" scroll-y>
   <view class="content-sales-item" wx:for="{{recommendlist}}" wx:key="index">
-    <image class="content-sales-item-img" src="{{item.imgUrl}}" />
+    <image class="content-sales-item-img" src="{{item.img}}" />
     <view class="content-sales-info">
       <view>{{item.title}}</view>
       <view  class="content-sales-appraise">
-        <view>{{item.rank}}</view>
-        <block wx:for="{{item.star1}}" wx:key="index">
+        <view>{{item.star}}.0</view>
+        <block wx:for="{{item.star}}" wx:key="index">
           <image src='http://qbboxshzh.bkt.clouddn.com/index/portal/servivce/xx.png'></image>
         </block>
-        <block wx:for="{{item.star2}}" wx:key="index">
+        <block wx:for="{{5-item.star}}" wx:key="index">
           <image src='http://qbboxshzh.bkt.clouddn.com/service/star.png'></image>
         </block>
       </view>
     </view>
   </view>
+
 </scroll-view>

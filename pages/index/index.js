@@ -11,7 +11,8 @@ Page({
 onLoad :function(){
   var _this=this;
   wx.request({
-    url: 'http://127.0.0.1:3000/datalist',
+
+    url: 'http://localhost:8080/kbb/order',
     success:function(res){
       _this.setData({
         datalist:res.data
@@ -64,9 +65,9 @@ onLoad :function(){
 
   // 点击跳转至服务页面
   toService: function(e) {
-    var keyword = e.currentTarget.dataset.keyword;
+    var formData = e.currentTarget.dataset.keyword;
     wx.navigateTo({
-      url: '/pages/index/portal/service/service?keyword='+keyword,
+      url: '/pages/index/search/result/result?data='+formData,
     })
   },
   // 点击跳转至分类页面
@@ -77,11 +78,11 @@ onLoad :function(){
     })
   },
   //点击任务跳转到任务详情页
-  toDetails:function(){
-    wx.navigateTo({
-      url: '/pages/index/task-detail/detail',
-    })
-  },
+  // toDetails:function(){
+  //   wx.navigateTo({
+  //     url: '/pages/index/task-detail/detail',
+  //   })
+  // },
   //点击跳转至活动页面
   toActivity:function(){
     wx.navigateTo({
@@ -128,4 +129,6 @@ toDetails:function(){
 people:function(){
   wx.navigateTo({ url: '/pages/people/people' })
 }
+
 })
+

@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ff9500",
+  "navigationBarTitleText": "精选人才",
+  "navigationBarTextStyle": "white"
+
 }
