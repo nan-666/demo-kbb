@@ -10,6 +10,7 @@
     "pages/index/search/result/result",
     "pages/task/Release",
     "pages/people/people",
+    "pages/peopledetail/peopledetail",
     "pages/personal/personal",
     "pages/Asetting/setting",
     "pages/map/map",
