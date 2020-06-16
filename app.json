@@ -13,7 +13,7 @@
     "pages/Asetting/setting",
     "pages/map/map",
     "pages/chat/index/index",
-    "pages/find/find",
+    "pages/video/video",
     "pages/personal/C_Services/C_Services"
   ],
   "window": {
@@ -35,7 +35,7 @@
         "selectedIconPath": "image/index1.png"
       },
       {
-        "pagePath": "pages/find/find",
+        "pagePath": "pages/video/video",
         "text": "发现",
         "iconPath": "image/forum.png",
         "selectedIconPath": "image/forum1.png"
