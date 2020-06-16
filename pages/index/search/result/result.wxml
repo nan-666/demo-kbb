@@ -7,7 +7,7 @@
   </view>
   <scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
 		<view class="service-list">
-			<navigator class="service-item" wx:for="{{list}}" wx:key="{{item.id}}" url="../servicedetail/servicedetail?id={{item.id}}">
+			<navigator class="service-item" wx:for="{{list}}" wx:key="{{item.id}}" url="/pages/peopledetail/peopledetail?id={{item.id}}">
 				<view class="service-img">
 					<image src="{{item.img}}" mode="aspectFill"></image>
 				</view>
@@ -16,10 +16,10 @@
 					<view class="service-tags">
 						<view>{{item.star}}.0</view>
             <block wx:for="{{item.star}}" wx:key="index">
-              <image src='http://qbboxshzh.bkt.clouddn.com/index/portal/servivce/xx.png'></image>
+              <image src='http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png'></image>
             </block>
             <block wx:for="{{5-item.star}}" wx:key="index">
-              <image src='http://qbboxshzh.bkt.clouddn.com/service/star.png'></image>
+              <image src='http://q9xwl365p.bkt.clouddn.com/service/star.png'></image>
             </block>
 					</view>
 					<text class="service-city">服务城市：{{item.address}}</text>

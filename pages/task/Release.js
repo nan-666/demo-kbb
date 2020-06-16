@@ -7,6 +7,7 @@ Page({
   data: {
     item: 0,
     tab: 0,
+    _data:null,//缓存中的用户数据
     //最上面的图标
     topicon:[{
       id: 1,
@@ -160,6 +161,37 @@ Page({
       })
       return;
     }
+    var that = this;
+    wx.getStorage({
+      
+      key: '_data',
+      success:function(res){
+        that.setData({
+          _data:res.data
+        })
+      }
+    }),
+    //向后台提交任务数据
+    wx.request({
+      url: 'http://localhost:8080/kbb/task/post_task',
+      method:'POST',
+      data:{
+            "type" : e.detail.value.type,
+            "userId":_data.userId,
+            "requirement" : e.detail.value.requirement,
+            "information" : e.detail.value.information,
+            "name" : e.detail.value.name,
+            "phone" : e.detail.value.phone,
+            "date" : e.detail.value.date,
+            "region" : e.detail.value.region,
+            "money" : e.detail.value.money},
+      header:{
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success:function(res){
+        console.log(res);
+      }
+    })
   },
 
 

@@ -17,7 +17,7 @@
     <view class="server-title">
       <text>选择服务</text><text style="color:red;">*</text>
       <view class="server-input">
-        <picker name="num" bindchange="pickerChange" value="{{picker.index}}" range="{{picker.arr}}">{{picker.arr[picker.index]}}</picker>
+        <picker name="type" bindchange="pickerChange" value="{{picker.index}}" range="{{picker.arr}}">{{picker.arr[picker.index]}}</picker>
       </view>
       
     </view>
