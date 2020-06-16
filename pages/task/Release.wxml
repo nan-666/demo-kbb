@@ -1,17 +1,6 @@
 <!--pages/task/Release.wxml-->
 
-<!-- 图标 -->
-<view class="topicon">
-      <view class="icon-inner">
-        <view class="list-item" wx:for="{{topicon}}" wx:key="index"  data-index="{{index}}">
-          <image src="{{item.coverImgUrl}}" />
-          <view class="icon-title">{{item.title}}</view>  
-        </view>
-      </view>
-</view>
-
 <!-- 详细服务要求 -->
-
 <form bindsubmit="formSubmit">
   <view class="content">
     <view class="server-title">
@@ -27,19 +16,7 @@
         <input name="requirement" id="requirement" bindchange="requirementChange" bindfocus="inputFocus" placeholder="服务要求"></input>
       </view>
       
-    </view>
-    <view class="server-title">
-      <text>服务信息</text><text style="color:red;">*</text>
-      <view class="server-input">
-        <input name="information" id="information" bindchange="informationChange" bindfocus="inputFocus" placeholder="请如实填写真实信息"></input>
-        </view>
-    </view>
-    <view class="server-title">
-      <text>联系人</text><text style="color:red;">*</text>
-      <view class="server-input">
-        <input name="name" id="name" bindchange="nameChange" bindfocus="inputFocus" placeholder="姓名"></input>
-      </view>
-    </view>
+    </view>   
     <view class="server-title">
       <text>联系电话</text><text style="color:red;">*</text>
       <view class="server-input">
@@ -60,10 +37,29 @@
     </view>
     <view class="server-title">
       <text>佣金</text><text style="color:red;" space="nbsp">*     \t</text>
-        <image src = "http://q9xwl365p.bkt.clouddn.com/task/Release/money.png" />
+        <image src = "http://qbboxshzh.bkt.clouddn.com/task/Release/money.png" />
       <view class="server-input">
         <input name="money" id="money" bindchange="moneyChange" bindfocus="inputFocus" placeholder="金额"></input>
       </view>
+    </view>
+    <view class="photo-box">
+      <view class="photoTitle">上传照片</view>
+      <!-- 上传照片 -->
+      <view class="question-images clearFloat">
+      <block wx:for="{{images}}" wx:key="*this">
+        <view class="q-image-wrap">
+          <!-- 图片缩略图  -->
+          <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+          <!-- 移除图片的按钮  -->
+          <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">
+            <image src="http://qbboxshzh.bkt.clouddn.com/task/remove.png" style="width:50rpx;height:50rpx"></image>
+          </view>
+        </view>
+      </block>
+      <view class='uploadImgBtn' bindtap="chooseImage" wx:if="{{images.length < 3}}">
+        <image src="http://qbboxshzh.bkt.clouddn.com/task/add.png" style="height:200rpx;width:200rpx"></image>
+      </view>
+    </view>
     </view>
     <button form-type="submit">发布需求</button>
   </view>
