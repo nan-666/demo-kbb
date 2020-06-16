@@ -114,22 +114,22 @@ page{
   margin: 10rpx 20rpx;
 }
 .content-activity > view:first-child{
-  background-image: url(http://q9xwl365p.bkt.clouddn.com/index/recommend/bg/people.jpg);
+  background-image: url(http://qbboxshzh.bkt.clouddn.com/index/recommend/bg/people.jpg);
   padding-top: 18px;
   height: 47px;
 }
 .content-activity > view:nth-child(2){
-  background-image: url(http://q9xwl365p.bkt.clouddn.com/index/recommend/bg/design1.jpg);
+  background-image: url(http://qbboxshzh.bkt.clouddn.com/index/recommend/bg/design1.jpg);
   padding-top: 18px;
   height: 47px;
 }
 .content-activity > view:nth-child(3){
-  background-image: url(http://q9xwl365p.bkt.clouddn.com/index/recommend/bg/capacity1.jpg);
+  background-image: url(http://qbboxshzh.bkt.clouddn.com/index/recommend/bg/capacity1.jpg);
   padding-top: 18px;
   height: 47px;
 }
 .content-activity > view:last-child{
-  background-image: url(http://q9xwl365p.bkt.clouddn.com/index/recommend/bg/active2.jpg);
+  background-image: url(http://qbboxshzh.bkt.clouddn.com/index/recommend/bg/active2.jpg);
   padding-top: 18px;
   height: 47px;
 }
