@@ -102,6 +102,8 @@ onLoad :function(){
       });
       var _this=this;
       var {datalist} = this.data;
+      var {newlist} = this.data;
+      var {moneylist} = this.data;
       wx.request({
         url: 'http://localhost:8080/kbb/screen',
         method:'POST',
@@ -115,20 +117,22 @@ onLoad :function(){
               let {describe,address,type,money,time} = res.data[i]
               var orderData = {id: res.data[i].id,describe,address,type,money,time}
               datalist.push(orderData);
+              newlist.push(orderData);
+              moneylist.push(orderData);
             }
             if(_this.data.rank == '从低到高'){
               _this.setData({
-                datalist:datalist.sort((prev,next) => prev.money - next.money)
+                datalist,
+                newlist:newlist.sort((prev, next) => Date.parse(next.time) - Date.parse(prev.time)),
+                moneylist:moneylist.sort((prev,next) => prev.money - next.money)
               })
-            } else if(_this.data.rank == '从高到低'){
+            } else{
               _this.setData({
-                datalist:datalist.sort((prev,next) => next.money - prev.money)
+                datalist,
+                newlist:newlist.sort((prev, next) => Date.parse(next.time) - Date.parse(prev.time)),
+                moneylist:moneylist.sort((prev,next) => next.money - prev.money)
               })
-            } else {
-              _this.setData({
-                datalist
-              })
-            }
+            } 
           }
         }
       })
