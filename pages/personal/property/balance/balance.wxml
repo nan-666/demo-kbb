@@ -3,7 +3,7 @@
   <!-- 余额显示部分 -->
   <view class="balance-top">
     <view class="balance-text"><text>余额（元）</text></view>
-    <view class="balance-num">0.00</view>
+    <view class="balance-num">{{balance}}</view>
   </view>
   <!-- 具体操作 -->
   <view class="balance-content">

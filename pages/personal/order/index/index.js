@@ -1,4 +1,5 @@
 //index.js
+var app=getApp()
 Page({
   data:{
     // shop:[{
@@ -15,24 +16,56 @@ Page({
     //   trueMoney: 19.90,
     //   coverImgUrl: 'http://qbboxshzh.bkt.clouddn.com/index/task-detail/heart.jpg'
     // }]
+    item:0,
   },
  
-  onLoad: function () {
-    var _this = this;
-    wx.request({
-      url: 'http://127.0.0.1:3000',
-      success: function (res) {
-        _this.setData(res.data)
-      }
+  onLoad: function (e) {
+    this.setData({
+      item:e.typeid,
     })
+    var _this=this; 
+    wx.request({ 
+      url: 'http://localhost:8080/kbb//main/java/action/order', 
+      method:'POST', 
+      data: {
+        item: _this.data.item,
+        userId:app.gobalData.userId
+      },
+      header:{ 
+        'content-type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      }, 
+      success:function(res){ 
+        console.log(res.data);
+        _this.setData({ 
+          service:res.data 
+        }) 
+      } 
+    }) 
   },
 
   // 标签栏点击监听
   changeItem(e) {
     var item = e.currentTarget.dataset.item;
-    this.setData({
-      item: item
-    })
+    var _this=this; 
+    wx.request({ 
+      url: 'http://localhost:8080/kbb//main/java/action/order', 
+      method:'POST', 
+      data: {
+        item: item,
+        userId:app.gobalData.userId
+      },
+      header:{ 
+        'content-type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      }, 
+      success:function(res){ 
+        console.log(res.data);
+        _this.setData({ 
+          service:res.data 
+        }) 
+      } 
+    }) 
   },
   // 滑块滑动时的监听函数
   changeTab: function (e) {

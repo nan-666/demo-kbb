@@ -7,52 +7,49 @@ Page({
    */
   data:{
     userInfo: {},         // 用户信息
-    hasUserInfo: false  // 是否获取用户信息成功
+    hasUserInfo: false,  // 是否获取用户信息成功
+    orderItems: [
+      {
+        typeId: 0,
+        name: '待付款',
+        url: 'bill',
+        imageurl: '/image/forum.png',
+      },
+      {
+        typeId: 1,
+        name: '待服务',
+        url: 'bill',
+        imageurl: '/image/forum.png',
+      },
+      {
+        typeId: 2,
+        name: '待评价',
+        url: 'bill',
+        imageurl: '/image/forum.png'
+      },
+      {
+        typeId: 3,
+        name: '售后',
+        url: 'bill',
+        imageurl: '/image/forum.png'
+      }
+    ],
   },
 
   onLoad: function(){
-    if(app.gobalData.userInfo){   // 如果全局变量中有用户信息
-      this.setData({
-        userInfo: app.gobalData.userInfo,
-        hasUserInfo: true
-      })
-    }else{    // 否则通过回调函数，从app.js中获取用户信息
-      app.getUserInfoCallback = (res) => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    }
-  },
-
-  // 单击按钮获取用户信息，仅第一次需要用户授权时才须点击，授权成功后下次再获取用户信息，
-  // 只需在app.js中调用wx.getUserInfo获取
-  getUserInfo: function(e){
-    console.log(e)
-    if(e.detail.userInfo){
-      this.setData({
-        userInfo: e.detail.userInfo,
-        hasUserInfo: true
-      })
-    }
-  },
-
-  // 单击按钮获取用户信息，仅第一次需要用户授权时才须点击，授权成功后下次再获取用户信息，
-  // 只需在app.js中调用wx.getUserInfo获取
-  getUserInfo: function(e){
-    console.log(e)
-    if(e.detail.userInfo){
-      this.setData({
-        userInfo: e.detail.userInfo,
-        hasUserInfo: true
-      })
-    }
+    this.setData({
+      userInfo:app.gobalData.userInfo,
+    })
   },
   btnclick: function(e) {
     wx.navigateTo({ url: '/pages/personal/worker/worker' })
   },
-
+  navclick:function(e){
+    var typeid=e.currentTarget.dataset.typeid;
+    wx.navigateTo({
+      url: '/pages/personal/order/index/index?typeid='+typeid,
+    })
+  },
 
   //点击账号设置跳转到设置页
   toSetting:function(){

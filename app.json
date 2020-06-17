@@ -14,7 +14,8 @@
     "pages/map/map",
     "pages/chat/index/index",
     "pages/find/find",
-    "pages/personal/C_Services/C_Services"
+    "pages/personal/C_Services/C_Services",
+    "pages/personal/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -53,7 +54,7 @@
         "selectedIconPath": "image/news1.png"
       },
       {
-        "pagePath": "pages/personal/personal",
+        "pagePath": "pages/personal/login/login",
         "text": "个人中心",
         "iconPath": "image/personal.png",
         "selectedIconPath": "image/personal1.png"
