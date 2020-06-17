@@ -7,32 +7,11 @@ Page({
   data: {
     item: 0,
     tab: 0,
-    _data:null,//缓存中的用户数据
-    //最上面的图标
-    topicon:[{
-      id: 1,
-      title: '预约服务',
-      coverImgUrl: 'http://qbboxshzh.bkt.clouddn.com/task/Release/yyfw.png',
-    },{
-      id: 2,
-      title: '匹配人员',
-      coverImgUrl: 'http://qbboxshzh.bkt.clouddn.com/task/Release/ppry.png',
-    },{
-      id: 3,
-      title: '订单服务',
-      coverImgUrl: 'http://qbboxshzh.bkt.clouddn.com/task/Release/ddfw.png',
-    },{
-      id: 4,
-      title: '订单完成',
-      coverImgUrl: 'http://qbboxshzh.bkt.clouddn.com/task/Release/ddwc.png',
-    },],
-
-       // 
    picker:{
     arr: ['管道维修','电脑维修','家政保洁','家电维修','专业咨询','心理咨询','上门安装'],
     index: 1
   },
-
+  images: [],
   
   date: '2020-07-01',
   region: ['江西省', '九江市', '濂溪区'],
@@ -137,7 +116,41 @@ Page({
   moneyChange: function(){
     this.setData({money_focus: false})
   },
-
+  // 照片上传方法
+  chooseImage(e) {
+    wx.chooseImage({
+      sizeType: ['original', 'compressed'],  //可选择原图或压缩后的图片
+      sourceType: ['album', 'camera'], //可选择性开放访问相册、相机
+      success: res => {
+        const images = this.data.images.concat(res.tempFilePaths)
+        // 限制最多只能留下3张照片
+        const images1 = images.length <= 3 ? images : images.slice(0, 3)
+        this.setData({
+          images: images1
+        })
+      }
+    })
+  },
+  removeImage(e) {
+    var that = this;
+    var images = that.data.images;
+    // 获取要删除的第几张图片的下标
+    const idx = e.currentTarget.dataset.idx
+    // splice  第一个参数是下表值  第二个参数是删除的数量
+    images.splice(idx,1)
+    this.setData({
+      images: images
+    })
+  },
+ 
+  handleImagePreview(e) {
+    const idx = e.target.dataset.idx
+    const images = this.data.images
+    wx.previewImage({
+      current: images[idx],  //当前预览的图片
+      urls: images,  //所有要预览的图片
+    })
+  },
   
   // 提交表单
   formSubmit: function(e){
@@ -161,37 +174,6 @@ Page({
       })
       return;
     }
-    var that = this;
-    wx.getStorage({
-      
-      key: '_data',
-      success:function(res){
-        that.setData({
-          _data:res.data
-        })
-      }
-    }),
-    //向后台提交任务数据
-    wx.request({
-      url: 'http://localhost:8080/kbb/task/post_task',
-      method:'POST',
-      data:{
-            "type" : e.detail.value.type,
-            "userId":_data.userId,
-            "requirement" : e.detail.value.requirement,
-            "information" : e.detail.value.information,
-            "name" : e.detail.value.name,
-            "phone" : e.detail.value.phone,
-            "date" : e.detail.value.date,
-            "region" : e.detail.value.region,
-            "money" : e.detail.value.money},
-      header:{
-        'content-type': 'application/x-www-form-urlencoded'
-      },
-      success:function(res){
-        console.log(res);
-      }
-    })
   },
 
 
