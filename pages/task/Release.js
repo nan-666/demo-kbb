@@ -7,12 +7,13 @@ Page({
   data: {
     item: 0,
     tab: 0,
+    _data:null,
    picker:{
     arr: ['管道维修','电脑维修','家政保洁','家电维修','专业咨询','心理咨询','上门安装'],
     index: 1
   },
   images: [],
-  
+  imageurls:[],
   date: '2020-07-01',
   region: ['江西省', '九江市', '濂溪区'],
 
@@ -154,7 +155,13 @@ Page({
   
   // 提交表单
   formSubmit: function(e){
-
+    
+    console.log(e.detail.value)
+    console.log(this.data.picker.index)
+    console.log(this.data.region)
+    console.log(this.data.images)
+    console.log(this.data.date)
+    console.log(this.data._data)
     var name = e.detail.value.name,
       phone = e.detail.value.phone;
     if(name === '' || phone === ''){
@@ -174,6 +181,68 @@ Page({
       })
       return;
     }
+    //上传图片到七牛云
+    var list = [];
+    const qiniuUploader = require("../../utils/qiniuUploader");
+    for(var i=0;i< this.data.images.length;i++){
+      const options = {     // 设置七牛上传参数
+        region: 'ECN',      // 空间所在区域，ECN为华东区
+        domain: 'http://qbboxshzh.bkt.clouddn.com',  // 域名，试用阶段为测试域名（30天有效期）
+        uptokenURL: 'http://127.0.0.1:8080/kbb//GetQiniuToken',  // 开发中服务器提供的获取上传凭证token的接口
+        key: 'image/upload/'+(new Date()).valueOf()+'.jpg'     // 指定文件key，在服务端可生成同名文件覆盖的上传凭证
+      };
+      qiniuUploader.upload(this.data.images[i], (res)=>{     // 上传成功，返回图片的key及url
+        var imgUrl = res.imageURL;
+        // 同名图片覆盖后，因为浏览器有缓存的原因，不能立刻预览到最新图片，此时需要通过在url中添加唯一参数来强制去除缓存
+        var imgNewUrl = imgUrl + '?a=' + (new Date()).valueOf();
+        console.log(imgNewUrl);
+        // 将图片url存入自己的服务器数据库
+        list.push(imgNewUrl)
+
+      }, (error)=> {      // 上传错误，打印错误信息
+        console.log('error' + error)
+      }, options, (progress)=>{       // 上传进度
+        
+      }, null, null , (complete)=>{
+        
+      })
+    }
+    var that = this
+    setTimeout(function() {
+      that.setData({
+        imageurls:list
+      })
+      
+      //向后台提交任务数据
+      wx.request({
+        url: 'http://localhost:8080/kbb/task/post_task',
+        method:'POST',
+        data:{
+              "num" : that.data.picker.index,
+              "userId":that.data._data.userId,
+              "requirement" : e.detail.value.requirement,
+              "phone" : e.detail.value.phone,
+              "date" : that.data.date,
+              "region" : that.data.region[0]+that.data.region[1]+that.data.region[2],
+              "money" : e.detail.value.money,
+              "images" : that.data.imageurls
+            },
+          header:{
+              "Accept": "application/json, text/javascript, */*; q=0.01",
+              "Content-Type":"application/x-www-form-urlencoded; charset=UTF-8"
+            },
+        success:function(res){
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'success',
+            duration: 2000
+          })
+          
+        }
+      })
+    }, 3000);
+
+    
   },
 
 
@@ -181,7 +250,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
+    var _data = wx.getStorageSync('_data')
+    this.setData({_data:_data})
+      
   },
 
   /**
