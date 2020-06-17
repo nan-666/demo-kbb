@@ -2,20 +2,69 @@
   <!-- 搜索栏 -->
   <view class="server-search">
     <view class="server-search-site" bindtap="btnclick">
-      <image src="http://q9xwl365p.bkt.clouddn.com/index/icon/site.png" />
+      <image src="http://qbboxshzh.bkt.clouddn.com/index/icon/site.png" />
      <view>九江市</view>
     </view>
     <view class="server-search-box">
       <icon class="weui-icon-search_in-box" type="search"></icon>
-      <input type="text" placeholder-class="placeholderinput" placeholder="搜索服务"/>
+      <input type="text" placeholder-class="placeholderinput" placeholder="搜索任务" value='{{keyWord}}' bindconfirm='search'/>
     </view>
   </view>
+  <!-- 轮播图 -->
+  <swiper class="content-server-slide" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" autoplay circular>
+    <swiper-item>
+      <image src="http://qbboxshzh.bkt.clouddn.com/task/banner1.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="http://qbboxshzh.bkt.clouddn.com/task/banner2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="http://qbboxshzh.bkt.clouddn.com/task/banner3.jpg"></image>
+    </swiper-item>
+  </swiper>
   <!-- 标签 -->
-  <view class="tab">
-  <view class="tab-item {{tabs==0 ? 'active':''}}" bindtap="changeItems" data-item="0">综合</view>
-  <view class="tab-item {{tabs==1 ? 'active':''}}" bindtap="changeItems" data-item="1">最新</view>
-  <view class="tab-item {{tabs==2 ? 'active':''}}" bindtap="changeItems" data-item="2">佣金</view>
-  <view class="tab-item">筛选</view>
+  <view class="task-tab">
+  <view class="task-tab-item {{tabs==0 ? 'active':''}}" bindtap="changeItems" data-item="0">综合</view>
+  <view class="task-tab-item {{tabs==1 ? 'active':''}}" bindtap="changeItems" data-item="1">最新</view>
+  <view class="task-tab-item {{tabs==2 ? 'active':''}}" bindtap="changeItems" data-item="2">佣金</view>
+  <view class="task-tab-item" bindtap="translate">筛选</view>
+    <view class="float {{isRuleTrue?'isRuleShow':'isRuleHide'}} ">
+      <view class="animation-element" animation="{{animation}}">
+        <view class='use'>
+          <view class='iconuse'>类型</view>
+          <ul class="useage">
+            <li class="{{type=='家电维修' ? 'activity':''}}" bindtap="tryDriver" data-type="家电维修">家电维修</li>
+            <li class="{{type=='生活配送' ? 'activity':''}}" bindtap="tryDriver" data-type="生活配送">生活配送</li>
+            <li class="{{type=='家电清洗' ? 'activity':''}}" bindtap="tryDriver" data-type="家电清洗">家电清洗</li>
+          </ul>
+          <ul class="useage">
+            <li class="{{type=='房子装修' ? 'activity':''}}" bindtap="tryDriver" data-type="房子装修">房子装修</li>
+            <li class="{{type=='拉家搬货' ? 'activity':''}}" bindtap="tryDriver" data-type="拉家搬货">拉家搬货</li>
+            <li class="{{type=='上门安装' ? 'activity':''}}" bindtap="tryDriver" data-type="上门安装">上门安装</li>
+          </ul>
+          <ul class="useage">
+            <li class="{{type=='管道疏通' ? 'activity':''}}" bindtap="tryDriver" data-type="管道疏通">管道疏通</li>
+            <li class="{{type=='家庭保洁' ? 'activity':''}}" bindtap="tryDriver" data-type="家庭保洁">家庭保洁</li>
+            <li class="{{type=='上门回收' ? 'activity':''}}" bindtap="tryDriver" data-type="上门回收">上门回收</li>
+          </ul>
+          <ul class="useage">
+            <li class="{{type=='衣物洗护' ? 'activity':''}}" bindtap="tryDriver" data-type="衣物洗护">衣物洗护</li>
+          </ul>
+        </view>
+        <!-- 价格 -->
+        <view class='use'>
+          <view class='iconprice'>佣金</view>
+          <ul class="useage">
+            <li class="{{rank=='从低到高' ? 'activity':''}}" bindtap="Rank" data-rank="从低到高">从低到高</li>
+            <li class="{{rank=='从高到低' ? 'activity':''}}" bindtap="Rank" data-rank="从高到低">从高到低</li>
+          </ul>
+        </view>
+        <view class='buttom'>
+          <view class="animation-reset" bindtap="reset">重置</view>
+          <view class="animation-button" bindtap="complete">完成</view>
+        </view>
+      </view>
+    </view>
 </view>
 
 <view class="contents">
