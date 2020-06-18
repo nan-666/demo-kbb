@@ -64,7 +64,7 @@ App({
   checkLogin: function (token) {
     var _this = this;
     wx.request({
-      url: 'http://127.0.0.1:8080/kbb/main/java/login/CheckLogin',
+      url: 'http://127.0.0.1:8080/kbb/main/java/action/login/CheckLogin',
       method: 'POST',
       data: {
         token: token
@@ -98,7 +98,7 @@ App({
         console.log("res.code:"+res.code);
         // 发送code到开发者服务器，获取openId等信息，生成token凭证
         wx.request({
-          url: 'http://localhost:8080/kbb/main/java/login/Login',
+          url: 'http://localhost:8080/kbb/main/java/action/login/Login',
           method: 'POST',
           data: {
             code: res.code
