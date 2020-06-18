@@ -23,7 +23,7 @@ onLoad :function(){
     url: 'http://localhost:8080/kbb/order',
     success:function(res){
       for(var i = 0;i < res.data.length;i++){
-        if(res.data[i].state == 1){
+        if(res.data[i].state == '订单创建'){
           let {describe,address,type,money,time} = res.data[i]
           var orderData = {id: res.data[i].id,describe,address,type,money,time}
           datalist.push(orderData);
@@ -36,9 +36,9 @@ onLoad :function(){
           moneylist:moneylist.sort((prev,next) => next.money - prev.money)
         })
       }
-      
     }
   })
+  
 },
   // 标签栏点击监听
   changeItem(e) {
@@ -113,7 +113,7 @@ onLoad :function(){
         },
         success:function(res){
           for(var i = 0;i < res.data.length;i++){
-            if(res.data[i].state == 1){
+            if(res.data[i].state == '订单创建'){
               let {describe,address,type,money,time} = res.data[i]
               var orderData = {id: res.data[i].id,describe,address,type,money,time}
               datalist.push(orderData);
@@ -177,7 +177,7 @@ onLoad :function(){
         },
         success:function(res){
           for(var i = 0;i < res.data.length;i++){
-            if(res.data[i].state == 1){
+            if(res.data[i].state == '订单创建'){
               let {describe,address,type,money,time} = res.data[i]
               var orderData = {id: res.data[i].id,describe,address,type,money,time}
               datalist.push(orderData);

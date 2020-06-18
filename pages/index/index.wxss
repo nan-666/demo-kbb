@@ -119,7 +119,6 @@ page{
   height: 47px;
 }
 .content-activity > view:nth-child(2){
-
   background-image: url(http://qbboxshzh.bkt.clouddn.com/index/recommend/bg/design1.jpg);
   padding-top: 18px;
   height: 47px;
@@ -237,9 +236,14 @@ float: left;
 	display: flex;
   padding: 20rpx 0;
   background: #fff; 
+  border-bottom: 1rpx solid #e8e8e8;
   border-radius: 10rpx;
   margin: 15rpx 0;
 }
+.service-list{
+	padding: 0 20rpx;
+}
+
 .service-img{
 	width: 220rpx;
 	height: 156rpx;
