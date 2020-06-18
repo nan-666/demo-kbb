@@ -6,17 +6,37 @@ Page({
     tab: 0,
     items:0,
     tabs:0,
-    inputTxt:''//输入内容
+    inputTxt:'',//输入内容
+    datalist:[],
+    newlist:[],
+    moneylist:[],
+    word:'',
+    type:'',
+    rank:''
   },
 onLoad :function(){
   var _this=this;
+  var {datalist} = this.data;
+  var {newlist} = this.data;
+  var {moneylist} = this.data;
   wx.request({
-
     url: 'http://localhost:8080/kbb/order',
     success:function(res){
-      _this.setData({
-        datalist:res.data
-      })
+      for(var i = 0;i < res.data.length;i++){
+        if(res.data[i].state == 1){
+          let {describe,address,type,money,time} = res.data[i]
+          var orderData = {id: res.data[i].id,describe,address,type,money,time}
+          datalist.push(orderData);
+          newlist.push(orderData);
+          moneylist.push(orderData);
+        }
+        _this.setData({
+          datalist,
+          newlist:newlist.sort((prev, next) => Date.parse(next.time) - Date.parse(prev.time)),
+          moneylist:moneylist.sort((prev,next) => next.money - prev.money)
+        })
+      }
+      
     }
   })
 },
@@ -39,7 +59,8 @@ onLoad :function(){
     var items = e.currentTarget.dataset.item;
     this.setData({
       items: items
-    })
+    });
+    
   },
   // 任务大厅滑块滑动时的监听函数
   changeTabs: function (e) {
@@ -48,7 +69,82 @@ onLoad :function(){
       tabs: e.detail.current
     })
   },
-
+  //筛选部分的js
+  onReady: function () {
+    this.animation = wx.createAnimation()
+  },
+  translate: function () {
+    this.setData({
+      isRuleTrue: true
+    })
+    this.animation.translate(-245, 0).step()
+    this.setData({ animation: this.animation.export() })
+  },
+  tryDriver: function (e) {
+    var type = e.currentTarget.dataset.type;
+    this.setData({
+      type:type
+    })
+  },
+  Rank:function(e){
+    var rank = e.currentTarget.dataset.rank;
+    this.setData({
+      rank:rank
+    })
+  },
+  complete: function () {
+    this.setData({
+      isRuleTrue: false,
+    })
+    if(this.data.type){
+      this.setData({
+        datalist:[]
+      });
+      var _this=this;
+      var {datalist} = this.data;
+      var {newlist} = this.data;
+      var {moneylist} = this.data;
+      wx.request({
+        url: 'http://localhost:8080/kbb/screen',
+        method:'POST',
+        data:{"type":_this.data.type},
+        header:{
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        success:function(res){
+          for(var i = 0;i < res.data.length;i++){
+            if(res.data[i].state == 1){
+              let {describe,address,type,money,time} = res.data[i]
+              var orderData = {id: res.data[i].id,describe,address,type,money,time}
+              datalist.push(orderData);
+              newlist.push(orderData);
+              moneylist.push(orderData);
+            }
+            if(_this.data.rank == '从低到高'){
+              _this.setData({
+                datalist,
+                newlist:newlist.sort((prev, next) => Date.parse(next.time) - Date.parse(prev.time)),
+                moneylist:moneylist.sort((prev,next) => prev.money - next.money)
+              })
+            } else{
+              _this.setData({
+                datalist,
+                newlist:newlist.sort((prev, next) => Date.parse(next.time) - Date.parse(prev.time)),
+                moneylist:moneylist.sort((prev,next) => next.money - prev.money)
+              })
+            } 
+          }
+        }
+      })
+    }
+    this.animation.translate(0, 0).step()
+    this.setData({ animation: this.animation.export() })
+  },
+  reset:function(){
+    this.setData({
+      type:''
+    })
+  },
   //搜索功能
   goSearch: function(e) {
     var formData = e.detail.value;
@@ -59,6 +155,46 @@ onLoad :function(){
     }
   },
 
+  search:function(e){
+    var word = e.detail.value;
+    this.setData({
+      word:word,
+      datalist:[],
+      newlist:[],
+      moneylist:[]
+    })
+    if (this.data.word) {
+      var _this=this;
+      var {datalist} = this.data;
+      var {newlist} = this.data;
+      var {moneylist} = this.data;
+      wx.request({
+        url: 'http://localhost:8080/kbb/searchTask',
+        method:'POST',
+        data:{"word":_this.data.word},
+        header:{
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        success:function(res){
+          for(var i = 0;i < res.data.length;i++){
+            if(res.data[i].state == 1){
+              let {describe,address,type,money,time} = res.data[i]
+              var orderData = {id: res.data[i].id,describe,address,type,money,time}
+              datalist.push(orderData);
+              newlist.push(orderData);
+              moneylist.push(orderData);
+            }
+            _this.setData({
+              datalist,
+              newlist:newlist.sort((prev, next) => Date.parse(next.time) - Date.parse(prev.time)),
+              moneylist:moneylist.sort((prev,next) => next.money - prev.money)
+            })
+          }
+          
+        }
+      })
+    } 
+  },
   btnclick: function(e) {
     wx.navigateTo({ url: '/pages/map/map' })
   },
