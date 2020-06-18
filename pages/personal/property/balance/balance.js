@@ -1,4 +1,5 @@
 // pages/personal/property/balance/balance.js
+var app=getApp();
 Page({
 
   
@@ -19,14 +20,32 @@ toWithdraw:function(){
    * 页面的初始数据
    */
   data: {
-
+    balance:0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function () {
+    var _this=this; 
+    wx.request({ 
+      url: 'http://localhost:8080/kbb//main/java/action/bill', 
+      method:'POST', 
+      data: {
+        userid:app.gobalData.userId
+      },
+      header:{ 
+        'content-type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      }, 
+      success:function(res){ 
+        console.log(res.data[0].balance);
+        app.gobalData.balance=res.data[0].balance;
+        _this.setData({ 
+          balance:res.data[0].balance
+        }) 
+      } 
+    }) 
   },
 
   /**

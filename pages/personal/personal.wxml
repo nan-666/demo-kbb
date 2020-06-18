@@ -13,18 +13,44 @@
 			<image src="http://qbboxshzh.bkt.clouddn.com/personal/personal/qj.png" />
 		</view>
 	</view>
-
+	
   <view class="content2">
-	  <view class="content2-item" bindtap="order">
-		  <view>订单</view>
-			<image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
-		</view>
+	<!-- 摘抄部分 -->
+	<view class="order" catchtap="toOrder">
+    <text class="myorder-text">我的订单</text>
+  </view>
+		<view class="line"></view>
+  <view class="navs">
+    <block wx:for-items="{{orderItems}}" wx:key="name">
+      <view class="nav-item"  data-type="{{item.name}}" data-typeid="{{item.typeId}}" bindtap="navclick">
+        <image src="{{item.imageurl}}" class="nav-image" />
+        <text class="cz">{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+	<view class="line"></view>
 	  <view class="content2-item" bindtap="toBalance">
 		  <view>账户余额</view>
 			<image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
 		</view>
+		<view class="content2-item" bindtap="order">
+		  <view>我的评价</view>
+			<image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
+		</view>
+		<view class="content2-item" bindtap="order">
+		  <view>我的收藏</view>
+			<image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
+		</view>
+		<view class="content2-item" bindtap="order">
+		  <view>服务地址</view>
+			<image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
+		</view>
+		<view class="content2-item" bindtap="toC_Services">
+		  <view>售后记录</view>
+			<image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
+		</view>
 	  <view class="content2-item" bindtap="toC_Services">
-		  <view>常用服务</view>
+		  <view>在线客服</view>
 			<image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
 		</view>
 	</view>

@@ -13,8 +13,9 @@
     "pages/Asetting/setting",
     "pages/map/map",
     "pages/chat/index/index",
-    "pages/video/video",
-    "pages/personal/C_Services/C_Services"
+    "pages/find/find",
+    "pages/personal/C_Services/C_Services",
+    "pages/personal/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -35,7 +36,7 @@
         "selectedIconPath": "image/index1.png"
       },
       {
-        "pagePath": "pages/video/video",
+        "pagePath": "pages/find/find",
         "text": "发现",
         "iconPath": "image/forum.png",
         "selectedIconPath": "image/forum1.png"
@@ -53,7 +54,7 @@
         "selectedIconPath": "image/news1.png"
       },
       {
-        "pagePath": "pages/personal/personal",
+        "pagePath": "pages/personal/login/login",
         "text": "个人中心",
         "iconPath": "image/personal.png",
         "selectedIconPath": "image/personal1.png"

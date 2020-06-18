@@ -1,4 +1,5 @@
 // pages/Asetting/setting.js
+var app=getApp()
 Page({
 
   /**
@@ -6,6 +7,7 @@ Page({
    */
   data: {
     image: 'http://qbboxshzh.bkt.clouddn.com/forum/index/tx.jpg',
+    userInfo:{},
     // username: '',
     // gender:[{
     //       sex:'男',
@@ -22,7 +24,13 @@ Page({
     // intro: '',
     // label: '',
     // industry: '',
-
+    nickname:'',
+    gender:'',
+    phone:'',
+    birthday:'',
+    tag:'',
+    sort:'',
+    industry:''
   },
 
   // 选择头像，wx.chooseImage从本地相册选择图片或使用相机拍照
@@ -53,28 +61,54 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
-    var _this = this;
+    var _this=this;
     wx.request({
-      url: 'http://127.0.0.1:3000/getset/',
-      //method:'GET'            //GET请求方式为默认，可以不写
-      success:function(res){
-        _this.setData(res.data)
+      url: 'http://localhost:8080/kbb/main/java/action/getuserinfo',
+      method: 'POST',
+      data: {
+        userid:app.gobalData.userId,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data[0])
+        _this.setData({
+          infodata:res.data[0],
+        })
       }
     })
   },
 
+
+
   submit:function(e){
-    //发送数据到服务端
+    console.log(e.detail.value)
+    var _this=this;
     wx.request({
-      url: 'http://127.0.0.1:3000',          //服务端接口
-      method: 'POST',                         //请求方式：‘GET’、‘POST’，其中‘GET’方式为默认可不写
-      data: e.detail.value,                  //发送的参数
-      success: function(res){                //服务端响应成功，结果由res,data带回
+      url: 'http://localhost:8080/kbb/main/java/action/settingmsg',
+      method: 'POST',
+      data: {
+        userid:app.gobalData.userId,
+              nickName: _this.data.nickName,
+              avatarUrl:_this.data.avatarUrl,
+              gender:_this.data.gender,
+              phone:_this.data.city,
+              birthday:_this.data.birthday,
+              information:_this.data.city,
+              sort:_this.data.city,
+              work:_this.data.city,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      },
+      success: function (res) {
         console.log(res)
-      }    
+        
+      }
     })
-    // 关闭本页面，返回上一个页面
-    wx.navigateBack();    
   },
 
   /**

@@ -64,7 +64,7 @@ App({
   checkLogin: function (token) {
     var _this = this;
     wx.request({
-      url: 'http://127.0.0.1:8080/kbb/main/java/login/CheckLogin',
+      url: 'http://127.0.0.1:8080/kbb/main/java/action/login/CheckLogin',
       method: 'POST',
       data: {
         token: token
@@ -74,6 +74,8 @@ App({
         'Accept': 'application/json'
       },
       success: function (res) {
+        var msg=res.data.msg;
+        _this.gobalData.userId=msg.replace(/[^0-9]/ig,"");
         if(res.data.success){        // token有效，存为全局变量
           _this.gobalData.token = token;
           // 全局变量赋值后，执行回调函数，完成index中的操作
@@ -96,7 +98,7 @@ App({
         console.log("res.code:"+res.code);
         // 发送code到开发者服务器，获取openId等信息，生成token凭证
         wx.request({
-          url: 'http://localhost:8080/kbb/main/java/login/Login',
+          url: 'http://localhost:8080/kbb/main/java/action/login/Login',
           method: 'POST',
           data: {
             code: res.code
@@ -109,6 +111,7 @@ App({
             // 将token保存为全局变量，共各页面使用
             _this.gobalData.token = res.data.data.token;
             _this.gobalData._data = res.data.data;
+            _this.gobalData.userId=res.data.data.userId;
             // 将token存入缓存，下次打开小程序无需再登录获取token
             wx.setStorage({
               data: res.data.data,
@@ -136,6 +139,8 @@ App({
   // 全局变量定义
   gobalData: {
     token: '',
-    userInfo: null
+    userInfo: null,
+    userId:'',
+    balance:0
   }
 })

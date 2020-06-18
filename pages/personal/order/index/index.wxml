@@ -1,26 +1,17 @@
-<!--index.wxml-->
-<!-- 标签页标题 -->
-<view class="tab">
-  <view class="tab-item {{tab==0?'active':''}}" bindtap="changeItem" data-item="0">全部订单</view>
-  <view class="tab-item {{tab==1?'active':''}}" bindtap="changeItem" data-item="1">待付款</view>
-  <view class="tab-item {{tab==2?'active':''}}" bindtap="changeItem" data-item="2">待服务</view>
-  <view class="tab-item {{tab==3?'active':''}}" bindtap="changeItem" data-item="3">待评价</view>
-</view>
-<!-- 标签页内容区 -->
-<view class="content">
-  <!--current：当前滑块显示页面索引号； bindchange：滑块滑动时监听函数  -->
-  <swiper current="{{item}}" bindchange="changeTab">
-    <swiper-item>
-      <include src="info.wxml" />
-    </swiper-item>
-    <swiper-item>
-      <include src="payment.wxml" />
-    </swiper-item>
-    <swiper-item>
-      <include src="service.wxml" />
-    </swiper-item>
-    <swiper-item>
-      <include src="evaluate.wxml" />
-    </swiper-item>
-  </swiper>
+<!--pages/index/info.wxml.wxml-->
+<view class="info">
+    <view class="service" bindtap="toDetail" wx:for="{{service}}" wx:key="index" data-index="{{index}}">
+      <view class="service-img">
+        <image src="{{item.coverImgUrl}}"/>
+      </view>
+      <view class="service-name">{{item.type}}</view>
+      <view class="service-money">¥{{item.money}}</view>
+      <view class="service-detail">{{item.title}}</view>
+      <view class="service-num">×1</view>
+      <view class="service-pay"><text>总价：¥{{item.money}}  实付款：¥{{item.money}}</text></view>
+      <view class="button-all">
+      <view class="button">查看进度</view>
+      <view class="button">确认完成</view>
+    </view>
+    </view>
 </view>

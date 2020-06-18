@@ -1,11 +1,13 @@
 // pages/personal/property/recharge/recharge.js
+var app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    inputmoney:0,
+    balance:0
   },
 
   // 点击银行卡跳转到选择银行卡页
@@ -15,59 +17,39 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad:function(){
+    this.setData({
+      balance:app.gobalData.balance,
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  //获取输入金额
+  inputmoney:function(e){
+    this.setData({
+      inputmoney:e.detail.value,
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  //post
+  formSubmit:function(){
+    var _this=this;
+    var updatemoney=parseInt(_this.data.inputmoney)+parseInt(_this.data.balance);
+    console.log(updatemoney);
+    wx.request({
+      method:'POST',
+      url: 'http://localhost:8080/kbb//main/java/action/updatebill', 
+      data:{
+        userid:app.gobalData.userId,
+        inputmoney:updatemoney
+      },
+      header:{ 
+        'content-type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      }, 
+      success:function(res){ 
+        console.log(res);
+          wx.reLaunch({
+            url: '/pages/personal/property/balance/balance',
+          })
+          }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+  })
