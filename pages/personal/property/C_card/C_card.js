@@ -4,14 +4,14 @@ Page({
     // cardlist: [
     //   {
     //     id: 1,
-    //     image: "http://q9xwl365p.bkt.clouddn.com/personal/property/C_card/zggsyh.png",
+    //     image: "http://qbboxshzh.bkt.clouddn.com/personal/property/C_card/zggsyh.png",
     //     name: "中国工商银行",
     //     number: "尾号****",
     //     card: "储蓄卡"
     //   },
     //   {
     //     id: 2,
-    //     image: "http://q9xwl365p.bkt.clouddn.com/personal/property/C_card/zgjsyh.png",
+    //     image: "http://qbboxshzh.bkt.clouddn.com/personal/property/C_card/zgjsyh.png",
     //     name: "中国建设银行",
     //     number: "尾号****",
     //     card: "储蓄卡"

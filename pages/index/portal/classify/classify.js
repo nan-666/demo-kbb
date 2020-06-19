@@ -15,42 +15,42 @@ Page({
           {
             child_id: 1,
             name: '修空调',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/air1.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/air1.png"
           },
           {
             child_id: 2,
             name: '空调移机',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/air2.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/air2.png"
           },
           {
             child_id: 3,
             name: '空调加氧',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/air3.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/air3.png"
           },
           {
             child_id: 4,
             name: '修冰箱',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/refrigerator.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/refrigerator.png"
           },
           {
             child_id: 5,
             name: '修洗衣机',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/washer.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/washer.png"
           },
           {
             child_id: 6,
             name: '修热水器',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/calorifier.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/calorifier.png"
           },
           {
             child_id: 7,
             name: '修燃气灶',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/gas.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/gas.png"
           },
           {
             child_id: 8,
             name: '修电脑',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/computer.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/computer.png"
           }
         ]
       },
@@ -63,32 +63,32 @@ Page({
           {
             child_id: 1,
             name: '油烟机',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/rangehood.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/rangehood.png"
           },
           {
             child_id: 2,
             name: '空调',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/air1.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/air1.png"
           },
           {
             child_id: 3,
             name: '洗衣机',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/washer.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/washer.png"
           },
           {
             child_id: 4,
             name: '冰箱',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/refrigerator.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/refrigerator.png"
           },
           {
             child_id: 5,
             name: '燃气灶',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/gas.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/gas.png"
           },
           {
             child_id: 6,
             name: '热水器',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/calorifier.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/calorifier.png"
           }
         ]
       },
@@ -101,37 +101,37 @@ Page({
           {
             child_id: 1,
             name: '家具',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/furnisher.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/furnisher.png"
           },
           {
             child_id: 2,
             name: '灯具',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/lamp.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/lamp.png"
           },
           {
             child_id: 3,
             name: '洁具',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/calorifier.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/calorifier.png"
           },
           {
             child_id: 4,
             name: '地板',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/floor.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/floor.png"
           },
           {
             child_id: 5,
             name: '瓷砖',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/ceramictile.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/ceramictile.png"
           },
           {
             child_id: 6,
             name: '门锁',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/lock.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/lock.png"
           },
           {
             child_id: 7,
             name: '纱窗',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/window.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/window.png"
           },
         ]
       },
@@ -143,27 +143,27 @@ Page({
           {
             child_id: 1,
             name: '家具',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/furnisher.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/furnisher.png"
           },
           {
             child_id: 2,
             name: '电器',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/electrical.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/electrical.png"
           },
           {
             child_id: 3,
             name: '手机',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/phone2.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/phone2.png"
           },
           {
             child_id: 4,
             name: '塑料',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/plastics.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/plastics.png"
           },
           {
             child_id: 5,
             name: '纸品',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/paper.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/paper.png"
           },
         ]
       },
@@ -175,37 +175,37 @@ Page({
           {
             child_id: 1,
             name: '刷漆',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/brushe.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/brushe.png"
           },
           {
             child_id: 2,
             name: '改电',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/insertion.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/insertion.png"
           },
           {
             child_id: 3,
             name: '贴墙纸',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/paper2.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/paper2.png"
           },
           {
             child_id: 4,
             name: '改水',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/water2.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/water2.png"
           },
           {
             child_id: 5,
             name: '翻修',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/refurbished.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/refurbished.png"
           },
           {
             child_id: 6,
             name: '吊顶',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/suspended.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/suspended.png"
           },
           {
             child_id: 7,
             name: '瓷砖美缝',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/ceramictile.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/ceramictile.png"
           }
         ]
       },
@@ -217,17 +217,17 @@ Page({
           {
             child_id: 1,
             name: '厕所疏通',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/bathroom.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/bathroom.png"
           },
           {
             child_id: 2,
             name: '厨房疏通',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/kitchen.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/kitchen.png"
           },
           {
             child_id: 3,
             name: '管道疏通',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/pipeline.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/pipeline.png"
           }
         ]
       },
@@ -239,17 +239,17 @@ Page({
           {
             child_id: 1,
             name: '小时工',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/clean.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/clean.png"
           },
           {
             child_id: 2,
             name: '擦玻璃',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/glass.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/glass.png"
           },
           {
             child_id: 3,
             name: '除甲醛',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/methanal.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/methanal.png"
           }
         ]
       },
@@ -261,27 +261,27 @@ Page({
           {
             child_id: 1,
             name: '羽绒服',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/jacket.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/jacket.png"
           },
           {
             child_id: 2,
             name: '大衣',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/coat.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/coat.png"
           },
           {
             child_id: 3,
             name: '鞋',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/shoes.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/shoes.png"
           },
           {
             child_id: 4,
             name: '家纺',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/hometextile.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/hometextile.png"
           },
           {
             child_id: 5,
             name: '箱包',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/bag.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/bag.png"
           }
         ]
       },
@@ -293,12 +293,12 @@ Page({
           {
             child_id: 1,
             name: '拉家',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/move.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/move.png"
           },
           {
             child_id: 2,
             name: '搬货',
-            image: "http://q9xwl365p.bkt.clouddn.com/service/icon/pickup.png"
+            image: "http://qbboxshzh.bkt.clouddn.com/service/icon/pickup.png"
           }
         ]
       }

@@ -1,0 +1,35 @@
+<!--pages/book/book.wxml-->
+<view class='tip'>
+  <image class='icon' src='/img/icon!.png'></image>
+  <view class='text-wrap'>
+    <text>填写您的需求及必要资料</text>
+    <text>预约</text>
+  </view>
+</view>
+<form bindsubmit ="saveBook" report-submit="true">
+  <view class='form'>
+    <view class='choose'>
+      <image class='icon' src='/img/icon-dzgl.png'></image>
+      <text>服务地址</text><text style="color:red;">*</text>
+      <view class="server-input">
+        <picker mode="region" bindchange="regionChange" value="{{region}}" custom-item="{{customItem}}">{{region[0]}} {{region[1]}} {{region[2]}}</picker>
+      </view>
+    </view>
+    <view class='choose' >
+      <text>服务时间</text><text style="color:red;">*</text>
+      <view class="server-input">
+        <picker mode="date" value="{{date}}" start="2015-10-01" end="2070-10-01" bindchange="dateChange">{{date}}</picker>
+      </view>
+    </view>
+    
+    <view class='section'>
+      <view class='section-title'>其他的需求简述</view>
+      <textarea name="textarea" />
+    </view>
+    <!-- <navigator class='link' url='../classify/classify'>太麻烦？选择零工服务</navigator> -->
+  </view>
+  <view class="redbtn-fixed">
+    <button formType="submit">提交申请</button>
+  </view>
+
+</form>

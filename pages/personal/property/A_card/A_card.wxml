@@ -4,7 +4,7 @@
   <view class= "add">
     <input class="input" maxlength="19" type="number" placeholder="点击输入银行卡号" bindinput="searchInput"/>
       <view class="add-photograph">
-        <image src="http://q9xwl365p.bkt.clouddn.com/personal/property/A_card/xj.png" />
+        <image src="http://qbboxshzh.bkt.clouddn.com/personal/property/A_card/xj.png" />
         <view>拍照添卡</view>
       </view>
   </view>

@@ -1,6 +1,6 @@
 <scroll-view class="content-all" scroll-y>
   <view class = "comment-user">
-    <image src="http://q9xwl365p.bkt.clouddn.com/forum/index/tx.jpg"></image>
+    <image src="http://qbboxshzh.bkt.clouddn.com/forum/index/tx.jpg"></image>
     <view class="user-info">
       <text class="user-name">xxxx</text>
       <text class="user-time">刚刚</text>

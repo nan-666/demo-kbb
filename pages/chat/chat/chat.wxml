@@ -1,2 +1,216 @@
 <!--pages/chat/chat.wxml-->
-<text>pages/chat/chat.wxml</text>
+<view class="chat" id="chat" bindlongpress="handleProxy" bindtouchmove="handleProxy" bindtouchend="handleProxy" style="{{('padding-bottom:' + (isIphoneX ? safeBottom + 70 + 'px' : '70px') + ';')}}">
+    <view class="record-modal {{isRecording ? '' : 'modal-display'}}">
+      <view class="wrapper">
+        <view class="modal-loading"></view>
+      </view>
+      <view class="modal-title">
+        {{title}}
+      </view>
+    </view>
+    <i-modal title="确认下载？" visible="{{modalVisible}}" bindok="handleProxy" bindcancel="handleProxy" class="_i-modal">
+      <view class=" input-wrapper"> 进度{{percent}}% </view>
+    </i-modal>
+    <i-modal title="发送自定义消息" visible="{{customModalVisible}}" bindok="handleProxy" bindcancel="handleProxy" class="_i-modal">
+      <view class="custom-wrapper"><input type="text" class="_input custom-input {{[focusedInput === 'data' ? 'input-focus' : '']}}" placeholder="输入数据" value="{{customData}}" bindinput="handleProxy" bindfocus="handleProxy" bindblur="handleProxy" /> 
+        <input type="text" class="_input custom-input {{[focusedInput === 'desc' ? 'input-focus' : '']}}" placeholder="输入描述" value="{{customDescription}}" bindinput="handleProxy" bindfocus="handleProxy" bindblur="handleProxy"/> 
+        <input type="text" class="_input custom-input {{[focusedInput === 'ext' ? 'input-focus' : '']}}" placeholder="输入其他" value="{{customExtension}}" bindinput="handleProxy" bindfocus="handleProxy" bindblur="handleProxy"/>
+      </view>
+    </i-modal>
+    <i-modal title="对IM demo的评分和评价" i-class="custom-modal" visible="{{rateModal}}" bindok="handleProxy" bindcancel="handleProxy" class="_i-modal">
+      <view class="custom-wrapper">
+        <i-rate bindchange="handleProxy" value="{{rate}}" class="_i-rate"></i-rate> 
+        <input type="text" class="_input custom-input" placeholder="输入评价" value="{{customExtension}}" bindinput="handleProxy"/>
+      </view>
+    </i-modal>
+    <i-modal title="提示" i-class="custom-modal" visible="{{revokeModal}}" bindok="handleProxy" bindcancel="handleProxy" class="_i-modal">
+      <view class=" custom-wrapper"> 确定要撤回本消息吗？ </view>
+    </i-modal>
+    <view id="list" bindtap="handleProxy">
+      <view wx:key="index" key="{{message.ID}}" id="{{message.ID}}" wx:for="{{currentMessageList}}" wx:for-index="index" wx:for-item="message" class="_li">
+        <view class="notice" wx:if="{{message.type === 'TIMGroupTipElem' || message.type === 'TIMGroupSystemNoticeElem'}}">
+          <view class="content">
+            <label wx:key="index" key="{{message.ID + index1}}" wx:for="{{message.virtualDom}}" wx:for-index="index1" wx:for-item="div" class="_span">
+              <label wx:if="{{div.name === 'groupTip' || 'system'}}" class="_span">{{div.text}}</label>
+            </label>
+          </view>
+        </view>
+        <view wx:elif="{{message.isRevoked}}" key="{{message.ID}}" class="">
+          <view class="notice">
+            <view class="content">
+              <block wx:if="{{message.from === myInfo.userID}}">你撤回了一条消息</block>
+              <block wx:else>{{message.from}}撤回了一条消息</block>
+            </view>
+            <block wx:if="{{message.from === myInfo.userID}}">
+              <view wx:if="{{(currentTime - message.time < 120) && message.type === 'TIMTextElem'}}" bindtap="handleProxy" class=" re-edit">重新编辑</view>
+            </block>
+          </view>
+        </view>
+        <view wx:else class="{{(message.flow === 'out') ? 'item-right' : 'item-left'}}">
+          <view class="content">
+            <view class="name">
+              <block wx:if="{{currentConversation.type === 'C2C'}}">
+                <block wx:if="{{message.flow === 'in'}}">
+                  {{currentConversation.userProfile.nick || currentConversation.userProfile.userID}}
+                </block>
+                <block wx:else>
+                  {{myInfo.nick || myInfo.userID}}
+                </block>
+              </block>
+              <block wx:else>
+                {{message.nameCard || message.nick || message.from}}
+              </block>
+            </view>
+            <view class="wrapper" bindlongpress="handleProxy">
+              <view class="load" bindtap="handleProxy" wx:if="{{message.from === myInfo.userID}}">
+                <view class="{{message.status}}"></view>
+              </view>
+              <view class="message" wx:if="{{message.type === 'TIMTextElem'}}">
+                <view class="text-message">
+                    <!-- <label class="_span">{{message.payload.text}}</label> -->
+                  <label wx:key="index" wx:for="{{message.divs}}" wx:for-index="index2" wx:for-item="div">
+                    <label wx:if="{{div.type=='span'}}">{{div.text}}</label>
+                    <image wx:else src="{{emojiUrl + emojiMap[div.text]}}" style="width:20px;height:20px;"></image>
+                  </label>
+                </view>
+              </view>
+              <image class="_image image-message" wx:elif="{{message.type === 'TIMImageElem'}}" src="{{message.payload.imageInfoArray[1].url}}" mode="widthFix" bindtap="handleProxy"></image>
+              <view class=" message" wx:elif="{{message.type === 'TIMFileElem'}}">
+                <view class="file" bindtap="handleProxy">
+                  <i-avatar src="../../../static/images/file.png" size="large" shape="square" class="_i-avatar"></i-avatar>
+                  <view>{{message.payload.fileName}}</view>
+                </view>
+              </view>
+              <view class="message" wx:elif="{{message.type === 'TIMCustomElem'}}">
+                <view wx:if="{{message.payload.data === 'survey'}}" class="survey">
+                  <view class="title"> 对IM DEMO的评分和建议 </view>
+                  <view class="description">
+                    <i-rate disabled="true" value="{{message.payload.description}}" class="_i-rate"></i-rate>
+                  </view>
+                  <view class="suggestion">
+                    <view>{{message.payload.extension}}</view>
+                  </view>
+                </view>
+                <view wx:elif="{{message.payload.data === 'group_create'}}">
+                  <view>{{message.payload.extension}}</view>
+                </view>
+                <view wx:elif="{{message.virtualDom[0].name === 'videoCall'}}" class="custom-elem">
+                  <view>{{message.virtualDom[0].text}}</view>
+                </view>
+                <view wx:else class="custom-elem">自定义消息</view>
+              </view>
+              <view class="message" wx:elif="{{message.type === 'TIMSoundElem'}}" url="{{message.payload.url}}">
+                <view class="box" bindtap="handleProxy">
+                  <image src="/static/images/audio-play.png" style="height:22px;width:22px" class="_image"></image>
+                  <view style="padding-left: 4px;">{{message.payload.second}}s</view>
+                </view>
+              </view>
+              <view class="message" wx:elif="{{message.type === 'TIMFaceElem'}}">
+                <view class="custom-elem">
+                  <image src="{{message.payload.data.indexOf('@') > 0 ? faceUrl + message.payload.data + '.png' : faceUrl + message.payload.data + '@2x.png'}}" style="height:90px; width:90px" class="_image"></image>
+                </view>
+              </view>
+              <view class="message" wx:elif="{{message.type === 'TIMVideoFileElem'}}">
+                <video src="{{message.payload.videoUrl}}" class="_video video" poster="{{message.payload.thumbUrl}}" object-fit="contain" binderror="handleProxy"></video>
+              </view>
+            </view>
+          </view>
+          <view>
+            <i-avatar i-class="avatar" wx:if="{{message.flow === 'out'}}" src="{{myInfo.avatar}}" shape="square" class="_i-avatar"></i-avatar>
+            <i-avatar i-class="avatar" shape="square" wx:elif="{{currentConversation.type === 'C2C'}}" bindtap="handleProxy" src="{{currentConversation.userProfile.avatar}}" class="_i-avatar"></i-avatar>
+            <i-avatar i-class="avatar" shape="square" wx:else bindtap="handleProxy" src="{{message.avatar}}" class="_i-avatar"></i-avatar>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="bottom" style="{{('padding-bottom:' + (isIphoneX ? safeBottom + 'px' : '') + ';')}}">
+      <view class="bottom-div" style="{{('margin-bottom:' + (isFocus ? '10px' : 0) + ';')}}">
+        <view class="btn-left" bindtap="handleProxy">
+          <icon src="{{!isRecord ? '/static/images/audio.png' : '/static/images/record.png'}}" size="{{28}}" class="_icon"></icon>
+        </view>
+        <view wx:if="{{!isRecord}}" style="width: 100%">
+          <input type="text" class="_input input" value="{{messageContent}}" bindinput="messageInput" confirm-type="send" focus="{{isFocus}}" bindfocus="inputFocus" bindblur="handleProxy" bindconfirm="handleProxy"/>
+        </view>
+        <view class="record" id="record" wx:if="{{isRecord}}">
+          <block wx:if="{{!isRecording}}"> 按住 说话 </block>
+          <block wx:if="{{isRecording}}"> 抬起 停止 </block>
+        </view>
+        <view class="btn" bindtap="handleEmoji">
+          <icon src="../../../static/images/smile.png" size="{{28}}" class="_icon"></icon>
+        </view>
+        <view class="send" bindtap="sendMessage" wx:if="{{messageContent.length !== 0}}"> 发送 </view>
+        <view class="btn" bindtap="handleMore" wx:else>
+          <icon src="/static/images/more.png" size="{{28}}" class="_icon"></icon>
+        </view>
+      </view>
+      <view class="bottom-emoji" wx:if="{{isEmojiOpen}}">
+        <view class="emoji-tab">
+          <view class="tabs">
+            <view class="single {{emojiShow ? 'choosed' : ''}}" bindtap="handleEmojiShow">
+              <image src="/static/images/smile.png" style="width:100%;height:100%" class="_image"></image>
+            </view>
+            <view class="single {{bigEmojiShow ? 'choosed' : ''}}" bindtap="handleBigEmojiShow">
+              <image src="{{faceUrl + 'tt16@2x.png'}}" style="width:100%;height:100%" class="_image"></image>
+            </view>
+          </view>
+        </view>
+        <view class="emojis" wx:if="{{emojiShow}}">
+          <view class="emoji" wx:key="index" key="{{emojiItem}}" bindtap="chooseEmoji" wx:for="{{emojiName}}" wx:for-index="index3" wx:for-item="emojiItem" data-item="{{emojiItem}}">
+            <image src="{{emojiUrl + emojiMap[emojiItem]}}" style="width:100%;height:100%"></image>
+          </view>
+        </view>
+        <view class="emojis" wx:if="{{bigEmojiShow}}">
+          <view class="bigemoji" wx:key="index" key="{{bigItem}}" bindtap="chooseBigEmoji" wx:for="{{bigEmoji}}" wx:for-index="index4" wx:for-item="bigItem" data-item="{{bigItem}}">
+            <image src="{{faceUrl + bigItem + '@2x.png'}}" style="width:100%;height:100%"></image>
+          </view>
+        </view>
+      </view>
+      <view class="bottom-image" wx:if="{{isMoreOpen}}">
+        <view class="images">
+          <view class="block" bindtap="handleProxy">
+            <view class="image">
+              <image src="/static/images/take-pic.png" class="_image icon"></image>
+            </view>
+            <view class="name"> 拍摄 </view>
+          </view>
+          <view class="block" bindtap="handleProxy">
+            <view class="image">
+              <image src="/static/images/picture.png" class="_image icon"></image>
+            </view>
+            <view class="name"> 图片 </view>
+          </view>
+          <view class="block" bindtap="handleProxy">
+            <view class="image">
+              <image src="/static/images/custom.png" class="_image icon"></image>
+            </view>
+            <view class="name"> 自定义消息 </view>
+          </view>
+          <view class="block" bindtap="handleProxy">
+            <view class=" image">
+              <image src="/static/images/rating.png" class="_image icon"></image>
+            </view>
+            <view class="name"> 评分 </view>
+          </view>
+        </view>
+        <view class="images">
+          <view class="block" bindtap="handleProxy">
+            <view class="image">
+              <image src="/static/images/video-file.png" class="_image icon"></image>
+            </view>
+            <view class="name"> 视频 </view>
+          </view>
+          <view class="block" bindtap="handleProxy" wx:if="{{currentConversation.type === 'C2C'}}">
+            <view class=" image">
+              <image src="/static/images/video.png" class="_image icon"></image>
+            </view>
+            <view class="name"> 视频通话 </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="float-button-list">
+      <image src="/static/images/camera.png" class="_img video-icon" wx:if="{{currentConversation.type === 'C2C'}}" bindtap="handleProxy"></image>
+      <image src="/static/images/conversation-profile.png" bindtap="handleProxy" class="_img"></image>
+    </view>
+  </view>
+

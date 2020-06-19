@@ -6,7 +6,7 @@ Page({
     markers: [
       {
         id: 0,
-        iconPath: 'http://q9xwl365p.bkt.clouddn.com/map/map/navi.png',    // 标记物图标
+        iconPath: 'http://qbboxshzh.bkt.clouddn.com/map/map/navi.png',    // 标记物图标
         latitude: 29.674771,
         longitude: 116.004630,
         width: 30,

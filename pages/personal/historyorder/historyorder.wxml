@@ -1,6 +1,6 @@
 <view class="allorder">全部订单</view>
 <view class="syn">
-  <image src="http://q9xwl365p.bkt.clouddn.com/task/syn/pipe.png" class="fimg"/>
+  <image src="http://qbboxshzh.bkt.clouddn.com/task/syn/pipe.png" class="fimg"/>
   <view class="syn-content">
     <text class="title">急急急，下水道堵了</text>
     <view>订单编号：<text class="order">1008611</text></view>

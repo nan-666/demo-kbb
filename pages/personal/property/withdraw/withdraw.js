@@ -1,11 +1,13 @@
 // pages/personal/property/withdraw/withdraw.js
+var app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    balance:0,
+    inputmoney:0,
   },
 
   // 点击银行卡跳转到选择银行卡页
@@ -14,14 +16,45 @@ Page({
       url: '/pages/personal/property/C_card/C_card',
     })
   },
-
+  //获取输入金额
+  moneyChange:function(e){
+    this.setData({
+      inputmoney:e.detail.value,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      balance:app.gobalData.balance,
+    })
   },
 
+  //post
+  formSubmit:function(){
+    var _this=this;
+    var updatemoney=parseInt(_this.data.balance)-parseInt(_this.data.inputmoney);
+    console.log(updatemoney);
+    wx.request({
+      method:'POST',
+      url: 'http://localhost:8080/kbb//main/java/action/updatebill', 
+      data:{
+        userid:app.gobalData.userId,
+        inputmoney:updatemoney
+      },
+      header:{ 
+        'content-type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      }, 
+      success:function(res){ 
+        console.log(res);
+          wx.reLaunch({
+            url: '/pages/personal/property/balance/balance',
+          })
+          }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

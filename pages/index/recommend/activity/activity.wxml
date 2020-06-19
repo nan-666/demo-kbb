@@ -1,16 +1,16 @@
 <!--pages/index/recommend/activity/activity.wxml-->
 <view class="activity">
-  <image src="http://q9xwl365p.bkt.clouddn.com/index/recommend/activity/activity.jpg"></image>
+  <image src="http://qbboxshzh.bkt.clouddn.com/index/recommend/activity/activity.jpg"></image>
   <view class="activity-detail">
     <text>查看详情</text>
-    <image src="http://q9xwl365p.bkt.clouddn.com/Asetting/img/arrows.png"></image>
+    <image src="http://qbboxshzh.bkt.clouddn.com/Asetting/img/arrows.png"></image>
   </view>
 </view>
 <view class="activity">
-  <image src="http://q9xwl365p.bkt.clouddn.com/index/recommend/activity/activity.jpg"></image>
+  <image src="http://qbboxshzh.bkt.clouddn.com/index/recommend/activity/activity.jpg"></image>
   <view class="activity-detail">
     <text>查看详情</text>
-    <image src="http://q9xwl365p.bkt.clouddn.com/Asetting/img/arrows.png"></image>
+    <image src="http://qbboxshzh.bkt.clouddn.com/Asetting/img/arrows.png"></image>
   </view>
 </view>
 

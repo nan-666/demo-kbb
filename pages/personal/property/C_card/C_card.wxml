@@ -10,8 +10,8 @@
           <view>{{item.card}}</view>
         </view>
       </view>
-      <image src="http://q9xwl365p.bkt.clouddn.com/personal/property/C_card/g.png" />
+      <image src="http://qbboxshzh.bkt.clouddn.com/personal/property/C_card/g.png" />
     </view>
  </view>
- <image class="C_card-add" bindtap="toA_card" src="http://q9xwl365p.bkt.clouddn.com/personal/property/C_card/tjyhk.png" />
+ <image class="C_card-add" bindtap="toA_card" src="http://qbboxshzh.bkt.clouddn.com/personal/property/C_card/tjyhk.png" />
 </scroll-view>

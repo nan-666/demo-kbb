@@ -9,22 +9,22 @@ Page({
       // {
       //   id: 1,
       //   name: "修空调",
-      //   image: "http://q9xwl365p.bkt.clouddn.com/service/icon/air1.png"
+      //   image: "http://qbboxshzh.bkt.clouddn.com/service/icon/air1.png"
       // },
       // {
       //   id: 2,
       //   name: "空调移机",
-      //   image: "http://q9xwl365p.bkt.clouddn.com/service/icon/air2.png"
+      //   image: "http://qbboxshzh.bkt.clouddn.com/service/icon/air2.png"
       // },
       // {
       //   id: 3,
       //   name: "空调加氧",
-      //   image: "http://q9xwl365p.bkt.clouddn.com/service/icon/air3.png"
+      //   image: "http://qbboxshzh.bkt.clouddn.com/service/icon/air3.png"
       // },
       // {
       //   id: 4,
       //   name: "修冰箱",
-      //   image: "http://q9xwl365p.bkt.clouddn.com/service/icon/refrigerator.png"
+      //   image: "http://qbboxshzh.bkt.clouddn.com/service/icon/refrigerator.png"
       // }
     // ]
   },

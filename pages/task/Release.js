@@ -13,7 +13,6 @@ Page({
     index: 0
   },
   images: [],
-
   imageurls:[],
   date: '2020-07-01',
   region: ['江西省', '九江市', '濂溪区'],
@@ -156,13 +155,6 @@ Page({
   
   // 提交表单
   formSubmit: function(e){
-    
-    console.log(e.detail.value)
-    console.log(this.data.picker.index)
-    console.log(this.data.region)
-    console.log(this.data.images)
-    console.log(this.data.date)
-    console.log(this.data._data)
     var name = e.detail.value.name,
       phone = e.detail.value.phone;
     if(name === '' || phone === ''){

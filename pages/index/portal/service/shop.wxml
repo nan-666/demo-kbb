@@ -6,10 +6,10 @@
       <view  class="content-sales-appraise">
         <view>{{item.star}}</view>
         <block wx:for="{{item.star}}" wx:key="index">
-          <image src='http://q9xwl365p.bkt.clouddn.com/index/portal/servivce/xx.png'></image>
+          <image src='http://qbboxshzh.bkt.clouddn.com/index/portal/servivce/xx.png'></image>
         </block>
         <block wx:for="{{5-item.star}}" wx:key="index">
-          <image src='http://q9xwl365p.bkt.clouddn.com/service/star.png'></image>
+          <image src='http://qbboxshzh.bkt.clouddn.com/service/star.png'></image>
         </block>
       </view>
     </view>

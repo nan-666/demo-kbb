@@ -32,6 +32,12 @@ Page({
      }
     })
   },
+  //跳转到预约页面
+  toappointment:function(){
+    wx.navigateTo({
+      url: '/pages/peopledetail/appointment/appointment?id='+this.data.id,
+    })
+  }
 
   
 })
