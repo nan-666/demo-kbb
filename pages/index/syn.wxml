@@ -1,6 +1,6 @@
-<view class="syn" bindtap="toDetails" >
+<view class="syn"  >
   
-  <scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
+  <scroll-view class="container-body" scroll-y="true" scroll-top="100" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
 		<view class="service-list">
 			<navigator class="service-item" wx:for="{{datalist}}" wx:key="{{item.id}}" url="/pages/index/task-detail/detail?id={{item.id}}">
 				

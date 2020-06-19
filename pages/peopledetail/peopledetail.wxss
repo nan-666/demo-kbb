@@ -21,7 +21,28 @@ image{
 .main > view{
   margin-top: 20rpx;
 }
-button{
-  background: #ff9500;
+.button{
   color: #fff;
+  font-size: 11pt;
+  display: flex;
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+.relation{
+  width: 200rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background: #66c0ff;
+  margin-right: 20rpx;
+  border-radius: 15rpx;
+  text-align: center;
+}
+.receive{
+  width: 200rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background: #fe4a55;
+  border-radius: 15rpx;
+  text-align: center;
 }

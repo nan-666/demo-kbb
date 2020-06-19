@@ -1,4 +1,4 @@
-/* pages/people/people.wxss */
+
 .service-list{
 	padding: 0 20rpx;
 }

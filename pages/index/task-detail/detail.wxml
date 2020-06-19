@@ -16,10 +16,10 @@
         <image src="{{item.img_2}}"/>
       </view>
     </view>
-    <view>地址：江西省九江市濂溪区</view>
+    <view>地址：{{item.address}}</view>
   </view>
   <view class="button">
-    <view class="relation">联系用户</view>
-    <view class="receive">立即接单</view>
+    <view class="relation" bindtap="toChat" data-userid="{{detailList[0].userid}}">联系用户</view>
+    <view class="receive" bindtap="takeOrder">立即接单</view>
   </view>
 </view>

@@ -24,8 +24,8 @@ onLoad :function(){
     success:function(res){
       for(var i = 0;i < res.data.length;i++){
         if(res.data[i].state == '订单创建'){
-          let {describe,address,type,money,time} = res.data[i]
-          var orderData = {id: res.data[i].id,describe,address,type,money,time}
+          let {id,describe,address,type,money,time} = res.data[i]
+          var orderData = {id,describe,address,type,money,time}
           datalist.push(orderData);
           newlist.push(orderData);
           moneylist.push(orderData);
@@ -36,9 +36,9 @@ onLoad :function(){
           moneylist:moneylist.sort((prev,next) => next.money - prev.money)
         })
       }
+      
     }
   })
-  
 },
   // 标签栏点击监听
   changeItem(e) {
@@ -114,8 +114,9 @@ onLoad :function(){
         success:function(res){
           for(var i = 0;i < res.data.length;i++){
             if(res.data[i].state == '订单创建'){
-              let {describe,address,type,money,time} = res.data[i]
-              var orderData = {id: res.data[i].id,describe,address,type,money,time}
+
+              let {id,describe,address,type,money,time} = res.data[i]
+              var orderData = {id,describe,address,type,money,time}
               datalist.push(orderData);
               newlist.push(orderData);
               moneylist.push(orderData);
@@ -178,8 +179,9 @@ onLoad :function(){
         success:function(res){
           for(var i = 0;i < res.data.length;i++){
             if(res.data[i].state == '订单创建'){
-              let {describe,address,type,money,time} = res.data[i]
-              var orderData = {id: res.data[i].id,describe,address,type,money,time}
+
+              let {id,describe,address,type,money,time} = res.data[i]
+              var orderData = {id,describe,address,type,money,time}
               datalist.push(orderData);
               newlist.push(orderData);
               moneylist.push(orderData);
@@ -198,7 +200,7 @@ onLoad :function(){
   btnclick: function(e) {
     wx.navigateTo({ url: '/pages/map/map' })
   },
-
+  //下拉刷新
   // 点击跳转至服务页面
   toService: function(e) {
     var formData = e.currentTarget.dataset.keyword;
@@ -213,12 +215,6 @@ onLoad :function(){
       url: '/pages/index/portal/classify/classify',
     })
   },
-  //点击任务跳转到任务详情页
-  // toDetails:function(){
-  //   wx.navigateTo({
-  //     url: '/pages/index/task-detail/detail',
-  //   })
-  // },
   //点击跳转至活动页面
   toActivity:function(){
     wx.navigateTo({
@@ -244,24 +240,6 @@ toDetails:function(){
   })
 },
 
-//服务搜索
-// serverinput:function(e){
-//   var inputTxt=e.detail.value
-//   this.setData({
-//     inputTxt:inputTxt
-//   })
-//   wx.request({
-//     method: "POST",
-//     url: 'http://127.0.0.1:3000/looklist',
-//     data:inputTxt,
-//     header: {
-//       'content-type': 'application/x-www-form-urlencoded'
-//     },
-//     success:function(e){
-//       console.log("success")
-//     }
-//   })
-// },
 people:function(){
   wx.navigateTo({ url: '/pages/people/people' })
 }
