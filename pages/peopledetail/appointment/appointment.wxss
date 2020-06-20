@@ -1,136 +1,185 @@
-/* pages/peopledetail/appointment/appointment.wxss */
-/* pages/book/book.wxss */
-
-page {
-  background-color: #fff;
-  padding: 0 30rpx;
-  box-sizing: border-box;
+/* pages/reserve/reserve.wxss */
+page{
+  background-color: #F4F4F4;
 }
-
-.tip {
-  line-height: 30rpx;
-  margin: 20rpx 0;
-  color: #a0a0a0;
+.reserve{
+  margin-top: 40rpx;
+  background-color: white;
+  border-top: 1rpx solid #E6E6E6;
+  border-bottom: 1rpx solid #E6E6E6;
+  font-size: 30rpx;
+  margin-bottom: 40rpx;
 }
-
-.tip .text-wrap {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.tip navigator {
-  display: inline-block;
-  vertical-align: middle;
-  background-color: #1099d7;
-  color: #fff;
-  border-radius: 50rpx;
-  padding: 8rpx 15rpx;
-  margin: 0 5rpx;
-}
-
-.tip .icon {
-  width: 38rpx;
-  height: 38rpx;
-  vertical-align: middle;
-  margin: 0 6rpx;
-}
-
-.tip text {
-  line-height: 1;
-  vertical-align: middle;
-}
-
-.form {
-  border-radius: 40rpx;
-  box-shadow: 0 0 4rpx #4e9cd6;
-  overflow: hidden;
-  padding: 20rpx;
-}
-
-.section {
-  background-color: #fff;
-  margin-bottom: 10px;
-  padding-left: 20rpx;
-  /* border-bottom: 1px solid #dcdee4; */
-}
-
-.section:not(:last-child) {
-  border-bottom: 1px solid #dcdee4;
-}
-
-.section__title {
-  line-height: 2;
-}
-
-.link {
-  text-align: right;
-  margin-bottom: 10rpx;
-  padding-right: 20rpx;
-  line-height: 2;
-}
-
-.choose .icon.arrow {
-  flex: 0 0 25rpx;
-  width: 25rpx;
-}
-
-.choose {
-  display: flex;
-  padding: 40rpx 20rpx;
-  /* border: 2px dashed #ccc; */
-  border-bottom: 1px solid #dcdee4;
-  align-items: center;
-  background-color: #fff;
-  margin-bottom: 20rpx;
-  /* color: #a8a8a8; */
-}
-
-.choose .icon {
-  flex: 0 0 40rpx;
-  width: 40rpx;
-  height: 48rpx;
-}
-
-.address {
-  flex: 1;
-  /* padding: 40rpx 20rpx; *//* border-bottom: 1px solid #eee; */
-  color: #a0a0a0;
+.reserve_arrow{
+  width: 20rpx;
+  height: 30rpx;
   margin-left: 20rpx;
 }
-
-.address .name {
-  margin-right: 40rpx;
-}
-
-.address .info {
-  font-size: 24rpx;
-}
-
-.workers {
+.reserve_date{
   display: flex;
-  flex-wrap: wrap;
-  padding: 20rpx 0;
+  justify-content: center;
+  align-items: center;
 }
+.reserve_date view{
+  font-size: 30rpx;
+  color: #333;
+}
+.reserve_type{
+  height: 90rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+  padding: 0rpx 30rpx;
+}
+.reserve_sele{
+  color: #999;
+  font-size: 28rpx;
+  border: 1rp solid red;
+}
+.reserve_tab{
+  text-align: right;
+}
+.reserve_man{
+  display: flex;
+  align-items: center;
+}
+.reserve_num{
+  width: 300rpx;
+}
+.reserve_marks{
+  font-size: 28rpx;
+  background-color: white;
+  padding: 20rpx 30rpx 30rpx;
+}
+.reserve_text{
+  border: 1rpx solid #E6E6E6;
+  width: 94%;
+  height: 120rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  border-radius: 6rpx;
+}
+.reserve_pay{
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 15rpx;
+  text-indent: 2em;
+}
+.reserve_warn{
+  display: flex;
+  align-items: center;
+}
+.reserve_warn view{
+  margin-left: 15rpx;
+}
+.reserve_money{
+  color: #FF7272;
+}
+.footer{
+  padding: 20rpx 30rpx;
+  background-color: white;
+  border-top: 1rpx solid #E6E6E6;
+  border-bottom: 1rpx solid #E6E6E6;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  width: 92%;
+}
+.footer button{
+  color: white;
+  font-size: 36rpx;
+  background-color: #34AAFF;
+}
+/*zhezhao*/
+/*mask*/ 
+.drawer_screen { 
+ width: 100%; 
+ height: 100%; 
+ position: fixed; 
+ top: 0; 
+ left: 0; 
+ z-index: 1000; 
+ background: #000; 
+ opacity: 0.5; 
+ overflow: hidden; 
+} 
+/*content*/ 
+.drawer_box { 
+ width: 80vw; 
+ overflow: hidden; 
+ position: fixed; 
+ top: 13%; 
+ left: 0; 
+ z-index: 1001; 
+ background: #FFF; 
+ margin: 0 10vw 0 10vw; 
+ border-radius: 20rpx; 
+} 
+.zfimg{
+  width: 50rpx;
+  height: 45rpx;
+  margin-right: 20rpx;
+}
+.zfimg image{
+  width: 100%;
+  height: 100%;
+} 
+.yetext{
+  color: #34AAFF;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+}
+.zftext{
+  font-size: 40rpx;
+  margin-left: 20rpx;
+}
+.zfztext{
+  font-size: 40rpx;
+}
+.radio-group .weui-cell {
+  padding: 30rpx 30rpx;
+  font-size: 30rpx;
+}
+.drawer_title{ 
+ padding:30rpx; 
+ font: 30rpx "microsoft yahei";
+ font-weight: bold; 
+ text-align: center; 
+ color: #333;
+ background: #F2F2F2; 
+} 
+.drawer_title1{
+ border-top:0.5px solid #e6e6e6; 
+ padding: 20rpx; 
+ font: 27rpx "microsoft yahei"; 
+ text-align: center; 
+ color: #999; 
+}
+.drawer_content { 
+ height: 210px; 
+ overflow-y: scroll; /*超出父盒子高度可滚动*/ 
+} 
+ 
 
-.workers .item {
-  color: #a0a0a0;
-  padding: 4rpx 40rpx;
-  border: 1px solid rgba(220, 220, 220, 0.5);
-  background-color: #ededed;
-  border-radius: 30rpx;
-  margin: 0 10rpx 10rpx 0;
+.btn_ok2{ 
+ padding: 25rpx; 
+ font: 30rpx "microsoft yahei"; 
+ text-align: center; 
+ /* border-top: 1rpx solid #E8E8EA;  */
+ background: linear-gradient(to bottom right,#ff9500, #ff9500);
+ color: #fff;
+ border-radius: 0; 
+} 
+button[disabled][type="default"], wx-button[disabled]:not([type]) {
+color:#fff;
+opacity: 0.8;
 }
-
-.workers .item.active {
-  color: #549cd6;
-  border: 1px solid #549cd6;
-  background-color: #eef5fb;
+.server-input{
+  margin-left: 200rpx;
+  margin-top: -35rpx;
+  font-size: 32rpx;
 }
-
-textarea {
-  margin-top: 20rpx;
-}
-.redbtn-fixed{
-  position: relative;
-  margin-top: 40rpx;
+.money-input{
+  margin-left: 200rpx;
+  margin-top: -40rpx;
+  font-size: 32rpx;
 }

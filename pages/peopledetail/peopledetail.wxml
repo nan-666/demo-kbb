@@ -1,6 +1,8 @@
 <!--pages/peopledetail/peopledetail.wxml-->
 <view class="content" wx:for="{{detailList}}" wx:key="index">
-  <image src="{{item.img}}" />
+  <view class="img">
+    <image src="{{item.img}}" />
+  </view>
   <view class="main">
     <view class="title">店铺：{{item.title}}</view>
     <view>服务：{{item.type}}</view>
@@ -9,7 +11,7 @@
     <view>住址：{{item.address}}</view>
   </view>
   <view class="button">
-    <view class="relation" bindtap="toChat" data-userid="{{detailList[0].userid}}">联系商家</view>
+    <view class="relation" bindtap="toChat">联系商家</view>
     <view class="receive" bindtap="toappointment">立即预约</view>
   </view>
 </view>

@@ -26,6 +26,7 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       success:function(res){
+        
         _this.setData({
           detailList:res.data
         })
@@ -35,9 +36,13 @@ Page({
   //跳转到预约页面
   toappointment:function(){
     wx.navigateTo({
-      url: '/pages/peopledetail/appointment/appointment?id='+this.data.id,
+      url: '/pages/peopledetail/appointment/appointment?id='+this.data.id+'&type='+this.data.detailList[0].type,
     })
-  }
-
+  },
+  toChat:function(){
+    wx.navigateTo({
+      url: '/pages/chat/chat/chat?toAccount=' + this.data.id    // 将聊天对方ID传递到会话页面
+    })
+  },
   
 })
