@@ -141,6 +141,7 @@ App({
     token: '',
     userInfo: null,
     userId:'',
-    balance:0
+    balance:0,
+    islogin:false,
   }
 })

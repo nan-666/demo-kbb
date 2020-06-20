@@ -9,16 +9,7 @@ Page({
     inputTxt:''//输入内容
   },
 onLoad :function(){
-  var _this=this;
-  wx.request({
 
-    url: 'http://localhost:8080/kbb/order',
-    success:function(res){
-      _this.setData({
-        datalist:res.data
-      })
-    }
-  })
 },
   // 标签栏点击监听
   changeItem(e) {

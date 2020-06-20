@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data:{
-    userInfo: {},         // 用户信息
+    userInfo: {avatarUrl:"https://wx.qlogo.cn/mmopen/vi_32/xPIMiczUGIVDhp7QObTfXZnT8f2mWv9O99vsMdZNjHz1pTF9teeiclVwDvuvHYkrKnV5OSKaEmmMWNxicshqHPtbA/132"},         // 用户信息
     hasUserInfo: false,  // 是否获取用户信息成功
     orderItems: [
       {
@@ -34,11 +34,34 @@ Page({
         imageurl: '/image/forum.png'
       }
     ],
+    modalHidden:false,
   },
-
-  onLoad: function(){
+  logins:function(){
+    wx.navigateTo({
+      url: '/pages/personal/login/login',
+    })
+  },
+  onLoad: function(e){
     this.setData({
-      userInfo:app.gobalData.userInfo,
+      modalHidden:e.nav,
+    })
+    var _this=this;
+    wx.request({
+      url: 'http://localhost:8080/kbb/main/java/action/getuserinfo',
+      method: 'POST',
+      data: {
+        userid:app.gobalData.userId,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data[0])
+        _this.setData({
+          userInfo:res.data[0],
+        })
+      }
     })
   },
   btnclick: function(e) {
@@ -51,6 +74,11 @@ Page({
     })
   },
 
+  serverinfo:function(){
+    wx.navigateTo({
+      url: '/pages/register/register',
+    })
+  },
   //点击账号设置跳转到设置页
   toSetting:function(){
     wx.navigateTo({

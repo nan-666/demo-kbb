@@ -12,11 +12,16 @@ Page({
     var token = wx.getStorageSync('token');
     if (token) { // 已有token
       that.checkLogin(token)
-      wx.navigateTo({
-        url: '/pages/personal/personal',
+      wx.reLaunch({
+        url: '/pages/personal/personal?nav=true',
       })
+      app.gobalData.islogin=true;
     } else {
       this.login();
+      wx.reLaunch({
+        url: '/pages/personal/personal?nav=true',
+      })
+      app.gobalData.islogin=true;
     }
       // 查看是否授权
       wx.getSetting({

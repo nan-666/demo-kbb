@@ -153,3 +153,8 @@ page {
   height:1rpx;
   background-color:#eee;
 }
+.logins{
+  position: absolute;
+  right:7%;
+  top:12%;
+}

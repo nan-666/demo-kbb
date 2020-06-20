@@ -20,6 +20,23 @@ Page({
   },
  
   onLoad: function (e) {
+    if(app.gobalData.islogin==false){
+      wx.showModal({
+        title: '提示',
+        content: '您还没有登录，确定前往登陆，取消返回主页',
+        success (res) {
+        if (res.confirm) {
+        wx.reLaunch({
+          url: '/pages/personal/login/login',
+        })
+        } else if (res.cancel) {
+        wx.reLaunch({
+          url: '/pages/index/index',
+        })
+        }
+        }
+        })
+    }else{
     this.setData({
       item:e.typeid,
     })
@@ -42,6 +59,7 @@ Page({
         }) 
       } 
     }) 
+  }
   },
 
   // 标签栏点击监听

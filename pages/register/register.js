@@ -7,6 +7,8 @@ Page({
    */
   data: {
     touxiang: '',
+    IDjpg:'',
+    workjpg:'',
     icon_r: 'https://manager.diandianxc.com/mine/enter.png',
     sex:[
       {name:'0',value:'男',checked:'true'},
@@ -38,6 +40,38 @@ Page({
         console.log(tempFilePaths);
         this.setData({
           touxiang: tempFilePaths[0]
+        })
+      },
+    })
+  },
+  // 选择头像，wx.chooseImage从本地相册选择图片或使用相机拍照
+  changeAvatar1: function () {
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: (res) => {
+        // tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths;
+        console.log(tempFilePaths);
+        this.setData({
+          IDjpg: tempFilePaths[0]
+        })
+      },
+    })
+  },
+  // 选择头像，wx.chooseImage从本地相册选择图片或使用相机拍照
+  changeAvatar2: function () {
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: (res) => {
+        // tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths;
+        console.log(tempFilePaths);
+        this.setData({
+          workjpg: tempFilePaths[0]
         })
       },
     })

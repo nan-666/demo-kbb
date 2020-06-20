@@ -11,6 +11,7 @@
     "pages/people/people",
     "pages/personal/personal",
     "pages/Asetting/setting",
+    "pages/register/register",
     "pages/map/map",
     "pages/chat/index/index",
     "pages/find/find",
@@ -54,7 +55,7 @@
         "selectedIconPath": "image/news1.png"
       },
       {
-        "pagePath": "pages/personal/login/login",
+        "pagePath": "pages/personal/personal",
         "text": "个人中心",
         "iconPath": "image/personal.png",
         "selectedIconPath": "image/personal1.png"

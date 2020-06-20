@@ -43,7 +43,7 @@ page{
   width: 20rpx;
   height: 30rpx;
 }
-.name,.sex,.phone,.info,.addressinfo{
+.name,.sex,.phone,.info,.addressinfo,.servername{
   background: #fff;
   display: flex;
   justify-content: space-between;
@@ -52,7 +52,7 @@ page{
   padding: 20rpx;
   border-bottom: 1rpx solid #eee;
 }
-.name input,.phone input,.info input,.addressinfo input{
+.name input,.phone input,.info input,.addressinfo input,.servername input{
   text-align:right;
 }
 .sex{
