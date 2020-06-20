@@ -140,7 +140,7 @@ page{
   flex: 1;
 }
 .contents > swiper{
-  height: 150vh; 
+  height: 200vh; 
 }
 .task-tab{
   display: flex;
@@ -227,7 +227,7 @@ float: left;
 /* 任务列表样式 */
 .syn{
   background: #f6f6f6;
-  height: 150vh;
+  height: 200vh;
 }
 .service-list{
   padding: 0 20rpx;

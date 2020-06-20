@@ -6,7 +6,7 @@
     </view>
   </view>
   <scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
-		<view class="service-list">
+		<view wx:if="{{show}}" class="service-list">
 			<navigator class="service-item" wx:for="{{list}}" wx:key="{{item.id}}" url="/pages/peopledetail/peopledetail?id={{item.id}}">
 				<view class="service-img">
 					<image src="{{item.img}}" mode="aspectFill"></image>
@@ -26,7 +26,8 @@
 				</view>
 			</navigator>
 		</view>
+		<view wx:else>未搜索到相关内容！</view>
 		<view class="gototop {{scrolltop>200?'active':''}}" bindtap="goToTop"></view>
 	</scroll-view>
-
+	
 </view>

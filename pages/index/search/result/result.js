@@ -22,10 +22,17 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       success:function(res){
-        // 设商家列表数据
-        _this.setData({
-          list:res.data
-        })
+        if(res.data.length != 0){
+          // 设商家列表数据
+          _this.setData({
+            show:true,
+            list:res.data
+          })
+        } else {
+          _this.setData({
+            show:false
+          })
+        }
       }
     })
   },
@@ -45,10 +52,17 @@ Page({
       'content-type': 'application/x-www-form-urlencoded'
     },
     success:function(res){
-      // 设商家列表数据
-      _this.setData({
-        list:res.data
-      })
+      if(res.data.length != 0){
+        // 设商家列表数据
+        _this.setData({
+          show:true,
+          list:res.data
+        })
+      } else {
+        _this.setData({
+          show:false
+        })
+      }
     }
   })
   }

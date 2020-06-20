@@ -14,38 +14,46 @@ Page({
     type:'',
     rank:''
   },
-onLoad :function(){
-  var _this=this;
-  var {datalist} = this.data;
-  var {newlist} = this.data;
-  var {moneylist} = this.data;
-  wx.request({
-    url: 'http://localhost:8080/kbb/order',
-    success:function(res){
-      for(var i = 0;i < res.data.length;i++){
-        if(res.data[i].state == '订单创建'){
-          let {id,describe,address,type,money,time} = res.data[i]
-          var orderData = {id,describe,address,type,money,time}
-          datalist.push(orderData);
-          newlist.push(orderData);
-          moneylist.push(orderData);
+  getData:function(){
+    this.setData({
+      datalist:[],
+      newlist:[],
+      moneylist:[]
+    });
+    var _this=this;
+    var {datalist} = this.data;
+    var {newlist} = this.data;
+    var {moneylist} = this.data;
+    wx.request({
+      url: 'http://localhost:8080/kbb/order',
+      success:function(res){
+        for(var i = 0;i < res.data.length;i++){
+          if(res.data[i].state == '订单创建'){
+            let {id,describe,address,type,money,time} = res.data[i]
+            var orderData = {id,describe,address,type,money,time}
+            datalist.push(orderData);
+            newlist.push(orderData);
+            moneylist.push(orderData);
+          }
+          _this.setData({
+            datalist,
+            newlist:newlist.sort((prev, next) => Date.parse(next.time) - Date.parse(prev.time)),
+            moneylist:moneylist.sort((prev,next) => next.money - prev.money)
+          })
         }
-        _this.setData({
-          datalist,
-          newlist:newlist.sort((prev, next) => Date.parse(next.time) - Date.parse(prev.time)),
-          moneylist:moneylist.sort((prev,next) => next.money - prev.money)
-        })
+        
       }
-      
-    }
-  })
-},
+    })
+  },
   // 标签栏点击监听
   changeItem(e) {
     var item = e.currentTarget.dataset.item;
     this.setData({
       item: item
     })
+    if(this.data.item == 1){
+      this.getData();
+    }
   },
   // 滑块滑动时的监听函数
   changeTab: function (e) {
@@ -53,6 +61,9 @@ onLoad :function(){
     this.setData({
       tab: e.detail.current
     })
+    if(this.data.tab == 1){
+      this.getData();
+    }
   },
   // 任务大厅标签栏点击监听
   changeItems(e) {
@@ -98,7 +109,9 @@ onLoad :function(){
     })
     if(this.data.type){
       this.setData({
-        datalist:[]
+        datalist:[],
+        newlist:[],
+        moneylist:[]
       });
       var _this=this;
       var {datalist} = this.data;
@@ -165,10 +178,12 @@ onLoad :function(){
       moneylist:[]
     })
     if (this.data.word) {
-      var _this=this;
+      
+      
       var {datalist} = this.data;
       var {newlist} = this.data;
       var {moneylist} = this.data;
+      var _this=this;
       wx.request({
         url: 'http://localhost:8080/kbb/searchTask',
         method:'POST',
