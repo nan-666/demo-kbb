@@ -317,5 +317,14 @@ Page({
       curNav: id,
       curIndex: index
     })
-  }
+  },
+  //搜索功能
+  goSearch: function(e) {
+    var formData = e.detail.value;
+    if (formData) {
+      wx.navigateTo({
+        url: '/pages/index/search/result/result?data='+formData,
+      })
+    }
+  },
 })
