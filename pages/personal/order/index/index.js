@@ -17,6 +17,9 @@ Page({
     //   coverImgUrl: 'http://qbboxshzh.bkt.clouddn.com/index/task-detail/heart.jpg'
     // }]
     item:0,
+    service:'',
+    index:0,
+    smoney:0,
   },
  
   onLoad: function (e) {
@@ -53,6 +56,15 @@ Page({
         'Accept': 'application/json'
       }, 
       success:function(res){ 
+        if(_this.data.item==0){
+          _this.setData({
+            smoney:0,
+          })
+        }else{
+          _this.setData({
+            smoney:res.data[0].money,
+          })
+        }
         console.log(res.data);
         _this.setData({ 
           service:res.data 
@@ -95,9 +107,13 @@ Page({
   },
 
   //点击跳转至订单详情页面
-  toDetail:function(){
+  toDetail:function(e){
+    var _this=this;
+    var detaildata=_this.data.service[e.currentTarget.dataset.index];
+    var datas=JSON.stringify(detaildata)
+    console.log(datas)
     wx.navigateTo({
-      url: '/pages/personal/order/detail/detail',
+      url: '/pages/personal/order/detail/detail?service='+encodeURIComponent(datas),
     })
   }
 })

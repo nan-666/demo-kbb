@@ -48,6 +48,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
+    if(app.gobalData.islogin==false){
+      wx.showModal({
+        title: '提示',
+        content: '您还没有登录，确定前往登陆，取消返回主页',
+        success (res) {
+        if (res.confirm) {
+        wx.reLaunch({
+          url: '/pages/personal/login/login',
+        })
+        } else if (res.cancel) {
+        wx.reLaunch({
+          url: '/pages/index/index',
+        })
+        }
+        }
+        })
+    }else{
     var _this=this;
     wx.request({
       url: 'http://localhost:8080/kbb/main/java/action/getuserinfo',
@@ -69,6 +86,7 @@ Page({
         })
       }
     })
+  }
   },
 
 

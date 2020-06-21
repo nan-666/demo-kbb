@@ -158,3 +158,9 @@ page {
   right:7%;
   top:12%;
 }
+.username{
+  position:absolute;
+  top:12%;
+  left:25%;
+  color:white;
+}

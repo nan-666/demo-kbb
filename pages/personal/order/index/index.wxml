@@ -2,16 +2,15 @@
 <view class="info">
     <view class="service" bindtap="toDetail" wx:for="{{service}}" wx:key="index" data-index="{{index}}">
       <view class="service-img">
-        <image src="{{item.coverImgUrl}}"/>
+        <image src="{{item.img_1}}"/>
       </view>
       <view class="service-name">{{item.type}}</view>
       <view class="service-money">¥{{item.money}}</view>
       <view class="service-detail">{{item.title}}</view>
       <view class="service-num">×1</view>
-      <view class="service-pay"><text>总价：¥{{item.money}}  实付款：¥{{item.money}}</text></view>
-      <view class="button-all">
-      <view class="button">查看进度</view>
-      <view class="button">确认完成</view>
+      <view class="service-pay"><text>总价：¥{{item.money}}  实付款：¥{{smoney}}</text></view>
+      <view class="button-all" style="width:30%;margin-left:70%">
+      <view class="button">查看详情</view>
     </view>
     </view>
 </view>

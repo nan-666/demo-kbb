@@ -82,6 +82,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
+    if(app.gobalData.islogin==false){
+      wx.showModal({
+        title: '提示',
+        content: '您还没有登录，确定前往登陆，取消返回主页',
+        success (res) {
+        if (res.confirm) {
+        wx.reLaunch({
+          url: '/pages/personal/login/login',
+        })
+        } else if (res.cancel) {
+        wx.reLaunch({
+          url: '/pages/index/index',
+        })
+        }
+        }
+        })
+    }else{
     var _this=this;
     wx.request({
       url: 'http://localhost:8080/kbb/main/java/action/getuserinfo',
@@ -94,7 +111,7 @@ Page({
         'Accept': 'application/json'
       },
       success: function (res) {
-        console.log(res.data[0])
+        console.log("issever"+res.data[0])
         var gender=res.data[0].gender=="男"?0:1;
         _this.setData({
           touxiang:res.data[0].avatarUrl,
@@ -103,6 +120,7 @@ Page({
         })
       }
     })
+  }
   },
 
 
@@ -144,29 +162,28 @@ Page({
       modalHidden: true
     })
     var _this=this;
-    console.log(_this.data.information.address);
+    console.log(_this.data.information);
     wx.request({
-      url: 'http://localhost:8080/kbb/main/java/action/settingmsg',
+      url: 'http://127.0.0.1:8080/kbb/main/java/action/settingmsg',
       method: 'POST',
+      dataType:"json",
       data: {
         userid:app.gobalData.userId,
         nickName: _this.data.information.name,
         avatarUrl:_this.data.touxiang,
         gender:_this.data.userSex,
-        phone:_this.data.information.phone,
-        address:_this.data.information.addresss
+        issever:1,
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded',
         'Accept': 'application/json'
       },
       success: function (res) {
-        console.log(res)
-        wx.reLaunch({
-          url: '/pages/personal/personal',
-        })
+         wx.reLaunch({
+           url: '/pages/provider/provider',
+         })
       }
-    })
+  })
   },
   
   /**
