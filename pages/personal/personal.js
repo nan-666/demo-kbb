@@ -94,6 +94,10 @@ Page({
           userInfo:res.data[0],
           userHidden:true,
         })
+      }else{
+        _this.setData({
+          userInfo:res.data[0],
+        })
       }
       }
     })

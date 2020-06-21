@@ -179,9 +179,7 @@ Page({
         'Accept': 'application/json'
       },
       success: function (res) {
-         wx.reLaunch({
-           url: '/pages/provider/provider',
-         })
+        
       }
   })
   },
