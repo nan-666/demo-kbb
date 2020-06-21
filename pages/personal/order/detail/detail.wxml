@@ -19,7 +19,7 @@
     <view class="price-name">商品总价</view>
     <view class="price-num">¥{{service.money}}</view>
     <view class="price-name">实付款</view>
-    <view class="price-num">¥0</view>
+    <view class="price-num">¥{{spay}}</view>
   </view>
   </view>
 </view>

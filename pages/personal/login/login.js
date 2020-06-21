@@ -16,6 +16,8 @@ Page({
         url: '/pages/personal/personal?nav=true&isok=true',
       })
       app.gobalData.islogin=true;
+      app.gobalData.isok=true;
+      app.gobalData.nav=true;
     } else {
       this.login();
       wx.reLaunch({

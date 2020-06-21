@@ -10,6 +10,7 @@ Page({
     id:0,
     money:0,
     state:99,
+    spay:0,
   },
   workorder:function(){
     var _this=this; 
@@ -78,19 +79,23 @@ Page({
     })
     if(parseInt(services.state)==0){
       this.setData({
-        content:"去付款"
+        content:"去付款",
+        spay:'0'
       })
     }else if(parseInt(services.state)==1){
       this.setData({
-        content:"待服务ing"
+        content:"待服务ing",
+        spay:this.data.money
       })
     }else if(parseInt(services.state)==2){
       this.setData({
-        content:"去评价"
+        content:"去评价",
+        spay:this.data.money
       })
     }else if(parseInt(services.state)==3){
       this.setData({
-        content:"查看详情"
+        content:"查看详情",
+        spay:this.data.money
       })
     }
     this.setData({

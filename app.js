@@ -143,5 +143,8 @@ App({
     userId:'',
     balance:0,
     islogin:false,
+    issever:0,
+    nav:false,
+    isok:false,
   }
 })

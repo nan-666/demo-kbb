@@ -71,10 +71,10 @@ Page({
   },
   onLoad: function(e){
     this.setData({
-      modalHidden:e.nav,
+      modalHidden:app.gobalData.nav,
     })
     var _this=this;
-    if(e.isok){
+    if(app.gobalData.isok){
     wx.request({
       url: 'http://localhost:8080/kbb/main/java/action/getuserinfo',
       method: 'POST',

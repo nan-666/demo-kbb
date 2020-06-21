@@ -12,6 +12,10 @@ Page({
       {name:'0',value:'男',checked:'true'},
       {name:'1',value:'女'}
     ],
+    sexs:[
+      {name:'0',value:'男'},
+      {name:'1',value:'女',checked:'true'}
+    ],
     isSex:"0",
     information:[],
     userSex:'',
@@ -78,11 +82,18 @@ Page({
       },
       success: function (res) {
         console.log(res.data[0])
-        var gender=res.data[0].gender=="男"?0:1;
+        var gender=((res.data[0].sex=="男")?0:1);
+        if(gender==1){
+          _this.setData({
+            sex:_this.data.sexs,
+          })
+        }
+        console.log(gender)
         _this.setData({
           touxiang:res.data[0].avatarUrl,
           isSex:gender,
           information:res.data[0],
+          issever:app.gobalData.issever,
         })
       }
     })
@@ -98,8 +109,7 @@ Page({
   //表单提交
   formSubmit(e){
     console.log(e);
-    var userSex=this.data.isSex==0?'男':'女';
-    var information= e.detail.value;
+    var userSex=((this.data.isSex==0)?'男':'女');
     console.log(userSex);
     this.setData({
       information: e.detail.value,
@@ -128,7 +138,6 @@ Page({
       modalHidden: true
     })
     var _this=this;
-    console.log(_this.data.information.address);
     wx.request({
       url: 'http://localhost:8080/kbb/main/java/action/settingmsg',
       method: 'POST',
@@ -138,7 +147,8 @@ Page({
         avatarUrl:_this.data.touxiang,
         gender:_this.data.userSex,
         phone:_this.data.information.phone,
-        address:_this.data.information.addresss
+        address:_this.data.information.addresss,
+        issever:app.gobalData.issever,
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded',
@@ -147,7 +157,7 @@ Page({
       success: function (res) {
         console.log(res)
         wx.reLaunch({
-          url: '/pages/personal/personal',
+          url: '/pages/personal/personal?nav=true&isok=true',
         })
       }
     })

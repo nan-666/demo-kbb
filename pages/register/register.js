@@ -14,6 +14,10 @@ Page({
       {name:'0',value:'男',checked:'true'},
       {name:'1',value:'女'}
     ],
+    sexs:[
+      {name:'0',value:'男'},
+      {name:'1',value:'女',checked:'true'}
+    ],
     isSex:"0",
     information:[],
     userSex:'',
@@ -112,7 +116,12 @@ Page({
       },
       success: function (res) {
         console.log("issever"+res.data[0])
-        var gender=res.data[0].gender=="男"?0:1;
+        var gender=((res.data[0].sex=="男")?0:1);
+        if(gender==1){
+          _this.setData({
+            sex:_this.data.sexs,
+          })
+        }
         _this.setData({
           touxiang:res.data[0].avatarUrl,
           isSex:gender,
@@ -132,8 +141,7 @@ Page({
   //表单提交
   formSubmit(e){
     console.log(e);
-    var userSex=this.data.isSex==0?'男':'女';
-    var information= e.detail.value;
+    var userSex=((this.data.isSex==0)?'男':'女');
     console.log(userSex);
     this.setData({
       information: e.detail.value,
@@ -154,12 +162,14 @@ Page({
   },
   //模态框确定
   modalConfirm() {
+
     wx.showToast({
       title: '提交成功',
       icon:'success'
     })
+    app.gobalData.issever=1
     this.setData({
-      modalHidden: true
+      modalHidden: true,
     })
     var _this=this;
     console.log(_this.data.information);
@@ -172,6 +182,8 @@ Page({
         nickName: _this.data.information.name,
         avatarUrl:_this.data.touxiang,
         gender:_this.data.userSex,
+        phone:_this.data.information.phone,
+        address:_this.data.information.addresss,
         issever:1,
       },
       header: {
@@ -179,7 +191,9 @@ Page({
         'Accept': 'application/json'
       },
       success: function (res) {
-        
+         wx.reLaunch({
+           url: '/pages/personal/personal?nav=true&isok=true',
+         })
       }
   })
   },

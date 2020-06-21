@@ -32,20 +32,15 @@ Page({
     this.setData({
       balance:app.gobalData.balance,
       id:options.id,
+      money:options.money,
     })
-    if(parseInt(options.money)!=0){
-      this.setData({
-        title:"确定",
-        money:options.money,
-      })
-    }
   },
 
   //post
   formSubmit:function(){
     var _this=this;
     var updatemoney=0;
-    if(parseInt(_this.data.money)!=0){
+    if(_this.data.money){
       updatemoney=parseInt(_this.data.balance)-parseInt(_this.data.money);
       if(updatemoney<0){
         wx.showModal({
