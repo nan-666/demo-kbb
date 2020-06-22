@@ -99,6 +99,10 @@ Page({
           userInfo:res.data[0],
         })
       }
+      wx.setStorage({
+        data: res.data[0],
+        key: '_userInfo'
+      });
       }
     })
   }

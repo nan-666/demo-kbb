@@ -51,14 +51,14 @@
             <view class="name">
               <block wx:if="{{currentConversation.type === 'C2C'}}">
                 <block wx:if="{{message.flow === 'in'}}">
-                  {{currentConversation.userProfile.nick || currentConversation.userProfile.userID}}
+                  {{_userInfo.nickname || currentConversation.userProfile.userID}}
                 </block>
                 <block wx:else>
-                  {{myInfo.nick || myInfo.userID}}
+                  {{_userInfo.nickname || myInfo.userID}}
                 </block>
               </block>
               <block wx:else>
-                {{message.nameCard || message.nick || message.from}}
+                {{message.nameCard || _userInfo.nickname || message.from}}
               </block>
             </view>
             <view class="wrapper" bindlongpress="handleProxy">
@@ -116,9 +116,9 @@
             </view>
           </view>
           <view>
-            <i-avatar i-class="avatar" wx:if="{{message.flow === 'out'}}" src="{{myInfo.avatar}}" shape="square" class="_i-avatar"></i-avatar>
+            <i-avatar i-class="avatar" wx:if="{{message.flow === 'out'}}" src="{{_userInfo.avatarUrl}}" shape="square" class="_i-avatar"></i-avatar>
             <i-avatar i-class="avatar" shape="square" wx:elif="{{currentConversation.type === 'C2C'}}" bindtap="handleProxy" src="{{currentConversation.userProfile.avatar}}" class="_i-avatar"></i-avatar>
-            <i-avatar i-class="avatar" shape="square" wx:else bindtap="handleProxy" src="{{message.avatar}}" class="_i-avatar"></i-avatar>
+            <i-avatar i-class="avatar" shape="square" wx:else bindtap="handleProxy" src="{{_userInfo.avatarUrl}}" class="_i-avatar"></i-avatar>
           </view>
         </view>
       </view>

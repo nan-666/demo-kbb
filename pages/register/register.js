@@ -20,6 +20,9 @@ Page({
     ],
     isSex:"0",
     information:[],
+    name:'',
+    title:'',
+    industry:'',
     userSex:'',
     modalHidden:true
   },
@@ -145,11 +148,38 @@ Page({
     console.log(userSex);
     this.setData({
       information: e.detail.value,
-      userSex,
+      userSex:userSex,
       modalHidden:false
     });
   },
- 
+ // 校验姓名
+ nameChange: function(e){
+  var name = e.detail.value;
+  this.setData({name: name})
+},
+
+
+//校验店铺说明
+industryChange: function(e){
+  var industry = e.detail.value;
+  this.setData({industry: industry})
+},
+
+//获取店铺名称
+titleChange: function(e){
+  var title = e.detail.value;
+  this.setData({title: title})
+},
+//获取电话号码
+addressChange: function(e){
+  var address = e.detail.value;
+  this.setData({"information.address": address})
+},
+//获取地址
+phoneChange: function(e){
+  var phone = e.detail.value;
+  this.setData({"information.phone": phone})
+},
   //模态框取消
   modalCancel(){
     wx.showToast({
@@ -174,23 +204,30 @@ Page({
     var _this=this;
     console.log(_this.data.information);
     wx.request({
-      url: 'http://127.0.0.1:8080/kbb/main/java/action/settingmsg',
+      url: 'http://127.0.0.1:8080/kbb/InsetMerchant',
       method: 'POST',
       dataType:"json",
       data: {
         userid:app.gobalData.userId,
-        nickName: _this.data.information.name,
-        avatarUrl:_this.data.touxiang,
-        gender:_this.data.userSex,
-        phone:_this.data.information.phone,
-        address:_this.data.information.addresss,
-        issever:1,
+        "name": _this.data.name,
+        "img":_this.data.touxiang,
+        "sex":_this.data.userSex,
+        "phone":_this.data.information.phone,
+        "address":_this.data.information.address,
+        "title":_this.data.title,
+        "industry":_this.data.industry
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded',
         'Accept': 'application/json'
       },
       success: function (res) {
+        wx.showToast({
+          title: res.data.msg,
+          icon: 'success',
+          duration: 2000
+        }),
+
          wx.reLaunch({
            url: '/pages/personal/personal?nav=true&isok=true',
          })

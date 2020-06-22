@@ -228,9 +228,11 @@ Page({
           wx.showToast({
             title: res.data.msg,
             icon: 'success',
-            duration: 2000
+            duration: 1000
           })
-          
+          wx.redirectTo({
+            url: '../personal/order/index/index',
+          })
         }
       })
     }, 3000);

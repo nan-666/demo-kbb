@@ -34,6 +34,7 @@ Page({
                          // 获取到用户的 code 之后：res.code
                          console.log("用户的code:" + res.code);
                          app.gobalData.userInfo = res.userInfo;
+                         
                         }
                         });
               } else {
@@ -45,6 +46,7 @@ Page({
               }
           }
       });
+      
   },
   // 校验token有效性
   checkLogin: function (token) {

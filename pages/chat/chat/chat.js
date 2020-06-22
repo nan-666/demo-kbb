@@ -3,6 +3,7 @@ var emoji = require('../../../utils/emoji.js')
 var app = getApp()
 Page({
   data: {
+    _userInfo:[],
     messageContent: '', // 用户输入消息
     toAccount: '', // 会话用户ID
     conversation: {},
@@ -31,6 +32,49 @@ Page({
 
   onLoad: function(options){
     var _this = this;
+    var _data = wx.getStorage({
+      key: '_data',
+    });
+    this.setData({
+      _data:_data
+    })
+    var _userInfo = wx.getStorageSync('_userInfo')
+    this.setData({
+      _userInfo:_userInfo
+    })
+
+    var userId = _data.userId+"";
+    wx.request({
+      url: 'http://127.0.0.1:8080/kbb/GetUserSig',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      },
+      data:{userId: userId},
+      success: (res) => {
+        if(res.data.success){
+          app.tim.login({
+            userID: userId,
+            userSig: res.data.data.userSig
+          }).then((imResponse) => {           // 登录成功
+            // 登录成功后将当前用户存入app的全局对象中
+            app.gobalData.userId = userId;
+            // 跳转到首页
+          }).catch((imError) => {
+            console.log('login error：', imError);    // 登录失败的相关信息
+          })
+        }
+      }
+    })
+
+
+
+
+
+
+
+
     var toAccount = options.toAccount;
     this.setData({
       toAccount: toAccount

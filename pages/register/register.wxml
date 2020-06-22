@@ -13,12 +13,14 @@
       <image class='icon-r' src='{{icon_r}}'></image>
     </view>
   </view>
- 
   <view class='name'>
-    <text>昵称</text>
-    <input name="name" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的昵称' value="{{information.nickname}}"></input>
+    <text>真实姓名</text>
+    <input name="name" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的真实姓名' bindinput="nameChange" value="{{name}}"></input>
   </view>
-
+  <view class='title'>
+    <text>店铺名称</text>
+    <input name="title" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的店铺名称' bindinput="titleChange" value="{{title}}"></input>
+  </view>
   <view class='sex'>
     <text>性别</text>
     <radio-group class="radio-group" bindchange="radioChange">
@@ -30,9 +32,12 @@
  
   <view class='phone'>
     <text>手机</text>
-    <input name="phone" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的手机号' value="{{information.phone}}"></input>
+    <input name="phone" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的手机号' bindinput="phoneChange" value="{{information.phone}}"></input>
   </view>
- 
+ <view class='address'>
+    <text>地址</text>
+    <input name="address" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的地址' bindinput="addressChange" value="{{information.address}}"></input>
+  </view>
  
 <view class='baseInfo'>
   <text>认证信息</text>
@@ -40,7 +45,7 @@
  
  <view class='servername'>
     <text>服务</text>
-    <input name="servername" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你想提供的服务' ></input>
+    <input name="servername" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你想提供的服务' bindinput="industryChange" value="{{industry}}"></input>
   </view>
 
   <view class='icon'>
