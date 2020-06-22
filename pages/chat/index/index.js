@@ -13,9 +13,7 @@ Page({
       title: '正在同步数据',
       mask: true
     })
-    var _data = wx.getStorage({
-      key: '_data',
-    });
+    var _data = wx.getStorageSync('_data');
     this.setData({
       _data:_data
     })

@@ -32,9 +32,7 @@ Page({
 
   onLoad: function(options){
     var _this = this;
-    var _data = wx.getStorage({
-      key: '_data',
-    });
+    var _data = wx.getStorageSync('_data');
     this.setData({
       _data:_data
     })
