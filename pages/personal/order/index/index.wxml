@@ -1,17 +1,31 @@
 <!--pages/index/info.wxml.wxml-->
-<view class="info">
-    <view class="service" bindtap="toDetail" wx:for="{{service}}" wx:key="index" data-index="{{index}}">
-      <view class="service-img">
-        <image src="{{item.coverImgUrl}}"/>
-      </view>
-      <view class="service-name">{{item.type}}</view>
-      <view class="service-money">¥{{item.money}}</view>
-      <view class="service-detail">{{item.title}}</view>
-      <view class="service-num">×1</view>
-      <view class="service-pay"><text>总价：¥{{item.money}}  实付款：¥{{item.money}}</text></view>
-      <view class="button-all">
-      <view class="button">查看进度</view>
-      <view class="button">确认完成</view>
-    </view>
-    </view>
+<scroll-view class="contents-server" scroll-y>
+  <!-- 标签 -->
+  <view class="task-tab">
+    <view class="task-tab-item {{tabs==0 ? 'active':''}}" bindtap="changeItems" data-item="0">全部</view>
+    <view class="task-tab-item {{tabs==1 ? 'active':''}}" bindtap="changeItems" data-item="1">已接单</view>
+    <view class="task-tab-item {{tabs==2 ? 'active':''}}" bindtap="changeItems" data-item="2">待服务</view>
+    <view class="task-tab-item {{tabs==3 ? 'active':''}}" bindtap="changeItems" data-item="3">待评价</view>
+    <view class="task-tab-item {{tabs==4 ? 'active':''}}" bindtap="changeItems" data-item="4">退款/售后</view>
+  </view>
+<view class="contents">
+<!--curren:当前滑块显示页面索引号； bindchange:滑块滑动时监听函数 -->
+  <swiper current="{{items}}" bindchange="changeTabs">
+    <swiper-item>
+      <include src="all.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="accepted.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="service.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="evaluate.wxml" />
+    </swiper-item>
+    <swiper-item>
+      <include src="refund.wxml" />
+    </swiper-item>
+  </swiper>
 </view>
+</scroll-view>

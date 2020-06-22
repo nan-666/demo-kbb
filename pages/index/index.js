@@ -37,7 +37,7 @@ Page({
           }
           _this.setData({
             datalist,
-            newlist:newlist.sort((prev, next) => Date.parse(next.time) - Date.parse(prev.time)),
+            newlist:newlist.sort((prev, next) => Date.parse(prev.time) - Date.parse(next.time)),
             moneylist:moneylist.sort((prev,next) => next.money - prev.money)
           })
         }
@@ -45,6 +45,9 @@ Page({
       }
     })
   },
+onLoad :function(){
+
+},
   // 标签栏点击监听
   changeItem(e) {
     var item = e.currentTarget.dataset.item;
@@ -143,7 +146,7 @@ Page({
             } else{
               _this.setData({
                 datalist,
-                newlist:newlist.sort((prev, next) => Date.parse(next.time) - Date.parse(prev.time)),
+                newlist:newlist.sort((prev, next) => Date.parse(prev.time) - Date.parse(next.time)),
                 moneylist:moneylist.sort((prev,next) => next.money - prev.money)
               })
             } 
@@ -203,7 +206,7 @@ Page({
             }
             _this.setData({
               datalist,
-              newlist:newlist.sort((prev, next) => Date.parse(next.time) - Date.parse(prev.time)),
+              newlist:newlist.sort((prev, next) => Date.parse(prev.time) - Date.parse(next.time)),
               moneylist:moneylist.sort((prev,next) => next.money - prev.money)
             })
           }
@@ -230,6 +233,8 @@ Page({
       url: '/pages/index/portal/classify/classify',
     })
   },
+
+
   //点击跳转至活动页面
   toActivity:function(){
     wx.navigateTo({

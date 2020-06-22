@@ -1,6 +1,6 @@
-<!--pages/index/info.wxml.wxml-->
+<!--pages/index/all.wxml-->
 <scroll-view class="hot-box" scroll-y="true">
-<navigator class="orderDetail" wx:for="{{evaluatelist}}" wx:key="index" url="/pages/personal/order/detail/detail?id={{item.id}}">
+<navigator class="orderDetail" wx:for="{{alllist}}" wx:key="index" url="/pages/personal/order/detail/detail?id={{item.id}}">
 <view class="orderListTitle">
 <text class="userName">{{item.title}}</text>
 <text class="orderStatus">{{item.state}}</text>

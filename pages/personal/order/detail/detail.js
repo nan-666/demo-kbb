@@ -1,33 +1,39 @@
 // pages/detail/detail.js
+var app=getApp()
 Page({
 
-  /**
+   /**
    * 页面的初始数据
    */
   data: {
+    id:'',
+    _data:null,
 
+    detailList:''
   },
 
-
-  onLoad: function () {
-    var _this=this; 
-    wx.request({ 
-      url: 'http://localhost:8080/kbb//main/java/action/order', 
-      method:'POST', 
-      data: {
-        item: _this.data.item,
-        userId:app.gobalData.userId
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    var _this=this;
+    var id = options.id;
+    this.setData({
+      id:id
+    })
+    wx.request({
+      url: 'http://localhost:8080/kbb/orderDetail',
+      method:'POST',
+      data:{"id":_this.data.id},
+      header:{
+        'content-type': 'application/x-www-form-urlencoded'
       },
-      header:{ 
-        'content-type': 'application/x-www-form-urlencoded',
-        'Accept': 'application/json'
-      }, 
-      success:function(res){ 
-        console.log(res.data);
-        _this.setData({ 
-          service:res.data
-        }) 
-      } 
-    }) 
-  }
+      success:function(res){
+        _this.setData({
+          detailList:res.data
+        })
+     }
+    })
+  },
+
 })

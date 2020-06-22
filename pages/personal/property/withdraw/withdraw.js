@@ -8,6 +8,9 @@ Page({
   data: {
     balance:0,
     inputmoney:0,
+    money:0,
+    title:"预计两个小时内到账，确认提现",
+    id:0,
   },
 
   // 点击银行卡跳转到选择银行卡页
@@ -28,13 +31,64 @@ Page({
   onLoad: function (options) {
     this.setData({
       balance:app.gobalData.balance,
+      id:options.id,
+      money:options.money,
     })
   },
 
   //post
   formSubmit:function(){
     var _this=this;
-    var updatemoney=parseInt(_this.data.balance)-parseInt(_this.data.inputmoney);
+    var updatemoney=0;
+    if(_this.data.money){
+      updatemoney=parseInt(_this.data.balance)-parseInt(_this.data.money);
+      if(updatemoney<0){
+        wx.showModal({
+          title: '提示',
+          content: '余额不足',
+          success (res) {
+          if (res.confirm) {
+          
+          } else if (res.cancel) {
+          wx.navigateBack()
+          }
+          }
+          })
+      }
+      wx.request({
+        method:'POST',
+        url: 'http://localhost:8080/kbb//main/java/action/updatebill', 
+        data:{
+          userid:app.gobalData.userId,
+          inputmoney:updatemoney
+        },
+        header:{ 
+          'content-type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
+        }, 
+        success:function(res){ 
+          console.log(res);
+          wx.request({
+            method:'POST',
+            url: 'http://localhost:8080/kbb//main/java/action/upstate', 
+            data:{
+              id:_this.data.id,
+              state:1
+            },
+            header:{ 
+              'content-type': 'application/x-www-form-urlencoded',
+              'Accept': 'application/json'
+            }, 
+            success:function(res){ 
+              wx.reLaunch({
+                url: '/pages/personal/personal',
+              })
+            }
+          })
+          }
+      })
+    }else{
+    updatemoney=parseInt(_this.data.balance)-parseInt(_this.data.inputmoney);
     console.log(updatemoney);
     wx.request({
       method:'POST',
@@ -54,6 +108,9 @@ Page({
           })
           }
     })
+
+  }
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

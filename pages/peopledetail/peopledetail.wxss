@@ -56,4 +56,5 @@ image{
   background: #fe4a55;
   border-radius: 15rpx;
   text-align: center;
+
 }

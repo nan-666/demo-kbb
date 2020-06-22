@@ -1,27 +1,24 @@
 <!--pages/index/info.wxml.wxml-->
-<view class="order" wx:for="{{shop}}" wx:key="index" data-index="{{index}}">
-  <view class="shop">
-    <view class="shop-img">
-      <image src="http://qbboxshzh.bkt.clouddn.com/personal/order/shop.png"/>
-    </view>
-    <view class="shop-name"><text>{{item.name}}</text></view>
-    <view class="shop-right">
-      <image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png"/>
-    </view>
-  </view>
-  <view class="service" bindtap="toDetail" wx:for="{{service}}" wx:key="index" data-index="{{index}}">
-    <view class="service-img">
-      <image src="{{item.coverImgUrl}}"/>
-    </view>
-    <view class="service-name">{{item.name}}</view>
-    <view class="service-money">¥{{item.money}}</view>
-    <view class="service-detail">{{item.detail}}</view>
-    <view class="service-num">×{{item.num}}</view>
-    <view class="service-pay"><text>总价：¥{{item.money}} 优惠：¥{{item.free}} 实付款：¥{{item.trueMoney}}</text></view>
-  </view>
-    <view class="button-all">
-      <view class="button">查看进度</view>
-      <view class="button">确认完成</view>
-    </view>
-  </view>
-  
+<scroll-view class="hot-box" scroll-y="true">
+<navigator class="orderDetail" wx:for="{{servicelist}}" wx:key="index" url="/pages/personal/order/detail/detail?id={{item.id}}">
+<view class="orderListTitle">
+<text class="userName">{{item.title}}</text>
+<text class="orderStatus">{{item.state}}</text>
+</view>
+<view class="orderListDetails">
+<view class="productImg">
+<image src="{{item.img_1}}" style="width:120rpx;height:120rpx;"></image>
+</view>
+<view class="productInfo">
+<view class="productTitle">预定时间: {{item.time}}</view>
+<view class="productTitle">{{item.describe}}</view>
+</view>
+</view>
+<view class="productCount">
+<view>
+<text style="margin-right:20rpx">合计：￥{{item.money}}</text>
+<text style="border:1rpx solid #ff9500;border-radius:30rpx;padding:10rpx;color:ff9500;">确认付款</text>
+</view>
+</view>
+</navigator>
+</scroll-view>

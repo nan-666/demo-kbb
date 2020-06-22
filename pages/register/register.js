@@ -7,6 +7,8 @@ Page({
    */
   data: {
     touxiang: '',
+    IDjpg:'',
+    workjpg:'',
     icon_r: 'https://manager.diandianxc.com/mine/enter.png',
     sex:[
       {name:'0',value:'男',checked:'true'},
@@ -46,6 +48,38 @@ Page({
       },
     })
   },
+  // 选择头像，wx.chooseImage从本地相册选择图片或使用相机拍照
+  changeAvatar1: function () {
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: (res) => {
+        // tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths;
+        console.log(tempFilePaths);
+        this.setData({
+          IDjpg: tempFilePaths[0]
+        })
+      },
+    })
+  },
+  // 选择头像，wx.chooseImage从本地相册选择图片或使用相机拍照
+  changeAvatar2: function () {
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: (res) => {
+        // tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths;
+        console.log(tempFilePaths);
+        this.setData({
+          workjpg: tempFilePaths[0]
+        })
+      },
+    })
+  },
 
 
   /**
@@ -81,19 +115,17 @@ Page({
         'Accept': 'application/json'
       },
       success: function (res) {
-        console.log(res.data[0])
+        console.log("issever"+res.data[0])
         var gender=((res.data[0].sex=="男")?0:1);
         if(gender==1){
           _this.setData({
             sex:_this.data.sexs,
           })
         }
-        console.log(gender)
         _this.setData({
           touxiang:res.data[0].avatarUrl,
           isSex:gender,
           information:res.data[0],
-          issever:app.gobalData.issever,
         })
       }
     })
@@ -130,17 +162,21 @@ Page({
   },
   //模态框确定
   modalConfirm() {
+
     wx.showToast({
       title: '提交成功',
       icon:'success'
     })
+    app.gobalData.issever=1
     this.setData({
-      modalHidden: true
+      modalHidden: true,
     })
     var _this=this;
+    console.log(_this.data.information);
     wx.request({
-      url: 'http://localhost:8080/kbb/main/java/action/settingmsg',
+      url: 'http://127.0.0.1:8080/kbb/main/java/action/settingmsg',
       method: 'POST',
+      dataType:"json",
       data: {
         userid:app.gobalData.userId,
         nickName: _this.data.information.name,
@@ -148,19 +184,18 @@ Page({
         gender:_this.data.userSex,
         phone:_this.data.information.phone,
         address:_this.data.information.addresss,
-        issever:app.gobalData.issever,
+        issever:1,
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded',
         'Accept': 'application/json'
       },
       success: function (res) {
-        console.log(res)
-        wx.reLaunch({
-          url: '/pages/personal/personal?nav=true&isok=true',
-        })
+         wx.reLaunch({
+           url: '/pages/personal/personal?nav=true&isok=true',
+         })
       }
-    })
+  })
   },
   
   /**

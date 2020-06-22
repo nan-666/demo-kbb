@@ -12,11 +12,18 @@ Page({
     var token = wx.getStorageSync('token');
     if (token) { // 已有token
       that.checkLogin(token)
-      wx.navigateTo({
-        url: '/pages/personal/personal',
+      wx.reLaunch({
+        url: '/pages/personal/personal?nav=true&isok=true',
       })
+      app.gobalData.islogin=true;
+      app.gobalData.isok=true;
+      app.gobalData.nav=true;
     } else {
       this.login();
+      wx.reLaunch({
+        url: '/pages/personal/personal?nav=true&isok=true',
+      })
+      app.gobalData.islogin=true;
     }
       // 查看是否授权
       wx.getSetting({
@@ -43,7 +50,7 @@ Page({
   checkLogin: function (token) {
     var _this = this;
     wx.request({
-      url: 'http://127.0.0.1:8080/kbb/main/java/login/CheckLogin',
+      url: 'http://127.0.0.1:8080/kbb/main/java/action/login/CheckLogin',
       method: 'POST',
       data: {
         token: token
@@ -87,6 +94,7 @@ Page({
             'Accept': 'application/json'
           },
           success: function (res) {
+            console.log("me"+res.data.data)
             // 将token保存为全局变量，共各页面使用
             app.gobalData.token = res.data.data.token;
             app.gobalData._data = res.data.data;
@@ -125,11 +133,7 @@ Page({
               nickName: ee.nickName,
               avatarUrl:ee.avatarUrl,
               gender:ee.gender,
-              phone:ee.city,
-              birthday:'2020-06-17',
-              information:ee.city,
-              sort:ee.city,
-              work:ee.city,
+              issever:0,
             },
             header: {
               'content-type': 'application/x-www-form-urlencoded',

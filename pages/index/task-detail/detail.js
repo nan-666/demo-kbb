@@ -7,6 +7,7 @@ Page({
   data: {
     id:'',
     _data:null,
+
     detailList:''
   },
 
@@ -63,4 +64,5 @@ Page({
      }
     })
   }
+
 })

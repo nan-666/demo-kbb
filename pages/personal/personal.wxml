@@ -7,28 +7,23 @@
 			<image src="http://qbboxshzh.bkt.clouddn.com/personal/personal/sz.png" />
 			<view>账号设置</view>
 		</view>
-	
-		<view class="content-info-change">
-			<view>注册为服务商身份</view>
+		<view class="username">{{userInfo.nickname}}</view>
+		<view class="logins" style="color:#eee" bindtap="logins" hidden="{{modalHidden}}">
+		微信登陆
+		</view>
+		<view class="content-info-change" bindtap="serverinfo" hidden="{{userHidden}}">
+			<view>申请为服务商身份</view>
 			<image src="http://qbboxshzh.bkt.clouddn.com/personal/personal/qj.png" />
 		</view>
 	</view>
 	
   <view class="content2">
 	<!-- 摘抄部分 -->
-	<view class="order" bindtap="toOrder">
-    <text class="myorder-text">我的订单</text>
-  </view>
-		<view class="line"></view>
-  <view class="navs">
-    <block wx:for-items="{{orderItems}}" wx:key="name">
-      <view class="nav-item"  data-type="{{item.name}}" data-typeid="{{item.typeId}}" bindtap="navclick">
-        <image src="{{item.imageurl}}" class="nav-image" />
-        <text class="cz">{{item.name}}</text>
-      </view>
-    </block>
-  </view>
 	<view class="line"></view>
+		<view class="content2-item" bindtap="toOrder">
+		  <view>我的订单</view>
+			<image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
+		</view>
 	  <view class="content2-item" bindtap="toBalance">
 		  <view>账户余额</view>
 			<image src="http://qbboxshzh.bkt.clouddn.com/personal/property/balance/right.png" />
